@@ -1,0 +1,12 @@
++accelerometer
++camera
++compass
++connection
+-contacts
++device
++events
+-file
++geolocation
+-media
++notification
+-storage
