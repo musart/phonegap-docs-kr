@@ -1,12 +1,12 @@
 SQLResultSetList
 =======
 
-SQL ¿¿¿¿¿ ¿¿¿¿ ¿¿¿ ¿¿¿¿ SQLResultSet¿ ¿¿¿ ¿¿.
+SQL ¿¿¿¿¿ ¿¿¿ ¿¿¿ ¿¿¿¿ SQLResultSet¿ ¿¿ ¿ ¿¿.
 
 Properties
 -------
 
-- __length__: SQL ¿¿¿ ¿¿ ¿¿¿¿ ¿¿ ¿¿.
+- __length__: SQL ¿¿¿ ¿¿ ¿¿¿¿ ¿¿¿ ¿¿
 
 Methods
 -------
@@ -16,8 +16,9 @@ Methods
 Details
 -------
 
-SQLResultSetList¿ SQL select ¿¿¿ ¿¿ ¿¿¿¿ ¿¿¿¿ ¿¿¿¿. ¿ ¿¿¿ ¿¿¿ ¿¿ select ¿¿¿ length ¿¿¿ ¿¿¿¿.
-The SQLResultSetList contains the data returned from a SQL select statement.  The object contains a length property letting you know how many rows the select statement has been returned.  To get a row of data you would call the `item` method specifing an index.  The item method returns a JavaScript Object who's properties are the columns of the database the select statement was executed against.
+SQLResultSetList ¿ SQL select ¿¿¿¿¿¿ ¿¿¿ ¿¿¿¿ ¿¿¿¿. ¿ ¿¿¿ ¿¿¿ ¿¿ ¿¿¿ select ¿¿¿ ¿¿ ¿¿¿¿¿¿ ¿¿¿¿ length ¿¿¿ ¿¿¿¿. ¿¿¿¿ ¿¿ ¿¿ ¿¿ ¿¿¿ ¿¿¿¿ ¿¿¿ 'item' ¿¿¿ ¿¿¿ ¿¿¿. item ¿¿¿ database¿ ¿¿¿ ¿¿ ¿¿¿ ¿¿¿¿¿¿ ¿¿¿ ¿¿¿¿.
+
+contains the data returned from a SQL select statement.  The object contains a length property letting you know how many rows the select statement has been returned.  To get a row of data you would call the `item` method specifing an index.  The item method returns a JavaScript Object who's properties are the columns of the database the select statement was executed against.
 
 ¿¿¿¿ ¿¿¿
 -------------------
@@ -63,7 +64,7 @@ Execute SQL ¿¿ ¿¿
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-		// database¿ ¿¿¿.
+		// database¿ ¿¿¿. 
 		//
 		function populateDB(tx) {
 			tx.executeSql('DROP TABLE IF EXISTS DEMO');
@@ -72,7 +73,7 @@ Execute SQL ¿¿ ¿¿
 			tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
 		}
 
-		// database ¿¿¿¿.
+		// database¿ ¿¿¿¿.
 		//
 		function queryDB(tx) {
 			tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
@@ -101,7 +102,7 @@ Execute SQL ¿¿ ¿¿
 			db.transaction(queryDB, errorCB);
 		}
 
-		// PhoneGap¿ ¿¿¿¿ ¿¿¿¿.
+		// PhoneGap¿ ¿¿¿¿.
 		//
 		function onDeviceReady() {
 			var db = window.openDatabase("Database", "1.0", "PhoneGap Demo", 200000);

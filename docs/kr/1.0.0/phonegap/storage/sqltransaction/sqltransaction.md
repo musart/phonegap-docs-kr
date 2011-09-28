@@ -1,17 +1,17 @@
 SQLTransaction
 =======
 
-Contains methods that allow the user to execute SQL statements against the Database.
+사용자가 database에 대해 SQL 구문을 수행하도록 가능하게 하는 함수를 포함한다.
 
 Methods
 -------
 
-- __executeSql__: executes a SQL statement
+- __executeSql__: SQL 구문을 실행한다.
 
 Details
 -------
 
-When you call a Database objects transaction method it's callback methods will be called with a SQLTransaction object.  The user can build up a database transaction by calling the executeSql method multiple times.  
+당신이 database 객체에 트랜젝션 함수를 호출할 때 콜백 함수는 SQLTransaction 객체ㅏ 함께 호출된다. 사용자는 database executeSql 함수를 여러번 호출하면서 트렌젝션을 개발할 수 있다.
 
 지원하는 플랫폼
 -------------------
@@ -63,7 +63,7 @@ Execute SQL 빠른 예제
 			db.transaction(populateDB, errorCB, successCB);
         }
 		
-		// Populate the database 
+		// database를 채운다.
 		//
 		function populateDB(tx) {
 			 tx.executeSql('DROP TABLE IF EXISTS DEMO');
@@ -72,13 +72,13 @@ Execute SQL 빠른 예제
 			 tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
 		}
 		
-		// Transaction error callback
+		// error callback 처리
 		//
 		function errorCB(err) {
 			alert("Error processing SQL: "+err);
 		}
 		
-		// Transaction success callback
+		// success callback 처리
 		//
 		function successCB() {
 			alert("success!");
