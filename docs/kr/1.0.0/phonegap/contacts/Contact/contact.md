@@ -1,14 +1,14 @@
 Contact
 =======
 
-Contains properties that describe a contact, such as a user's personal or business contact.
+사용자의 개인적이거나 업무적인 연락처와 같이, 연락처를 설명하는 속성을 포함한다.
 
 Properties
 ----------
 
-- __id:__ A globally unique identifier. _(DOMString)_
-- __displayName:__ The name of this Contact, suitable for display to end-users. _(DOMString)_
-- __name:__ An object containing all components of a persons name. _(ContactName)_
+- __id:__ 전역적인 unique 식별자. _(DOMString)_
+- __displayName:__ 최종사용자에게 표시되기 적합한 이 연락처의 이름. _(DOMString)_
+- __name:__ 사람 이름의 모든 컴포넌트를 포함하는 객체. _(ContactName)_
 - __nickname:__ A casual name to address the contact by. _(DOMString)_
 - __phoneNumbers:__ An array of all the contact's phone numbers. _(ContactField[])_
 - __emails:__ An array of all the contact's email addresses. _(ContactField[])_
