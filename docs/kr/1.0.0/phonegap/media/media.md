@@ -1,39 +1,39 @@
 Media
 =====
 
-> The `Media` object provides the ability to record and play back audio files on a device. 
+> `Media` 객체는 기기의 오디오 파일들을 녹음하고 제생하는 기능을 제공한다.
 
     var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
 
 
-Note: The current implementation does not adhere to a W3C specification for media capture, and is provided for convenience only.  A future implementation will adhere to the latest W3C specification and may deprecate the current APIs.
+Note: 현재 구현은 media capture관련 W3C 표준과 맞지 않고, 편의를 위해서만 제공된다. 미래의 구현은 최신 W3C 스펙에 맞을 것이고 현재 API들은 제거될 것이다.
 
 Parameters
 ----------
 
-- __src__: A URI containing the audio content. _(DOMString)_
-- __mediaSuccess__: (Optional) The callback that is invoked after a Media object has completed the current play/record or stop action. _(Function)_
-- __mediaError__: (Optional) The callback that is invoked if there was an error. _(Function)_
-- __mediaStatus__: (Optional) The callback that is invoked to indicate status changes. _(Function)_
+- __src__: 오디오 컨텐츠를 담는 URI. _(DOMString)_
+- __mediaSuccess__: (선택적인 변수) Media 객체가 현재 재생/녹음 또는 정지 동작이 완료되었을 때 불리는 콜백. _(Function)_
+- __mediaError__: (선택적인 변수) 만약 에러가 발생하면 발생하는 콜백. _(Function)_
+- __mediaStatus__: (선택적인 변수) 상태 변화를 나타내기 위해 발생하는 콜백. _(Function)_
 
 Methods
 -------
 
-- media.getCurrentPosition: Returns the current position within an audio file.
-- media.getDuration: Returns the duration of an audio file.
-- media.play: Start or resume playing audio file.
-- media.pause: Pause playing audio file.
-- media.release: Releases the underlying OS'es audio resources.
-- media.seekTo: Moves the position within the audio file.
-- media.startRecord: Start recording audio file.
-- media.stopRecord: Stop recording audio file.
-- media.stop: Stop playing audio file.
+- media.getCurrentPosition: 오디오 파일의 현재 위치를 반환한다.
+- media.getDuration: 오디오 파일의 지속시간을 반환한다.
+- media.play: 오디오 파일을 재생하는 것을 시작하거나 재개한다.
+- media.pause: 오디오 파일을 재생하는 것을 멈춘다.
+- media.release: 근본적인 OS들의 오디오 리소스를 릴리즈한다.
+- media.seekTo: 오디오 파일 안의 위치를 이동한다.
+- media.startRecord: 오디오 파일을 녹음하는 것을 시작한다.
+- media.stopRecord: 오디오 파일을 녹음하는 것을 멈춘다.
+- media.stop: 오디오 파일을 재생하는 것을 멈춘다.
 
 Additional ReadOnly Parameters
 ---------------------
 
-- ___position__: The position within the audio playback in seconds.  Not automatically updated during play, call getCurrentPosition to update.
-- ___duration__: The duration of the media in seconds.
+- ___position__: 초 단위의 오디오 재생의 위치. 재생중에 자동적으로 갱신되지 않는다. 갱신하기 위해서는 getCurrentPosition을 호출한다.
+- ___duration__: 초 단위의 미디어의 지속 기간.
 
 지원하는 플랫폼
 -------------------

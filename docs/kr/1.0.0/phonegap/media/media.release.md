@@ -1,7 +1,7 @@
 media.release
 =================
 
-Releases the underlying operating systems audio resources.
+근본적인 OS의 오디오 리소스를 릴리즈한다.
 
     media.release();
 
@@ -9,7 +9,7 @@ Releases the underlying operating systems audio resources.
 설명
 -----------
 
-Function `media.release` is a synchronous function that releases the underlying operating systems audio resources.  This function is particularly important for Android as there are a finite amount of OpenCore instances for media playback.  Developers should call the 'release' function when they no longer need the Media resource.
+`media.release` 함수는 근본적인 OS의 오디오 리소스를 릴리즈하는 동기화 함수이다. 이 함수는 미디어 재생을 위한 OpenCore 인스턴스의 한정된 양이 있기 때문에 특히 안드로이드에 중요하다. 개발자는 Media 리소스가 더 이상 필요하지 않을 때 'release' 함수를 호출해야 한다.
 
 지원하는 플랫폼
 -------------------
@@ -55,27 +55,27 @@ Function `media.release` is a synchronous function that releases the underlying 
             var my_media = null;
             var mediaTimer = null;
         
-            // Play audio
+            // 오디오를 재생한다.
             //
             function playAudio(src) {
-                // Create Media object from src
+                // url의 오디오 파일을 재생한다.
                 my_media = new Media(src, onSuccess, onError);
         
-                // Play audio
+                // 오디오를 재생한다.
                 my_media.play();
         
-                // Update my_media position every second
+                // 매 초마다 my_media 위치를 갱신한다.
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
-                        // get my_media position
+                        // my_media 위치를 얻는다.
                         my_media.getCurrentPosition(
-                            // success callback
+                            // 성공 콜백
                             function(position) {
                                 if (position > -1) {
                                     setAudioPosition((position) + " sec");
                                 }
                             },
-                            // error callback
+                            // 에러 콜백
                             function(e) {
                                 console.log("Error getting pos=" + e);
                                 setAudioPosition("Error: " + e);
@@ -85,7 +85,7 @@ Function `media.release` is a synchronous function that releases the underlying 
                 }
             }
         
-            // Pause audio
+            // 오디오를 일시정지한다.
             // 
             function pauseAudio() {
                 if (my_media) {
@@ -93,7 +93,7 @@ Function `media.release` is a synchronous function that releases the underlying 
                 }
             }
         
-            // Stop audio
+            // 오디오를 멈춘다.
             // 
             function stopAudio() {
                 if (my_media) {
@@ -103,20 +103,20 @@ Function `media.release` is a synchronous function that releases the underlying 
                 mediaTimer = null;
             }
         
-            // onSuccess Callback
+            // onSuccess 콜백
             //
             function onSuccess() {
                 console.log("playAudio():Audio Success");
             }
         
-            // onError Callback 
+            // onError 콜백
             //
             function onError(error) {
                 alert('code: '    + error.code    + '\n' + 
                       'message: ' + error.message + '\n');
             }
         
-            // Set audio position
+            // 오디오 위치를 설정한다.
             // 
             function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;
