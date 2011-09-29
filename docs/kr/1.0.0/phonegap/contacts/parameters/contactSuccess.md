@@ -1,16 +1,16 @@
 contactSuccess
 ==============
 
-Success callback function that provides the `Contact` array resulting from a `contacts.find` operation.
+'contacts.find' 동작의 결과인 'Contact' 배열을 제공하는 성공 콜백 함수.
 
     function(contacts) {
-        // Do something
+        // 무언가 한다.
     }
 
 Parameters
 ----------
 
-- __contacts:__ The contact array resulting from a find operation. (`Contact`)
+- __contacts:__ find 동작의 결과인 연락처 배열. (`Contact`)
 
 Example
 -------

@@ -57,7 +57,7 @@ _Note: Not all of the above contact fields are supported on every device platfor
 	// 새로운 연락처 객체를 생성한다.
     var contact = navigator.contacts.create();
 	contact.displayName = "Plumber";
-	contact.nickname = "Plumber"; 		//specify both to support all devices
+	contact.nickname = "Plumber"; 		//모든 기기를 지원하기 위해 양쪽 다 명시한다.
 	
 	// 특정 필드를 채운다.
 	var name = new ContactName();
@@ -112,7 +112,8 @@ _Note: Not all of the above contact fields are supported on every device platfor
 		    // 생성한다.
 		    var contact = navigator.contacts.create();
 			contact.displayName = "Plumber";
-			contact.nickname = "Plumber"; 		//specify both to support all devices
+			contact.nickname = "Plumber"; 		//모든 기기를 지원하기 위해 양쪽 다 명시한다.
+
 			var name = new ContactName();
 			name.givenName = "Jane";
 			name.familyName = "Doe";

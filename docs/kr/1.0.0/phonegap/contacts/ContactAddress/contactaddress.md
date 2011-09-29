@@ -1,23 +1,23 @@
 ContactAddress
 ==============
 
-Contains address properties for a `Contact` object.
+'Contact' 객체의 주소 속성을 담는다.
 
 Properties
 ----------
-- __pref:__ Set to `true` if this `ContactAddress` contains the user's preferred value. _(boolean)_
-- __type:__ A string that tells you what type of field this is (example: 'home'). _(DOMString)
-- __formatted:__ The full address formatted for display. _(DOMString)_
-- __streetAddress:__ The full street address. _(DOMString)_
-- __locality:__ The city or locality. _(DOMString)_
-- __region:__ The state or region. _(DOMString)_
-- __postalCode:__ The zip code or postal code. _(DOMString)_
-- __country:__ The country name. _(DOMString)_
+- __pref:__ 만약 'ContactAddress'가 사용자의 선호 값이 포함되어 있다면 'true'로 설정된다. _(boolean)_
+- __type:__ 이것이 어떤 타입의 필드인지 알려주는 문자열 (예제: 'home'). _(DOMString)
+- __formatted:__ 표시하기 위한 구성된 전체 주소. _(DOMString)_
+- __streetAddress:__ 전체 street 주소. _(DOMString)_
+- __locality:__ 도시나 주택지구. _(DOMString)_
+- __region:__ state나 region. _(DOMString)_
+- __postalCode:__ zip code나 postal code. _(DOMString)_
+- __country:__ 나라 이름. _(DOMString)_
 
 Details
 -------
 
-The `ContactAddress` object stores the properties of a single address of a contact.  A `Contact` object can have one or more addresses in a  `ContactAddress[]` array. 
+`ContactAddress` 객체는 연락처의 단일 주소 속성들을 저장한다. 'Conatact' 객체는 'ContactAddress[]' 배열안에 하나 이상의 주소를 가질 수 있다.
 
 지원하는 플랫폼
 -------------------
@@ -29,7 +29,7 @@ The `ContactAddress` object stores the properties of a single address of a conta
 빠른 예제
 -------------
 
-	// display the address information for all contacts
+	// 모든 contacts의 주소 정보를 표시한다.
     function onSuccess(contacts) {
 		for (var i=0; i<contacts.length; i++) {
 			for (var j=0; j<contacts[i].addresses.length; j++) {
@@ -49,7 +49,7 @@ The `ContactAddress` object stores the properties of a single address of a conta
         alert('onError!');
     };
 
-    // find all contacts
+    // 모든 연락처를 찾는다.
     var options = new ContactFindOptions();
 	options.filter=""; 
 	var filter = ["displayName","addresses"];
@@ -73,17 +73,17 @@ The `ContactAddress` object stores the properties of a single address of a conta
         // PhoneGap이 준비되면 호출된다
         //
         function onDeviceReady() {
-		    // find all contacts
+		    // 모든 연락처를 찾는다.
 		    var options = new ContactFindOptions();
 			options.filter=""; 
 			var filter = ["displayName","addresses"];
 		    navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
-        // onSuccess: Get a snapshot of the current contacts
+        // onSuccess: 현재 contacts의 정보를 얻는다.
         //
 		function onSuccess(contacts) {
-			// display the address information for all contacts
+			// 모든 contacts의 주소 정보를 표시한다.
 			for (var i=0; i<contacts.length; i++) {
 				for (var j=0; j<contacts[i].addresses.length; j++) {
 					alert("Pref: " + contacts[i].addresses[j].pref + "\n" +
@@ -98,7 +98,7 @@ The `ContactAddress` object stores the properties of a single address of a conta
 			}
 		};
     
-        // onError: Failed to get the contacts
+        // onError: contacts를 얻기 실패
         //
         function onError(contactError) {
             alert('onError!');
@@ -115,31 +115,31 @@ The `ContactAddress` object stores the properties of a single address of a conta
 Android 2.X Quirks
 ------------------
 
-- __pref:__ This property is not supported by Android 2.X devices and will always return `false`.
+- __pref:__ 이 속성은 Android 2.X 기기에서 지원되지 않고 항상 'false'를 반환한다.
 
 Android 1.X Quirks
 ------------------
 
-- __pref:__ This property is not supported by Android 1.X devices and will always return `false`.
-- __type:__ This property is not supported by Android 1.X devices and will always return `null`.
-- __streetAddress:__ This property is not support by Android 1.X devices, and will always return `null`.
-- __locality:__ This property is not support by Android 1.X devices, and will always return `null`.
-- __region:__ This property is not support by Android 1.X devices, and will always return `null`.
-- __postalCode:__ This property is not support by Android 1.X devices, and will always return `null`.
-- __country:__ This property is not support by Android 1.X devices, and will always return `null`.
+- __pref:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 'false'를 반환한다.
+- __type:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 'null'를 반환한다.
+- __streetAddress:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 'null'를 반환한다.
+- __locality:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 'null'를 반환한다.
+- __region:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 'null'를 반환한다.
+- __postalCode:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 'null'를 반환한다.
+- __country:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 'null'를 반환한다.
 
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
-- __pref:__ This property is not supported on Blackberry devices and will always return `false`.
-- __type:__ Partially supported.  Only one each of "Work" and "Home" type addresses can be stored per contact. 
-- __formatted:__ Partially supported.  Will return concatenation of all BlackBerry address fields.
-- __streetAddress:__ Supported.  Will return concatenation of BlackBerry __address1__ and __address2__ address fields. 
-- __locality:__ Supported.  Stored in BlackBerry __city__ address field.
-- __region:__ Supported.  Stored in BlackBerry __stateProvince__ address field.
-- __postalCode:__ Supported.  Stored in BlackBerry __zipPostal__ address field.
-- __country:__ Supported.
+- __pref:__ 이 속성은 Blackberry 기기에서 지원되지 않고 항상 'false'를 반환한다.
+- __type:__ 부분적으로 지원된다. 연락처당 각각 "Work"와 "Home" 타입의 주소만 저장된다. 
+- __formatted:__ 부분적으로 지원된다. 모든 BlackBerry 주소 필드의 연속을 반환한다.
+- __streetAddress:__ 지원된다. BlackBerry의 __address1__ 과 __address2__ 주소 필드의 연속을 반환한다.
+- __locality:__ 지원된다.  BlackBerry의 __city__ 주소 필드에 저장된 값.
+- __region:__ 지원된다.  BlackBerry의 __stateProvince__ 주소 필드에 저장된 값.
+- __postalCode:__ 지원된다.  BlackBerry의 __zipPostal__ 주소 필드에 저장된 값.
+- __country:__ 지원된다.
 
 iOS Quirks
 ----------
-- __pref:__ This property is not supported on iOS devices and will always return `false`.
-- __formatted:__ Not currently supported.
+- __pref:__ 이 속성은 iOS 기기에서 지원되지 않고 항상 'false'를 반환한다.
+- __formatted:__ 현재 지원되지 않는다.

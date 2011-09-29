@@ -1,12 +1,12 @@
 ContactError
 ========
 
-A `ContactError` object is returned to the `contactError` callback when an error occurs.
+`ContactError` 객체는 에러가 발생할 때 'contactError' 콜백에 반환된다.
 
 Properties
 ----------
 
-- __code:__ One of the predefined error codes listed below.
+- __code:__ 아래 나열된 미리 정의된 에러 코드 중에 하나.
 
 Constants
 ---------
@@ -22,5 +22,5 @@ Constants
 설명
 -----------
 
-The `ContactError` object is returned to the user through the `contactError` callback function when an error occurs.
+`ContactError` 객체는 에러가 발생했을 때 사용자의 'contactError' 콜백함수에 반환된다.
 

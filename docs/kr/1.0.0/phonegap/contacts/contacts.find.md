@@ -13,19 +13,13 @@ contacts.find 는 기기의 연락처 저장소를 쿼리하고 'Contact' 객체
 사용자는 __contactFields__ 변수안의 검색 식별자로 쓰이는 연락처 필드를 반드시 명시한다. __contactFields__ 인자에 명시된 필드만 __contactSuccess__ 콜백 함수로 전달되는 'Contact' 객체의 속성으로 반환된다. 길이가 없는 __contactFields__ 인자는 'id' 속성만 채워진 'Contact' 객체로 반환한다. ["*"]의 __contactFields__ 값은 모든 연락처 필드들을 반환한다.
 __contactFindOptions.filter__ 문자열은 연락처 저장소를 쿼리 할 때 검색 필터로 사용될 수 있다. 만약 이 문자열이 제공되어 지면, case-insensitive하고 부분적인 값 메치가 __contactFields__ 인자에 명기된 각 필드에 적용된다. 만약 매치가 명기된 필드와 비교하여 발견되면 연락처는 반환된다.
 
-Users must specify the contact fields to be used as a search qualifier in the __contactFields__ parameter.  
-Only the fields specified in the __contactFields__ parameter will be returned as properties of the `Contact` objects that are passed to the __contactSuccess__ callback function. 
- A zero-length __contactFields__ parameter will result in an array of `Contact` objects with only the `id` property populated. A __contactFields__ value of ["*"] will return all contact fields. 
-
-The __contactFindOptions.filter__ string can be used as a search filter when querying the contacts database.  If provided, a case-insensitive, partial value match is applied to each field specified in the __contactFields__ parameter.  If a match is found in a comparison with _any_ of the specified fields, the contact is returned.
-
 Parameters
 ----------
 
-- __contactFields:__ 검색 식별자로 사용되는 연락처 필드. 이 필드들은 반환되는 'Contact' 객체안의 변수들 만을 갖게 될 것이다. _(DOMString[])_ [Required]
-- __contactSuccess:__ 연락처 DB로부터 반환된 연락처와 함께 작동되는 성공 콜백 함수. [Required] 
-- __contactError:__ 실패 콜백 함수. 에러가 발생할 경우 호출된다. [Optional]
-- __contactFindOptions:__ 연락처를 걸러내기 위한 검색 옵션. [Optional]
+- __contactFields:__ 검색 식별자로 사용되는 연락처 필드. 이 필드들은 반환되는 'Contact' 객체안의 변수들 만을 갖게 될 것이다. _(DOMString[])_ [필수]
+- __contactSuccess:__ 연락처 DB로부터 반환된 연락처와 함께 작동되는 성공 콜백 함수. [필] 
+- __contactError:__ 실패 콜백 함수. 에러가 발생할 경우 호출된다. [선택]
+- __contactFindOptions:__ 연락처를 걸러내기 위한 검색 옵션. [선택]
 
 지원하는 플랫폼
 -------------------

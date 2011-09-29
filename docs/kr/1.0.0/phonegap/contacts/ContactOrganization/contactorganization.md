@@ -1,20 +1,20 @@
 ContactOrganization
 ===================
 
-Contains organization properties of a `Contact` object.
+'Contact' 객체의 조직 속성을 포함한다.
 
 Properties
 ----------
-- __pref:__ Set to `true` if this `ContactOrganization` contains the user's preferred value. _(boolean)_
-- __type:__ A string that tells you what type of field this is (example: 'home'). _(DOMString)
-- __name:__ The name of the organization. _(DOMString)_
-- __department:__ The department the contract works for. _(DOMString)_
-- __title:__ The contacts title at the organization. _(DOMString)_
+- __pref:__ 만약 'ContactOrganization' 이 사용자의 선호하는 변수를 포함할 경우 'true'로 설정한다. _(boolean)_
+- __type:__ 이것이 어떤 타입의 필드인지 알려주는 문자열 (example: 'home'). _(DOMString)
+- __name:__ 조직의 이름 _(DOMString)_
+- __department:__ 연락처가 일하는 부서. _(DOMString)_
+- __title:__ 조직에서 연락처의 직함. _(DOMString)_
 
 Details
 -------
 
-The `ContactOrganization` object stores a contact's organization properties.  A `Contact` object stores one or more `ContactOrganization` objects in an array. 
+`ContactOrganization` 객체는 연락처의 조직 속성을 저장한다. 'Contact' 객체는 하나 이상의 'ContactOrganization' 객체를 배열에 저장한다.
 
 지원하는 플랫폼
 -------------------
@@ -71,7 +71,7 @@ The `ContactOrganization` object stores a contact's organization properties.  A 
 			navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
-        // onSuccess: Get a snapshot of the current contacts
+        // onSuccess: 현재 contacts의 정보를 얻는다.
         //
 		function onSuccess(contacts) {
 			for (var i=0; i<contacts.length; i++) {
@@ -85,7 +85,7 @@ The `ContactOrganization` object stores a contact's organization properties.  A 
 			}
 		};
     
-        // onError: Failed to get the contacts
+        // onError: contacts를 얻기 실패
         //
         function onError(contactError) {
             alert('onError!');
@@ -103,29 +103,29 @@ The `ContactOrganization` object stores a contact's organization properties.  A 
 Android 2.X Quirks
 ------------------
 
-- __pref:__ This property is not supported by Android 2.X devices and will always return `false`.
+- __pref:__ 이 속성은 Android 2.X 기기에서 지원되지 않고 항상 'false'를 반환한다.
 
 Android 1.X Quirks
 ------------------
 
-- __pref:__ This property is not supported by Android 1.X devices and will always return `false`.
-- __type:__ This property is not supported by Android 1.X devices and will always return `null`.
-- __title:__ This property is not supported by Android 1.X devices, and will always be returned as `null`. 
+- __pref:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 'false'를 반환한다.
+- __type:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 'null'를 반환한다.
+- __title:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 'false'를 반환한다.
 
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
-- __pref:__ This property is not supported by Blackberry devices and will always return `false`.
-- __type:__ This property is not supported by Blackberry devices and will always return `null`.
-- __name:__ Partially supported.  The first organization name will be stored in the BlackBerry __company__ field.
-- __department:__ This property is not supported, and will always be returned as `null`.
-- __title:__ Partially supported.  The first organization title will be stored in the BlackBerry __jobTitle__ field.
+- __pref:__ 이 속성은 Blackberry 기기에서 지원되지 않고 항상 'false'를 반환한다.
+- __type:__ 이 속성은 Blackberry 기기에서 지원되지 않고 항상 'null'를 반환한다.
+- __name:__ 부분적으로 지원된다. 첫번째 조직이름은 BlackBerry의 __company__ 필드에 저장된다.
+- __department:__ 이 속서은 지원되지 않고, 항상 'null'을 반환한다.
+- __title:__ 부분적으로 지원된다. 첫번째 조직의 직합은 BlackBerry의 __jobTitle__ 필드에 저장된다.
 
 iOS Quirks
 -----------
-- __pref:__ This property is not supported on iOS devices and will always return `false`.
-- __type:__ This property is not supported on iOS devices and will always return `null`.
-- __name:__ Partially supported.  The first organization name will be stored in the iOS __kABPersonOrganizationProperty__ field.
-- __department__: Partially supported.  The first department name will be stored in the iOS __kABPersonDepartmentProperty__ field.
-- __title__: Partially supported.  The first title will be stored in the iOS __kABPersonJobTitleProperty__ field.
+- __pref:__ 이 속성은 iOS 기기에서 지원되지 않고 항상 'false'를 반환한다.
+- __type:__ 이 속성은 iOS 기기에서 지원되지 않고 항상 'null'를 반환한다.
+- __name:__ 부분적으로 지원된다. 첫번째 조직이름은 iOS의 __kABPersonOrganizationProperty__ 필드에 저장된다.
+- __department__: 부분적으로 지원된다. 첫번째 부서이름은 iOS의 __kABPersonDepartmentProperty__ 필드에 저장된다.
+- __title__: 부분적으로 지원된다. 첫번째 직함은 iOS의 __kABPersonJobTitleProperty__ 필드에 저장된다.
 
 

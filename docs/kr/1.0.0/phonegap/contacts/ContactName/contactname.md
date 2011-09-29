@@ -1,22 +1,22 @@
 ContactName
 ===========
 
-Contains name properties of a `Contact` object.
+'Contact' 객체의 이름 속성을 담는다.
 
 Properties
 ----------
 
-- __formatted:__ The complete name of the contact. _(DOMString)_
-- __familyName:__ The contacts family name. _(DOMString)_
-- __givenName:__ The contacts given name. _(DOMString)_
-- __middleName:__ The contacts middle name. _(DOMString)_
-- __honorificPrefix:__ The contacts prefix (example Mr. or Dr.) _(DOMString)_
-- __honorificSuffix:__ The contacts suffix (example Esq.). _(DOMString)_
+- __formatted:__ 연락처의 완변한 이름. _(DOMString)_
+- __familyName:__ 연락처의 family name. _(DOMString)_
+- __givenName:__ 연락처의 given name. _(DOMString)_
+- __middleName:__ 연락처의 iddle name. _(DOMString)_
+- __honorificPrefix:__ 연락처의 prefix (example Mr. or Dr.) _(DOMString)_
+- __honorificSuffix:__ 연락처의 suffix (example Esq.). _(DOMString)_
 
 Details
 -------
 
-The `ContactName` object stores name properties of a contact.
+`ContactName` 객체는 연락처의 이름 속성을 저장한다.
 
 지원하는 플랫폼
 -------------------
@@ -72,7 +72,7 @@ The `ContactName` object stores name properties of a contact.
 			navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
-        // onSuccess: Get a snapshot of the current contacts
+        // onSuccess: 현재 contacts의 정보를 얻는다
         //
 		function onSuccess(contacts) {
 			for (var i=0; i<contacts.length; i++) {
@@ -85,7 +85,7 @@ The `ContactName` object stores name properties of a contact.
 			}
 		};
     
-        // onError: Failed to get the contacts
+        // onError: contacts를 얻기 실패
         //
         function onError(contactError) {
             alert('onError!');
@@ -101,18 +101,18 @@ The `ContactName` object stores name properties of a contact.
 
 Android Quirks
 ------------
-- __formatted:__ Partially supported.  Will return the concatenation of honorificPrefix, givenName, middleName, familyName and honorificSuffix but will not store.
+- __formatted:__ 부분적으로 지원된다. 앞에 붙는 존칭, givenName, middleName, familyName 그리고 뒤에 붙는 존칭의 연속을 반환한다. 하지만 저장되지는 않는다. 
 
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 ---------------------------------------------
 
-- __formatted:__ Partially supported.  Will return concatenation of BlackBerry __firstName__ and __lastName__ fields.
-- __familyName:__ Supported.  Stored in BlackBerry __lastName__ field.
-- __givenName:__ Supported.  Stored in BlackBerry __firstName__ field.
-- __middleName:__ This property is not supported, and will always return `null`.
-- __honorificPrefix:__ This property is not supported, and will always return `null`.
-- __honorificSuffix:__ This property is not supported, and will always return `null`.
+- __formatted:__ 부분적으로 지원된다. BlackBerry의 __firstName__ 과 __lastName__ 필드의 연속을 반환한다.
+- __familyName:__ 지원된다. BlackBerry에 저장된 __lastName__ 필드.
+- __givenName:__ 지원된다. BlackBerry에 저장된 __firstName__ 필드.
+- __middleName:__ 이 속성은 지원되지 않고, 항상 'null'을 반환한다.
+- __honorificPrefix:__ 이 속성은 지원되지 않고, 항상 'null'을 반환한다.
+- __honorificSuffix:__ 이 속성은 지원되지 않고, 항상 'null'을 반환한다.
 
 iOS Quirks
 ------------
-- __formatted:__ Partially supported.  Will return iOS Composite Name but will not store.
+- __formatted:__ 부분적으로 지원되나. iOS의 Composite Name을 반환하지만 저장하지 않는다.

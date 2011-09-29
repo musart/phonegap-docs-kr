@@ -1,13 +1,13 @@
 ContactFindOptions
 ==================
 
-Contains properties that can be used to filter the results of a `contacts.find` operation.
+'contacts.find' 동작의 결과를 거르기위해 사용되는 속성을 포함한다.
 
 Properties
 ----------
 
-- __filter:__ The search string used to find contacts. _(DOMString)_ (Default: "")
-- __multiple:__ Determines if the find operation should return multiple contacts. _(Boolean)_ (Default: false)
+- __filter:__ 연락처를 검색하기 위해 상용하는 문자열. _(DOMString)_ (기본값: "")
+- __multiple:__ 만약 find 동작이 여러개의 연락처를 반환하면 설정된다. _(Boolean)_ (기본값: false)
 
 
 지원하는 플랫폼
@@ -20,25 +20,25 @@ Properties
 빠른 예제
 -------------
 
-	// success callback
+	// 성공 콜백
     function onSuccess(contacts) {
 		for (var i=0; i<contacts.length; i++) {
 			alert(contacts[i].displayName);
 		}
     };
 
-	// error callback
+	// 실패 콜백
     function onError(contactError) {
         alert('onError!');
     };
 
-	// specify contact search criteria
+	// 명시된 연락처 기준
     var options = new ContactFindOptions();
 	options.filter="";			// empty search string returns all contacts
 	options.multiple=true;		// return multiple results
 	filter = ["displayName"];	// return contact.displayName field
 	
-	// find contacts
+	// 연락처를 찾는다.
     navigator.contacts.find(filter, onSuccess, onError, options);
 
 전체 예제
@@ -59,17 +59,17 @@ Properties
         // PhoneGap이 준비되면 호출된다
         //
         function onDeviceReady() {
-			// specify contact search criteria
+			// 명시된 연락처 기준
 		    var options = new ContactFindOptions();
 			options.filter="";			// empty search string returns all contacts
 			options.multiple=true;		// return multiple results
 			filter = ["displayName"];	// return contact.displayName field
 
-			// find contacts
+			// 연락처를 찾는다.
 		    navigator.contacts.find(filter, onSuccess, onError, options);
         }
     
-        // onSuccess: Get a snapshot of the current contacts
+        // onSuccess: 현재 contacts의 정보를 얻는다.
         //
 		function onSuccess(contacts) {
 			for (var i=0; i<contacts.length; i++) {
@@ -77,7 +77,7 @@ Properties
 			}
 		};
     
-        // onError: Failed to get the contacts
+        // onError: contacts를 얻기 실패
         //
         function onError(contactError) {
             alert('onError!');
