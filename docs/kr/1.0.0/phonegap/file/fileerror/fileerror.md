@@ -1,12 +1,12 @@
 FileError
 ========
 
-A 'FileError' object is set when an error occurs in any of the File API methods. 
+File API 함수들 중에 에러가 발생했을 경우 'FileError' 객체는 설정된다. 
 
 Properties
 ----------
 
-- __code:__ One of the predefined error codes listed below.
+- __code:__ 아래 열거된 미리 정의된 에러 코드 중 하나.
 
 Constants
 ---------
@@ -27,4 +27,4 @@ Constants
 설명
 -----------
 
-The `FileError` object is the only parameter of any of the File API's error callbacks.  Developers must read the code property to determine the type of error.
+'FileError' 객체는 File API의 에러 콜백들의 유일한 인자이다. 개발자는 에러의 종류를 결정하기 위해 반드시 코드 속성을 읽어야 한다.

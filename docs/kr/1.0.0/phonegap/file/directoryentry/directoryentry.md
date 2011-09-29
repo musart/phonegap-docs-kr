@@ -1,36 +1,37 @@
-DirectoryEntry
+rirectoryEntry
 ==============
 
-This object represents a directory on a file system.  It is defined in the [W3C Directories and Systems](http://www.w3.org/TR/file-system-api/) specification.
+이 객체는 파일 시스템의 디렉토리를 대표한다. [W3C Directories and Systems](http://www.w3.org/TR/file-system-api/) 스펙에 정의되어 있다.
 
 Properties
 ----------
 
-- __isFile:__ Always false. _(boolean)_
-- __isDirectory:__ Always true. _(boolean)_
-- __name:__ The name of the DirectoryEntry, excluding the path leading to it. _(DOMString)_
-- __fullPath:__ The full absolute path from the root to the DirectoryEntry. _(DOMString)_
+- __isFile:__ 항상 false. _(boolean)_
+- __isDirectory:__ 항상 true. _(boolean)_
+- __name:__ DirectoryEntry의 이름, excluding the path leading to it. _(DOMString)_
+- __fullPath:__ root로부터 DirectoryEntry까지 전체 절대 경로. _(DOMString)_
 
-NOTE: The following attributes are defined by the W3C specification, but are __not supported__ by PhoneGap:
+NOTE: 다음의 속성들은 W3C 표준에 정의되어 있지만 PhoneGap은 지원하지 __not supported__ 않는다:
 
-- __filesystem:__ The file system on which the DirectoryEntry resides. _(FileSystem)_ 
+- __filesystem:__ DirectoryEntry에 있는 파일 시스템
+The file system on which the DirectoryEntry resides. _(FileSystem)_ 
 
 Methods
 -------
 
-The following methods can be invoked on a DirectoryEntry object:
+다음의 함수들은 DirectoryEntry 객체에서 호출 가능하다.
 
-- __getMetadata__: Look up metadata about a directory. 
-- __moveTo__: Move a directory to a different location on the file system.
-- __copyTo__: Copy a directory to a different location on the file system.
-- __toURI__: Return a URI that can be used to locate a directory.
-- __remove__: Delete a directory.  The directory must be empty.
-- __getParent__: Look up the parent directory.
-- __createReader__: Create a new DirectoryReader that can read entries from a directory.
-- __getDirectory__: Create or look up a directory.
-- __getFile__: Create or look up a file.
-- __removeRecursively__: Delete a directory and all of its contents.
-
+- __getMetadata__: 디렉토리에 대해 메타데이터를 찾아본다.
+- __moveTo__: 디렉토리를 파일 시스템 상의 다른 위치로 이동한다.
+- __copyTo__: 디렉토리를 파일 시스템 상의 다른 위치로 복사한다.
+- __toURI__: 디렉토리를 위치하기위해 사용되는 URI를 반환한다.
+Return a URI that can be used to locate a directory.
+- __remove__: 디렉토리를 지운다. 디렉토리는 비어있어야 한다.
+- __getParent__: 부모 디렉토리를 찾아본다.
+- __createReader__: 디렉토리로부터 엔트리들을 읽을 수 있는 새로운 DirectoryReader를 생성한다.
+- __getDirectory__: 디렉토리를 생성하거나 찾아본다.
+- __getFile__: 파일을 생성하거나 찾아본다.
+- __removeRecursively__: 디렉토리와 그 안의 모든 컨텐츠를 제거한다.
 
 지원하는 플랫폼
 -------------------
@@ -42,12 +43,12 @@ The following methods can be invoked on a DirectoryEntry object:
 getMetadata
 -----------
 
-Look up metadata about a directory.
+디렉토리에 대한 메타데이터를 찾아본다.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with a Metadata object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileError object. _(Function)_
+- __successCallback__ - 메타데이터 객체와 함께 호출되는 콜백. _(Function)_
+- __errorCallback__ - 메타데이터를 검색하다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 호출된다. _(Function)_
 
 
 __빠른 예제__
@@ -60,28 +61,33 @@ __빠른 예제__
         alert(error.code);
     }
 
-    // Request the metadata object for this entry
+    // 이 엔트리의 메타데이터 객체를 요청한다.
     entry.getMetadata(success, fail);	
 
 
 moveTo
 ------
 
-Move a directory to a different location on the file system. It is an error to attempt to:
+디렉토리를 파일 시스템의 다른 위치에 이동한다. 다음을 수행하면 에러이다:
 
-- move a directory inside itself or to any child at any depth;
-- move a directory into its parent if a name different from its current one is not provided;
-- move a directory to a path occupied by a file;
-- move a directory to a path occupied by a directory which is not empty.
+- 디렉토리를 자신 안으로 또는 자식으로 이동한다.
+ move a directory inside itself or to any child at any depth;
+- 디렉토리를 자신의 부모로 이동한다.
+move a directory into its parent if a name different from its current one is not provided;
+- 파일 경로로 디렉토리를 이동한다. 
+move a directory to a path occupied by a file;
+- 비어있지 않은 디렉토리 경로로 디렉토리를 이동한다.
+move a directory to a path occupied by a directory which is not empty.
 
+추가적으로, 디렉토리를 기존의 빈 디렉토리의 최상위로 이동하기 위한 시도는 반드시 그 디렉토리를 지우고 교체한다.
 In addition, an attempt to move a directory on top of an existing empty directory must attempt to delete and replace that directory.
 
 __Parameters:__
 
-- __parent__ - The parent directory to which to move the directory. _(DirectoryEntry)_
-- __newName__ - The new name of the directory. Defaults to the current name if unspecified. _(DOMString)_
-- __successCallback__ - A callback that is called with the DirectoryEntry object of the new directory. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to move the directory.  Invoked with a FileError object. _(Function)_
+- __parent__ - 디렉토리를 이동하기 위한 부모 디렉토리. _(DirectoryEntry)_
+- __newName__ - 디렉토리의 새 이름. 만약 명시되어 있지 않으면 현재이름이 기본값이다. _(DOMString)_
+- __successCallback__ - 새 디렉토리의 DirectoryEntry 객체와 함께 호출되는 콜백. _(Function)_
+- __errorCallback__ - 디렉토리를 이동하다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 발생한다. _(Function)_
 
 
 __빠른 예제__
@@ -99,26 +105,27 @@ __빠른 예제__
             newName = document.getElementById('newName').value,
             parentEntry = new DirectoryEntry({fullPath: parent});
 
-        // move the directory to a new directory and rename it
+        // 디렉토리를 새 디렉토리로 이동하고 이름을 변경한다.
         entry.moveTo(parentEntry, newName, success, fail);
     }
 
 copyTo
 ------
 
-Copy a directory to a different location on the file system. It is an error to attempt to:
+디렉토리를 파일시스템의 다른 위치에 복사한다. 다음을 수행하면 에러이다:
 
-- copy a directory inside itself at any depth;
-- copy a directory into its parent if a name different from its current one is not provided. 
+- 자기 자신안의 위치에 디렉토리를 복사한다:
+- 만약 이름이 ?? 디렉토리를 자신의 부모로 복사한다.
+copy a directory into its parent if a name different from its current one is not provided. 
 
-Directory copies are always recursive - that is, they copy all contents of the directory.
+디렉토리 복사는 항상 재귀적이다 - 즉, 디렉토리의 모든 컨텐츠를 복사한다.
 
 __Parameters:__
 
-- __parent__ - The parent directory to which to copy the directory. _(DirectoryEntry)_
-- __newName__ - The new name of the directory. Defaults to the current name if unspecified. _(DOMString)_
-- __successCallback__ - A callback that is called with the DirectoryEntry object of the new directory. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to copy the underlying directory.  Invoked with a FileError object. _(Function)_
+- __parent__ - 디렉토리를 복사하기 위한 부모 디렉토리. _(DirectoryEntry)_
+- __newName__ - 디렉토리의 새 이름. 만약 명시되어 있지 않으면 현재 이름을 기본값으로 사용한다. _(DOMString)_
+- __successCallback__ - 새 디렉토리의 DirectoryEntry 객체와 함께 호출되는 콜백. _(Function)_
+- __errorCallback__ - 밑에 있는 디렉토리를 복사하다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 발생한다. _(Function)_
 
 
 __빠른 예제__
@@ -136,7 +143,7 @@ __빠른 예제__
             newName = document.getElementById('newName').value,
             parentEntry = new DirectoryEntry({fullPath: parent});
 
-        // copy the directory to a new directory and rename it
+        // 디렉토리를 새 디렉토리로 복사하고 이름을 바꾼다.
         entry.copyTo(parentEntry, newName, success, fail);
     }
 
@@ -144,11 +151,11 @@ __빠른 예제__
 toURI
 -----
 
-Returns a URI that can be used to locate the directory. 
+디렉토리의 정확한 위치를 찾기 위해 사용되는 URI를 반환한다.
 
 __빠른 예제__
 	
-    // Get the URI for this directory
+    // 이 디렉토리의 URI를 얻는다.
     var uri = entry.toURI();
     console.log(uri);
 
@@ -156,15 +163,15 @@ __빠른 예제__
 remove
 ------
 
-Deletes a directory. It is an error to attempt to:
+디렉토리를 제거한다. 다음을 수행하면 에러이다:
 
-- delete a directory that is not empty;
-- delete the root directory of a filesystem.
+- 비어있지 않은 디렉토리를 제거한다:
+- 파일시스템의 root 디렉토리를 제거한다.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called after the directory has been deleted.  Invoked with no parameters. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to delete the directory.  Invoked with a FileError object. _(Function)_
+- __successCallback__ - 디렉토리가 지위지고난 뒤 호출되는 콜백. 아무 인자 없이 호출된다. _(Function)_
+- __errorCallback__ - 디렉토리를 제거하다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 발생한다. _(Function)_
 
 __빠른 예제__
 	
@@ -176,19 +183,19 @@ __빠른 예제__
         alert('Error removing directory: ' + error.code);
     }
 
-    // remove this directory
+    // 이 디렉토리를 제거한다.
     entry.remove(success, fail);
 
 
 getParent
 ---------
 
-Look up the parent DirectoryEntry containing the directory. 
+디렉토리가 들어있는 부모 DirectoryEntry를 검색한다.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with the directory's parent DirectoryEntry. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to retrieve the parent DirectoryEntry.  Invoked with a FileError object. _(Function)_
+- __successCallback__ - 디렉토리의 부모 DirectoryEntry와 함께 호출되는 콜백. _(Function)_
+- __errorCallback__ - 부모 DirectoryEntry를 검색하다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 발생한다. _(Function)_
 
 __빠른 예제__
 	
@@ -200,25 +207,25 @@ __빠른 예제__
         alert('Failed to get parent directory: ' + error.code);
     }
 	
-	// Get the parent DirectoryEntry
+	// 부모 DirectoryEntry를 얻는다.
 	entry.getParent(success, fail);	
 
 
 createReader
 ------------
 
-Creates a new DirectoryReader to read entries in a directory.
+디렉토리에서 엔트리들을 읽기 위해 새로운 DirectoryReader를 생성한다.
 
 __빠른 예제__
 	
-    // create a directory reader
+    // 디렉토리 reader를 생성한다.
     var directoryReader = entry.createReader();	
 
 
 getDirectory
 ------------
 
-Creates or looks up an existing directory.  It is an error to attempt to:
+기존의 디렉토리를 생성하거나 검색한다. 다음을 수행하면 에러이다:
 
 - create a directory whose immediate parent does not yet exist.
 
@@ -227,7 +234,7 @@ __Parameters:__
 - __path__ - The path to the directory to be looked up or created.  Either an absolute path, or a relative path from this DirectoryEntry. _(DOMString)_
 - __options__ - Options to specify whether the directory is created if it doesn't exist.  _(Flags)_
 - __successCallback__ - A callback that is invoked with a DirectoryEntry object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs creating or looking up the directory.  Invoked with a FileError object. _(Function)_
+- __errorCallback__ - 디렉토리를 생성하거나 찾다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 발생한다. _(Function)_
 
 __빠른 예제__
 	
@@ -239,23 +246,23 @@ __빠른 예제__
         alert("Unable to create new directory: " + error.code);
     }
 
-    // Retrieve an existing directory, or create it if it does not already exist
+    // 기존의 디렉토리를 검색하거나, 존재하지 않는다면 생성한다.
     entry.getDirectory("newDir", {create: true, exclusive: false}, success, fail);	
 
 
 getFile
 -------
 
-Creates or looks up a file.  It is an error to attempt to:
+파일을 생성하거나 검색한다. 다음을 시도하면 에러이다:
 
-- create a file whose immediate parent does not yet exist.
+- 직속 부모가 아직 없는 파일을 생성한다.
 
 __Parameters:__
 
 - __path__ - The path to the file to be looked up or created.  Either an absolute path, or a relative path from this DirectoryEntry. _(DOMString)_
 - __options__ - Options to specify whether the file is created if it doesn't exist.  _(Flags)_
-- __successCallback__ - A callback that is invoked with a FileEntry object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs creating or looking up the file.  Invoked with a FileError object. _(Function)_
+- __successCallback__ - FileEntry 객체와 함께 발생되는 콜백. _(Function)_
+- __errorCallback__ - 파일을 생성하거나 찾다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 발생한다. _(Function)_
 
 __빠른 예제__
 	
@@ -267,23 +274,21 @@ __빠른 예제__
         alert("Failed to retrieve file: " + error.code);
     }
 
-    // Retrieve an existing file, or create it if it does not exist
+    // 파일을 검색하거나, 존재하지 않으면 생성한다.
     entry.getFile("newFile.txt", {create: true, exclusive: false}, success, fail);	
 
 
 removeRecursively
 -----------------
 
-Deletes a directory and all of its contents.  In the event of an error (e.g. trying to delete 
-a directory that contains a file that cannot be removed), some of the contents of the directory may 
-be deleted.   It is an error to attempt to:
+디렉토리와 그 안의 모든 컨텐츠를 제거한다. 에러 이벤트 가운데 (e.g. 지워질 수 없는 파일을 포함한 디렉토리를 지위기 위해 시도하는), 일부 디렉토리의 컨텐츠들은 아마 지워질 것이다. 다음을 수행하면 에러이다:
 
-- delete the root directory of a filesystem.
+- 파일 시스템의 root 디레토리를 제거한다.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called after the DirectoryEntry has been deleted.  Invoked with no parameters. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to delete the DirectoryEntry.  Invoked with a FileError object. _(Function)_
+- __successCallback__ - DirectoryEntry가 지워진 뒤 호출되는 콜백
+- __errorCallback__ - DirectoryEntry를 지울때 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 호출된다. _(Function)_
 
 __빠른 예제__
 	
@@ -295,5 +300,5 @@ __빠른 예제__
         alert("Failed to remove directory or it's contents: " + error.code);
     }
 
-    // remove the directory and all it's contents
+    // 디렉토리와 그 안의 모든 컨텐츠를 제거한다.
     entry.removeRecursively(success, fail);	

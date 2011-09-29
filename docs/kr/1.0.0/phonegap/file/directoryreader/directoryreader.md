@@ -1,13 +1,12 @@
 DirectoryReader
 ===============
 
-An object that lists files and directories in a directory.  Defined in the [Directories and Systems](http://www.w3.org/TR/file-system-api/) specification.
+디렉토리내에 파일과 디렉토리들을 열거하는 객체이다. [Directories and Systems](http://www.w3.org/TR/file-system-api/) 표준에 정의되어 있다.
 
 Methods
 -------
 
-- __readEntries__: Read the entries in a directory. 
-
+- __readEntries__: 디렉토리안에 엔트리들을 읽는다.
 
 지원하는 플랫폼
 -------------------
@@ -19,12 +18,12 @@ Methods
 readEntries
 -----------
 
-Read the entries in this directory.
+디렉토리안에 엔트리들을 읽는다.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is passed an array of FileEntry and DirectoryEntry objects. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs retrieving the directory listing. Invoked with a FileError object. _(Function)_
+- __successCallback__ - FileEntry와 DirectoryEntry 객체들의 배열을 전달하는 콜백. _(Function)_
+- __errorCallback__ - 만약 디렉토리를 열거하다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 발생한다. _(Function)_
 
 __빠른 예제__
 	
@@ -39,8 +38,8 @@ __빠른 예제__
         alert("Failed to list directory contents: " + error.code);
     }
 
-    // Get a directory reader
+    // directory reader 를 얻는다.
     var directoryReader = dirEntry.createReader();
 
-    // Get a list of all the entries in the directory
+    // 디렉토리 안에 모든 엔트리들의 리스트를 얻는다.
     directoryReader.readEntries(success,fail);

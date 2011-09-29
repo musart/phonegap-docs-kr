@@ -56,7 +56,7 @@ Details
         <title>Contact Example</title>
 
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-        <script type="text/javascript" charset="utf-8">
+
 
         // PhoneGap이 로드되기를 기다린다
         //
@@ -116,9 +116,9 @@ BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
 - __pref:__ 이 속성은 Blackberry 기기에서 지원되지 않고 항상 'false'를 반환한다.
 - __type:__ 이 속성은 Blackberry 기기에서 지원되지 않고 항상 'null'를 반환한다.
-- __name:__ 부분적으로 지원된다. 첫번째 조직이름은 BlackBerry의 __company__ 필드에 저장된다.
+- __name:__ 부분적으로 지원된다. 첫번째 조직이름은 BlackBerry의 __company__ 필드에 저장된 값.
 - __department:__ 이 속서은 지원되지 않고, 항상 'null'을 반환한다.
-- __title:__ 부분적으로 지원된다. 첫번째 조직의 직합은 BlackBerry의 __jobTitle__ 필드에 저장된다.
+- __title:__ 부분적으로 지원된다. 첫번째 조직의 직합은 BlackBerry의 __jobTitle__ 필드에 저장된 값.
 
 iOS Quirks
 -----------

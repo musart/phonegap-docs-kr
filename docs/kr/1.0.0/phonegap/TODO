@@ -2,11 +2,11 @@
 +camera
 +compass
 +connection
--contacts
++contacts
 +device
 +events
 -file
 +geolocation
 -media
 +notification
--storage
++storage
