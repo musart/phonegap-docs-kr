@@ -1,19 +1,19 @@
 CaptureAudioOptions
 ===================
 
-> Encapsulates audio capture configuration options.
+> 오디오 캡처 설정 옵션을 요악한다.
 
 Properties
 ----------
 
-- __limit:__ The maximum number of audio clips the device user can record in a single capture operation.  The value must be greater than or equal to 1 (defaults to 1).
-- __duration:__ The maximum duration of an audio sound clip, in seconds.
-- __mode:__ The selected audio mode.  The value must match one of the elements in `capture.supportedAudioModes`.
+- __limit:__ 기기 사용자가 한번의 capture 동작에 녹음할 수 있는 오디오 클립의 최대 갯수. 이 값은 1 이상이어야 한다.(기본값은 1이다.)
+- __duration:__ 초 단위의 오디오 사운드 클립의 최대 시간.
+- __mode:__ 선택된 오디오 모드. 이 값은 'capture.supportedAudioModes'안에 요소 중 하나와 일치해야 한다.
 
 빠른 예제
 -------------
 
-    // limit capture operation to 3 media files, no longer than 10 seconds each
+    // capture 동작을 3개의 미디어 파일로 각각은 10초로 제한한다.
     var options = { limit: 3, duration: 10 };
 
     navigator.device.capture.captureAudio(captureSuccess, captureError, options);
@@ -21,17 +21,17 @@ Properties
 Android Quirks
 --------------
 
-- The __duration__ parameter is not supported.  Recording lengths cannot be limited programmatically.
-- The __mode__ parameter is not supported.  The audio recording format cannot be altered programmatically.  Recordings are encoded using Adaptive Multi-Rate (AMR) format (audio/amr).
+- __duration__ 인자는 지원되지 않는다. 녹음 길이는 프로그래밍으로 제한할 수 없다.
+- __mode__ 인자는 지원되지 않는다. 오디오 녹음 포멧은 프로그래밍으로 바뀌지 않는다. 녹음은 AMR(Adaptive Multi-Rate) 포멧으로 인코딩된다. (audio/amr).
 
 BlackBerry WebWorks Quirks
 --------------------------
 
-- The __duration__ parameter is not supported.  Recording lengths cannot be limited programmatically.
-- The __mode__ parameter is not supported.  The audio recording format cannot be altered programmatically.  Recordings are encoded using Adaptive Multi-Rate (AMR) format (audio/amr).
+- __duration__ 인자는 지원되지 않는다. 녹음 길이는 프로그래밍으로 제한할 수 없다.
+- __mode__ 인자는 지원되지 않는다. 오디오 녹음 포멧은 프로그래밍으로 바뀌지 않는다. 녹음은 AMR(Adaptive Multi-Rate) 포멧으로 인코딩된다. (audio/amr).
 
 iOS Quirks
 ----------
 
-- The __limit__ parameter is not supported. One recording can be created for each invocation.
-- The __mode__ parameter is not supported.  The audio recording format cannot be altered programmatically.  Recordings are encoded using Waveform Audio (WAV) format (audio/wav).
+- __limit__ 인자는 지원되지 않는다. 하나의 녹음은 각 호출에 의해 실행된다.
+- __mode__ 인자는 지원되지 않는다. 오디오 녹음 포멧은 프로그래밍으로 바뀌지 않는다. 녹음은 WAV(Waveform Audio) 포멧으로 인코딩된다. (audio/wav).

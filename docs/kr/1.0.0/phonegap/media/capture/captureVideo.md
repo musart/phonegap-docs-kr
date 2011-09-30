@@ -1,7 +1,7 @@
 capture.captureVideo
 ====================
 
-> Start the video recorder application and return information about captured video clip file(s).
+> 비디오 녹화 어플리케이션을 시작하고, 기록된 비디오 클립 파일(들)의 정보를 반환한다.
 
     navigator.device.capture.captureVideo( 
 	    CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureVideoOptions options]
@@ -10,11 +10,11 @@ capture.captureVideo
 설명
 -----------
 
-This method starts an asynchronous operation to capture video recordings using the device video recording application.  The operation allows the device user to capture multiple recordings in a single session.
+이 함수는 기기의 비디오 녹화 어플리케이션을 사용하여 비디오 녹화를 하기 위한 비동기 동작을 시작한다. 이 동작은 기기 사용자에게 하나의 세션에서 다중 녹화를 기록하도록 제공한다.
 
-The capture operation ends when either the user exits the video recording application, or the maximum number of recordings, specified by the __limit__ parameter in CaptureVideoOptions, has been reached.  If no value is provided for the __limit__ parameter, a default value of one (1) is used, and the capture operation will terminate after the user records a single video clip.
+사용자가 비디오 녹화 어플리케이션을 나가거나 CaptureVideoOptions의 __limit__ 인자에 의해 정의된 녹화의 최대 개수에 도달하면 기록이 끝난다. 만약 __limit__ 인자에 아무런 값도 제공되지 않는다면, 1이 기본값으로 사용되고, capture 동작은 사용자가 하나의 비디오 클립이 녹화된 후 종료될 것이다.
 
-When the capture operation is finished, it will invoke the CaptureCB callback with an array of MediaFile objects describing each captured video clip file.  If the operation is terminated by the user before an video clip is captured, the CaptureErrorCB callback will be invoked with a CaptureError object with the CaptureError.`CAPTURE_NO_MEDIA_FILES` error code.
+capture 동작이 끝났을 때, 각각의 기록된 비디오 클립 파일들을 설명하는 MediaFile 객체 배열을 담은 CaptureCB 콜백을 호출한다. 만약 동작이 비디오 클립이 기록되기 전에 사용자에 의해 종료되면, CaptureErrorCB 콜백은 CaptureError 객체를 담아 호출된다. 'CAPTURE_NO_MEDIA_FILES' 에러 코드이다.
 
 지원하는 플랫폼
 -------------------
@@ -26,21 +26,21 @@ When the capture operation is finished, it will invoke the CaptureCB callback wi
 빠른 예제
 -------------
 
-    // capture callback
+    // capture 콜백
     var captureSuccess = function(mediaFiles) {
         var i, path, len;
         for (i = 0, len = mediaFiles.length; i < len; i += 1) {
             path = mediaFiles[i].fullPath;
-            // do something interesting with the file
+            // 파일 관련된 무언가를 한다.
         }
     };
 
-    // capture error callback
+    // capture error 콜백
     var captureError = function(error) {
         navigator.notification.alert('Error code: ' + error.code, null, 'Capture Error');
     };
 
-    // start video capture
+    // 비디오 캡쳐를 시작한다.
     navigator.device.capture.captureVideo(captureSuccess, captureError, {limit:2});
 
 전체 예제
@@ -55,7 +55,7 @@ When the capture operation is finished, it will invoke the CaptureCB callback wi
         <script type="text/javascript" charset="utf-8" src="json2.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // Called when capture operation is finished
+        // 캡쳐 동작이 완료되면 호출된다.
         //
         function captureSuccess(mediaFiles) {
             var i, len;
@@ -64,22 +64,22 @@ When the capture operation is finished, it will invoke the CaptureCB callback wi
             }	    
         }
 
-        // Called if something bad happens.
+        // 만약 무언가 나쁜일이 발생되면 호출된다.
         // 
         function captureError(error) {
 	        var msg = 'An error occurred during capture: ' + error.code;
             navigator.notification.alert(msg, null, 'Uh oh!');
         }
 
-        // A button will call this function
+        // 버튼은 이 함수를 호출할 것이다.
         //
         function captureVideo() {
-            // Launch device video recording application, 
-            // allowing user to capture up to 2 video clips
+            // 기기의 비디오 녹화 어플리케이션을 실행한다.
+            // 사용자에게 2개의 비디오 클립을 기록하도록 한다.
             navigator.device.capture.captureVideo(captureSuccess, captureError, {limit: 2});
         }
 
-        // Upload files to server
+        // 파일을 서버에 업로드 한다.
         function uploadFile(mediaFile) {
             var ft = new FileTransfer(),
                 path = mediaFile.fullPath,

@@ -1,7 +1,7 @@
 Capture
 =======
 
-> Provides access to the audio, image, and video capture capabilities of the device.
+> 기기의 오디오, 이미지, 비디오 캡처 기능으로의 접근을 제공한다.
 
 Objects
 -------
@@ -27,24 +27,24 @@ Methods
 Scope
 -----
 
-The __capture__ object is assigned to the __navigator.device__ object, and therefore has global scope.
+__capture__ 객체는 __navigator.device__ 객체에 의해 할당되고, 따라서 전역 범뷔이다.
 
-    // The global capture object
+    // 전역 capture 객체
     var capture = navigator.device.capture;
 
 Properties
 ----------
 
-- __supportedAudioModes:__ The audio recording formats supported by the device. (ConfigurationData[])
-- __supportedImageModes:__ The recording image sizes and formats supported by the device. (ConfigurationData[])
-- __supportedVideoModes:__ The recording video resolutions and formats supported by the device. (ConfigurationData[])
+- __supportedAudioModes:__ 기기에 의해 지원되는 포멧으로 기록되는 오디오. (ConfigurationData[])
+- __supportedImageModes:__ 기록된 이미지 크기와 기기에 의해 지원되는 포멧. (ConfigurationData[])
+- __supportedVideoModes:__ 기록된 비디오 해상도와 기기에 의해 지원되는 포멧. (ConfigurationData[])
 
 Methods
 -------
 
-- capture.captureAudio: Launch the device audio recording application for recording audio clip(s).
-- capture.captureImage: Launch the device camera application for taking image(s).
-- capture.captureVideo: Launch the device video recorder application for recording video(s).
+- capture.captureAudio: 오디오 클립(들)을 기록하기 위해 기기의 오디오 녹음 어플리케이션을 구동한다.
+- capture.captureImage: 이미지(들)을 얻기 위해 기기의 카메라 어플리케이션을 구동한다.
+- capture.captureVideo: 비디오(들)을 녹음하기 위해 기기의 비디오 레코더를 구동한다.
 
 
 지원하는 플랫폼
