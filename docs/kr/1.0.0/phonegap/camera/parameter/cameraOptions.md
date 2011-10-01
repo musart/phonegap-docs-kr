@@ -31,7 +31,7 @@ Options
             SAVEDPHOTOALBUM : 2
         };
 
-- __allowEdit:__ 선택하기 전에 이미지의 간단한 수정을 허락한다. (`Boolean`)
+- __allowEdit:__ 선택하기 전에 이미지의 간단한 수정을 가능하게 한다. (`Boolean`)
   
 - __EncodingType:__ 반환되는 이미지 파일의 인코딩 타입을 선택한다.  navigator.camera.EncodingType에 정의되어 있다. (`Number`)
         

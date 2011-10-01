@@ -17,7 +17,7 @@ Methods
 Details
 -----------
 
-localStorage 는 W3C Storage 인터페이스를 제공한다. 키-벨류 쌍의 데이터를 저정하는 것을 허락한다.
+localStorage 는 W3C Storage 인터페이스를 제공한다. 키-벨류 쌍의 데이터를 저정하는 것을 가능하게 한다.
 
 지원하는 플랫폼
 -------------------

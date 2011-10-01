@@ -10,4 +10,4 @@ cameraError
 Parameters
 ----------
 
-- __message:__ The message is provided by the device's native code. (`String`)
+- __message:__ 기기의 네이티브 코드에 의해 제공되는 메세지. (`String`)

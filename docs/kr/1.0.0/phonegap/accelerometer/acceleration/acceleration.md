@@ -1,7 +1,7 @@
 Acceleration
 ============
 
-특정 시간에 얻어진 가속도 값을 담고 있다. Contains `Accelerometer` data captured at a specific point in time.
+특정 시간에 얻어진 'Accelerometer' 값을 담고 있다.
 
 Properties
 ----------

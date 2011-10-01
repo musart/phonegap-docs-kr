@@ -5,8 +5,12 @@
 +contacts
 +device
 +events
--file
++file
 +geolocation
--media
++media
 +notification
 +storage
+
+-----------------------------
+contacts/Contact/contact.md
+storage/sqlresultsetlist/sqlresultsetlist.md

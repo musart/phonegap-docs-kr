@@ -12,19 +12,18 @@ camera.getPicture
 
 만약 `Camera.sourceType = Camera.PictureSourceType.PHOTOLIBRARY`이나 `Camera.PictureSourceType.SAVEDPHOTOALBUM`이면, 사진 선택 다이얼로그가 나타나고, 앨범내에 사진을 선택할 수 있다.
 
-결과 값은 당신이 정한 'cameraOptions'에 따른 다음 포멧중에 하나에서 `cameraSuccess`함수로 보내질 것이다. 
-The return value will be sent to the `cameraSuccess` function, in one of the following formats, depending on the `cameraOptions` you specify:
+당신이 정한 'cameraOptions'에 따라, 결과값은 다음 중 하나가 `cameraSuccess` 함수로 보내질 것이다. 
 
-- - A `String` containing the Base64 encoded photo image (default). 
-- A `String` representing the image file location on local storage.  
+- Base64로 암호화된 사진 이미지를 담은 'String'(기본값).
+- LocalStorage에 이미지 파일을 나타내는 'String'.
 
-You can do whatever you want with the encoded image or URI, for example:
+당신이 원하는 암호화된 이미지나 URI로 어떤 것도 할 수 있다, 예를 들면:
 
-- Render the image in an `<img>` tag _(see example below)_
-- Save the data locally (`LocalStorage`, [Lawnchair](http://brianleroux.github.com/lawnchair/), etc)
-- Post the data to a remote server
+- '<img>' 태그 안에서 이미지를 그린다. _(아래 예제 참조)_
+- 데이터를 저장한다. ('LocalStorage', [Lawnchair](http://brianleroux.github.com/lawnchair/), 등)
+- 데이터를 원격 서버에 게시한다.
 
-Note: The image quality of pictures taken using the camera on newer devices is quite good.  _Encoding such images using Base64 has caused memory issues on some of these devices (iPhone 4, BlackBerry Torch 9800)._  Therefore, using FILE_URI as the 'Camera.destinationType' is highly recommended.
+Note: 최신 기기의 카메라를 사용하여 찍힌 사진의 이미지 품질은 아주 좋다. _이러한 이미지들을 Base64를 사용하여 임호화하면 일부 기기(iPhone 4, BlackBerry Torch 9800)에서 메모리 이슈를 야기한다. 따라서, 'Camera.destinationType'으로 FILE_URI 사용을 강력하게 권한다.
 
 지원하는 플랫폼
 -------------------
@@ -78,44 +77,44 @@ Take photo and retrieve image file location:
         var pictureSource;   // picture source
         var destinationType; // sets the format of returned value 
         
-        // Wait for PhoneGap to connect with the device
+        // 기기와 연결하기 위해 PhoneGap을 기다린다.
         //
         document.addEventListener("deviceready",onDeviceReady,false);
     
-        // PhoneGap이 준비되면 호출된다 to be used!
+        // PhoneGap이 준비되면 호출된다.
         //
         function onDeviceReady() {
             pictureSource=navigator.camera.PictureSourceType;
             destinationType=navigator.camera.DestinationType;
         }
 
-        // Called when a photo is successfully retrieved
+        // 사진 데이터가 성공적으로 얻어지면 호출된다.
         //
         function onPhotoDataSuccess(imageData) {
-          // Uncomment to view the base64 encoded image data
+          // base64로 암호화된 이미지를 보려면 주석해제
           // console.log(imageData);
       
-          // Get image handle
+          // image handle을 얻는다.
           //
           var smallImage = document.getElementById('smallImage');
       
-          // Unhide image elements
+          // Unhide image elements 
           //
           smallImage.style.display = 'block';
       
-          // Show the captured photo
-          // The inline CSS rules are used to resize the image
+          // 캡처된 사진을 보여준다.
+          // 이 inline CSS rules 은 이미지 크기를 변경하는데 사용된다.`
           //
           smallImage.src = "data:image/jpeg;base64," + imageData;
         }
 
-        // Called when a photo is successfully retrieved
+        // 사진이 성공적으로 얻어지면 호출된다.
         //
         function onPhotoURISuccess(imageURI) {
-          // Uncomment to view the image file URI 
+          // 파일 URI를 보려면 주석해제
           // console.log(imageURI);
       
-          // Get image handle
+          // image handle을 얻는다.
           //
           var largeImage = document.getElementById('largeImage');
       
@@ -123,36 +122,36 @@ Take photo and retrieve image file location:
           //
           largeImage.style.display = 'block';
       
-          // Show the captured photo
-          // The inline CSS rules are used to resize the image
+          // 캡처된 사진을 보여준다.
+          // 이 inline CSS rules 은 이미지 크기를 변경하는데 사용된다.`
           //
           largeImage.src = imageURI;
         }
 
-        // A button will call this function
+        // 버튼은 이 함수를 호출한다.
         //
         function capturePhoto() {
-          // Take picture using device camera and retrieve image as base64-encoded string
+          // 기기의 카메라를 이용하여 사진을 찍고, base64로 암호화된 문자열의 이미지를 얻는다.
           navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50 });
         }
 
-        // A button will call this function
+        // 버튼은 이 함수를 호출한다.
         //
         function capturePhotoEdit() {
-          // Take picture using device camera, allow edit, and retrieve image as base64-encoded string  
+          // 기기의 카메라를 이용하여 사진을 찍고, 수정을 하고, base64로 암호화된 문자열의 이미지를 얻는다.
           navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true }); 
         }
     
-        // A button will call this function
+        // 버튼은 이 함수를 호출한다.
         //
         function getPhoto(source) {
-          // Retrieve image file location from specified source
+          // 지정된 위치의 이미지 파일 경로를 얻는다.
           navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50, 
             destinationType: destinationType.FILE_URI,
             sourceType: source });
         }
 
-        // Called if something bad happens.
+        // 무언가 잘못되면 호출된다.
         // 
         function onFail(message) {
           alert('Failed because: ' + message);

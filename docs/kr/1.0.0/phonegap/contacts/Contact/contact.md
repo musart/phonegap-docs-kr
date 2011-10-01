@@ -10,16 +10,16 @@ Properties
 - __displayName:__ 최종사용자에게 표시되기 적합한 이 연락처의 이름. _(DOMString)_
 - __name:__ 사람 이름의 모든 컴포넌트를 포함하는 객체. _(ContactName)_
 - __nickname:__ A casual name to address the contact by. _(DOMString)_
-- __phoneNumbers:__ An array of all the contact's phone numbers. _(ContactField[])_
-- __emails:__ An array of all the contact's email addresses. _(ContactField[])_
-- __addresses:__ An array of all the contact's addresses. _(ContactAddresses[])_
-- __ims:__ An array of all the contact's IM addresses. _(ContactField[])_
-- __organizations:__ An array of all the contact's organizations. _(ContactOrganization[])_
-- __birthday:__ The birthday of the contact. _(Date)_
-- __note:__ A note about the contact. _(DOMString)_
-- __photos:__ An array of the contact's photos. _(ContactField[])_
-- __categories:__  An array of all the contacts user defined categories. _(ContactField[])_
-- __urls:__  An array of web pages associated to the contact. _(ContactField[])_
+- __phoneNumbers:__ 연락처의 모든 전화번호 배열. _(ContactField[])_
+- __emails:__ 연락처의 모든 이메일 주소의 배열. _(ContactField[])_
+- __addresses:__ 연락처의 모든 주소의 배열. _(ContactAddresses[])_
+- __ims:__ 연락처의 모든 IM 주소의 배열. _(ContactField[])_
+- __organizations:__ 연락처의 모든 조직의 배열. _(ContactOrganization[])_
+- __birthday:__ 연락처의 생일. _(Date)_
+- __note:__ 연락처에 대한 메모. _(DOMString)_
+- __photos:__ 연락처의 사진 배열. _(ContactField[])_
+- __categories:__  연락처의 사용자 정의된 모든 범주의 배열. _(ContactField[])_
+- __urls:__  연락처와 관련된 웹 페이지의 배열. _(ContactField[])_
 
 Methods
 -------

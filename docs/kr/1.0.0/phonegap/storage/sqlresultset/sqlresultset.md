@@ -8,7 +8,7 @@ Properties
 
 - __insertId__: SQLResultSet 객체의 SQL 구문이 database에 삽입하는 열의 row ID.
 - __rowAffected__: SQL 구문에 의해 변경된 열들(rows)의 개수. 만약 구문이 어떤 열들(rows)에도 영향을 주지 않았다면 0으로 설정된다.
-- __rows__: SQLResultSetRowList는 반환된 열들(rows)을 대표한다. 만약 아무 열(row)도 반환되지 않는다면 이 객체는 비어있을 것이다.
+- __rows__: SQLResultSetRowList는 반환된 열들(rows)을 나타낸다. 만약 아무 열(row)도 반환되지 않는다면 이 객체는 비어있을 것이다.
 
 Details
 -------

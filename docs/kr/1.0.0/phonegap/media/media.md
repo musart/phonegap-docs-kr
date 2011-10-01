@@ -6,7 +6,7 @@ Media
     var media = new Media(src, mediaSuccess, [mediaError], [mediaStatus]);
 
 
-Note: 현재 구현은 media capture관련 W3C 표준과 맞지 않고, 편의를 위해서만 제공된다. 미래의 구현은 최신 W3C 스펙에 맞을 것이고 현재 API들은 제거될 것이다.
+Note: 현재 구현은 media capture관련 W3C 표준과 맞지 않고, 편의를 위해서만 제공된다. 앞으로 구현은 최신 W3C 표준에 맞을 것이고 현재 API들은 제거될 것이다.
 
 Parameters
 ----------
