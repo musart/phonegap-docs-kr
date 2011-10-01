@@ -1,56 +1,54 @@
 SQLResultSetList
 =======
 
-SQL 가나다라마바사아자차카타바파
-나냐너녀노뇨누뉴느니
+SQL 쿼리로부터 반환된 rows를 포함하는 SQLResultSet의 속성 중 하나.
+ One of the properties of the SQLResultSet containing the rows returned from a SQL query.
 
 Properties
 -------
 
-- __length__: SQL ��� �� ���� ��� ��
+- __length__: SQL 쿼리로부터 반환된 rows의 개수
 
 Methods
 -------
 
-- __item__: ������ ��� �� ���� ��� ���� �� ����.
+- __item__: 자바스크립트 객체에 의해 표현된 특정 인텍스에 있는 row를 반환한다.
 
 Details
 -------
 
-SQLResultSetList � SQL select ������ ��� ���� ����. � ��� ��� �� ��� select ��� �� ������ ���� length ��� ����. ���� �� �� �� ��� ���� ��� 'item' ��� ��� ���. item ��� database� ��� �� ��� ������ ��� ����.
+The SQLResultSetList contains the data returned from a SQL select statement.  The object contains a length property letting you know how many rows the select statement has been returned.  To get a row of data you would call the `item` method specifing an index.  The item method returns a JavaScript Object who's properties are the columns of the database the select statement was executed against.
 
-contains the data returned from a SQL select statement.  The object contains a length property letting you know how many rows the select statement has been returned.  To get a row of data you would call the `item` method specifing an index.  The item method returns a JavaScript Object who's properties are the columns of the database the select statement was executed against.
-
-���� ���
+Supported Platforms
 -------------------
 
 - Android
 - BlackBerry WebWorks (OS 6.0 and higher)
 - iPhone
 
-Execute SQL �� ��
+Execute SQL Quick Example
 ------------------
 
-	function queryDB(tx) {
-		tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
-	}
+        function queryDB(tx) {
+                tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
+        }
 
-	function querySuccess(tx, results) {
-		var len = results.rows.length;
-	���	console.log("DEMO table: " + len + " rows found.");
-	���	for (var i=0; i<len; i++){
-	����	console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
-		}
-	}
-	
-	function errorCB(err) {
-		alert("Error processing SQL: "+err.code);
-	}
-	
-	var db = window.openDatabase("Database", "1.0", "PhoneGap Demo", 200000);
-	db.transaction(queryDB, errorCB);
+        function querySuccess(tx, results) {
+                var len = results.rows.length;
+                console.log("DEMO table: " + len + " rows found.");
+                for (var i=0; i<len; i++){
+                console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
+                }
+        }
 
-�� ��
+        function errorCB(err) {
+                alert("Error processing SQL: "+err.code);
+        }
+
+        var db = window.openDatabase("Database", "1.0", "PhoneGap Demo", 200000);
+        db.transaction(queryDB, errorCB);
+
+Full Example
 ------------
 
     <!DOCTYPE html>
@@ -61,55 +59,55 @@ Execute SQL �� ��
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // PhoneGap� ����� ����.
+        // Wait for PhoneGap to load
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-		// database� ���. 
-		//
-		function populateDB(tx) {
-			tx.executeSql('DROP TABLE IF EXISTS DEMO');
-			tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
-			tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
-			tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
-		}
+                // Populate the database
+                //
+                function populateDB(tx) {
+                        tx.executeSql('DROP TABLE IF EXISTS DEMO');
+                        tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
+                        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
+                        tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
+                }
 
-		// database� ����.
-		//
-		function queryDB(tx) {
-			tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
-		}
+                // Query the database
+                //
+                function queryDB(tx) {
+                        tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
+                }
 
-		// Query the success callback
-		//
-		function querySuccess(tx, results) {
-			var len = results.rows.length;
-			console.log("DEMO table: " + len + " rows found.");
-			for (var i=0; i<len; i++){
-				console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
-			}
-		}
+                // Query the success callback
+                //
+                function querySuccess(tx, results) {
+                        var len = results.rows.length;
+                        console.log("DEMO table: " + len + " rows found.");
+                        for (var i=0; i<len; i++){
+                                console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
+                        }
+                }
 
-		// error callback ��
-		//
-		function errorCB(err) {
-			console.log("Error processing SQL: "+err.code);
-		}
+                // Transaction error callback
+                //
+                function errorCB(err) {
+                        console.log("Error processing SQL: "+err.code);
+                }
 
-		// success callback ��
-		//
-		function successCB() {
-			var db = window.openDatabase("Database", "1.0", "PhoneGap Demo", 200000);
-			db.transaction(queryDB, errorCB);
-		}
+                // Transaction success callback
+                //
+                function successCB() {
+                        var db = window.openDatabase("Database", "1.0", "PhoneGap Demo", 200000);
+                        db.transaction(queryDB, errorCB);
+                }
 
-		// PhoneGap� ����.
-		//
-		function onDeviceReady() {
-			var db = window.openDatabase("Database", "1.0", "PhoneGap Demo", 200000);
-			db.transaction(populateDB, errorCB, successCB);
-		}
-	
+                // PhoneGap is ready
+                //
+                function onDeviceReady() {
+                        var db = window.openDatabase("Database", "1.0", "PhoneGap Demo", 200000);
+                        db.transaction(populateDB, errorCB, successCB);
+                }
+
         </script>
       </head>
       <body>
