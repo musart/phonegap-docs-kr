@@ -107,4 +107,4 @@ capture 동작이 끝났을 때, 각각의 기록된 비디오 클립 파일들�
 BlackBerry WebWorks Quirks
 --------------------------
 
-- PhoneGap for BlackBerry WebWorks attempts to launch the __Video Recorder__ application, provided by RIM, to capture the video recordings.  The developer will receive a CaptureError.`CAPTURE_NOT_SUPPORTED` error code if the application is not installed on the device.
+- PhoneGap for BlackBerry WebWorks는 비디오 녹화를 위해 RIM에서 제공한 __Video Recorder__ 어플리케이션을 실행하기를 시도한다. 어플리케이션이 디바이스에 설치되어 있지 않으면 개발자는 'CAPTURE_NOT_SUPPORTED'라는 에러코드의 CaptureError를 받는다.

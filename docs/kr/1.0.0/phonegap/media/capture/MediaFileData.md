@@ -1,43 +1,43 @@
 MediaFileData
 =============
 
-> Encapsulates format information about a media file.
+> 미디어 파일의 포멧 정보를 요약한다.
 
 Properties
 ----------
 
-- __codecs:__ The actual format of the audio and video content. (DOMString)
-- __bitrate:__ The average bitrate of the content.  In case of an image, this attribute has value 0. (Number)
-- __height:__ The height of the image or video in pixels. In the case of a sound clip, this attribute has value 0. (Number)
-- __width:__ The width of the image or video in pixels. In the case of a sound clip, this attribute has value 0. (Number)
-- __duration:__ The length of the video or sound clip in seconds. In the case of an image, this attribute has value 0. (Number)
+- __codecs:__ 오디오와 비디오의 실제 포멧. (DOMString)
+- __bitrate:__ 컨텐츠의 평균 bitrate. 이미지의 경우 이 속성은 0이다. (Number)
+- __height:__ 이미지나 비디오의 픽셀단위의 높이. 오디오 클립의 경우 이 속성은 0이다. (Number)
+- __width:__ 이미지나 비디오의 픽셀단위의 넓이. 오디오 클립의 경우 이 속성은 0이다. (Number)
+- __duration:__ 비디오나 사운드 클립의 초단위의 길이. 이미지의 경우 이 속성은 0이다. (Number)
 
 BlackBerry WebWorks Quirks
 --------------------------
-There is no API that provides format information of media files.  So the MediaFileData object returned by the MediaFile.getFormatData function will have the following default values:
+미디어 파일의 포멧 정보를 제공하는 API가 없다. 따라서 MediaFile.getFormatData 함수에 의해 반환되는 MediaFileData 객체는 다음의 기본값을 갖는다.
 
-- __codecs:__ Not supported. The attribute will always be null.
-- __bitrate:__ Not supported.  The attribute will always be 0.
-- __height:__ Not supported.  The attribute will always be 0.
-- __width:__ Not supported.  The attribute will always be 0.
-- __duration:__ Not supported.  The attribute will always be 0.
+- __codecs:__ 지원되지 않는다. 이 속성은 항상 null이다.
+- __bitrate:__ 지원되지 않는다. 이 속성은 항상 0이다.
+- __height:__ 지원되지 않는다. 이 속성은 항상 0이다.
+- __width:__ 지원되지 않는다. 이 속성은 항상 0이다.
+- __duration:__ 지원되지 않는다. 이 속성은 항상 0이다.
 
 Android Quirks
 --------------
-Support for the MediaFileData properties is as follows:
+MediaFileData 속성을 다음과 같이 지원한다:
 
-- __codecs:__ Not supported.  The attribute will always be null.
-- __bitrate:__ Not supported.  The attribute will always be 0.
-- __height:__ Supported.  (Image and video files only).  
-- __width:__ Supported.  (Image and video files only). 
-- __duration:__ Supported.  (Audio and video files only).
+- __codecs:__ 지원되지 않는다. 이 속성은 항상 null이다.
+- __bitrate:__ 지원되지 않는다. 이 속성은 항상 0이다.
+- __height:__ 지원된다.  (이미지와 비디오 파일만).  
+- __width:__ 지원된다.  (이미지와 비디오 파일만). 
+- __duration:__ 지원된다.  (오디오와 비디오 파일만).
 
 iOS Quirks
 ----------
-Support for the MediaFileData properties is as follows:
+MediaFileData 속성을 다음과 같이 지원한다:
 
-- __codecs:__ Not supported.  The attribute will always be null.
-- __bitrate:__ Supported on iOS4 devices for audio only. The attribute will always be 0 for image and video.
-- __height:__ Supported.  (Image and video files only).  
-- __width:__ Supported.  (Image and video files only). 
-- __duration:__ Supported.  (Audio and video files only).
+- __codecs:__ 지원되지 않는다. 이 속성은 항상 null이다.
+- __bitrate:__ iOS4 기기에서 오디오만 지원된다. 이 속성은 이미지와 비디오에서 항상 0이다.
+- __height:__ 지원된다.  (이미지와 비디오 파일만).  
+- __width:__ 지원된다.  (이미지와 비디오 파일만). 
+- __duration:__ 지원된다.  (오디오와 비디오 파일만).

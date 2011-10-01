@@ -1,17 +1,16 @@
 CaptureCB
 =========
 
-> Invoked upon a successful media capture operation.
+> 성공적인 media capture 동작을 기반으로 발생된다.
 
     function captureSuccess( MediaFile[] mediaFiles ) { ... };
 
 설명
 -----------
 
-이 함수는 성공적으로 캡쳐 동작이 완료된 후에 호출된다. 이것은 media 파일이 캡쳐되었다는 의미이고, 사용자는 media 캡처 어플리케이션을 종료하거나 캡쳐 제한에 다다를 수 있다.
-This function is invoked after a successful capture operation has completed.  This means a media file has been captured, and either the user has exited the media capture application, or the capture limit has been reached.
+이 함수는 성공적으로 capture 동작이 완료된 후에 호출된다. 이것은 media 파일이 캡쳐되었다는 의미이고, 사용자가 media 캡처 어플리케이션을 종료했거나 캡쳐 제한에 도달했을 경우이다.
 
-Each MediaFile object describes a captured media file.  
+각각의 MediaFile 객체는 캡쳐된 미디어 파일을 설명한다.
 
 빠른 예제
 -------------

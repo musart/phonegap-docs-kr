@@ -1,7 +1,7 @@
 MediaFile.getFormatData
 =======================
 
-> Retrieves format information about the media capture file.
+> 미디어 캡쳐 파일에 대한 포멧 정보를 검색한다.
 
     mediaFile.getFormatData( 
         MediaFileDataSuccessCB successCallback, 
@@ -11,7 +11,8 @@ MediaFile.getFormatData
 설명
 -----------
 
-This function asynchronously attempts to retrieve the format information for the media file.  If successful, it invokes the MediaFileDataSuccessCB callback with a MediaFileData object.  If the attempt fails, this function will invoke the MediaFileDataErrorCB callback.
+이 함수는 비동기적으로 미디어 파일의 포멧 정보를 검색하기를 시도한다. 만약 성공일 경우 MediaFileData 객체와 함께 MeidaFileDataSuccessCB 콜백을 발생한다. 만약 시도가 실패하면, 이 함수는 MediaFileDataErrorCB 콜백을 발생한다.
+
 
 지원하는 플랫폼
 -------------------
@@ -22,12 +23,12 @@ This function asynchronously attempts to retrieve the format information for the
 
 BlackBerry WebWorks Quirks
 --------------------------
-There is no API that provides format information of media files.  Therefore, all MediaFileData objects will be returned with default values.  See MediaFileData documentation.
+미디어 파일의 포멧정보를 제공하는 API가 없다. 따라서, 모든 MediaFileData 객체는 기본값들을 반환한다. MediaFileData 문서를 보라.
 
 Android Quirks
 --------------
-The API for retrieving media file format information is limited.  Therefore, not all MediaFileData properties are supported.  See MediaFileData documentation.
+미디어 파일 포멧 정보를 검색하는 API는 제한된다. 따라서, 모든 MediaFileData 속성은 다 지원하지 않는다. MediaFileData 문서를 보라.
 
 iOS Quirks
 ----------
-The API for retrieving media file format information is limited.  Therefore, not all MediaFileData properties are supported.  See MediaFileData documentation.
+미디어 파일 포멧 정보를 검색하는 API는 제한된다. 따라서, 모든 MediaFileData 속성을 다 지원하지 않는다. MediaFileData 문서를 보라.

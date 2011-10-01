@@ -1,18 +1,18 @@
 MediaFile
 =========
 
-> Encapsulates properties of a media capture file.
+> 미디어 캡쳐 파일의 속성을 요약한다.
 
 Properties
 ----------
 
-- __name:__ The name of the file, without path information. (DOMString)
-- __fullPath:__ The full path of the file, including the name. (DOMString)
-- __type:__ The mime type (DOMString)
-- __lastModifiedDate:__ The date and time that the file was last modified. (Date)
-- __size:__ The size of the file, in bytes. (Number)
+- __name:__ 경로 정보 없는 파일의 이름. (DOMString)
+- __fullPath:__ 파일 이름을 포함한 전체 경로. (DOMString)
+- __type:__ mime 타입 (DOMString)
+- __lastModifiedDate:__ 파일이 마지막에 수정된 날짜와 시간. (Date)
+- __size:__ 바이트 단위의 파일 크기. (Number)
 
 Methods
 -------
 
-- __MediaFile.getFormatData:__ Retrieves the format information of the media file.
+- __MediaFile.getFormatData:__ 는 미디어 파일의 포멧정보를 검색한다.
