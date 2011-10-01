@@ -1,33 +1,33 @@
 SQLResultSetList
 =======
 
-SQL ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿ ¿¿¿ ¿¿¿ ¿¿¿¿ SQLResultSet¿ ¿¿ ¿ ¿¿.
+SQL ê°€ë‚˜ë‹¤ë¼ë§ˆë°”ì‚¬ì•„ìì°¨ì¹´íƒ€ë°”íŒŒ
 
 Properties
 -------
 
-- __length__: SQL ¿¿¿ ¿¿ ¿¿¿¿ ¿¿¿ ¿¿
+- __length__: SQL ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½
 
 Methods
 -------
 
-- __item__: ¿¿¿¿¿¿ ¿¿¿ ¿¿ ¿¿¿¿ ¿¿¿ ¿¿¿¿ ¿¿ ¿¿¿¿.
+- __item__: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 
 Details
 -------
 
-SQLResultSetList ¿ SQL select ¿¿¿¿¿¿ ¿¿¿ ¿¿¿¿ ¿¿¿¿. ¿ ¿¿¿ ¿¿¿ ¿¿ ¿¿¿ select ¿¿¿ ¿¿ ¿¿¿¿¿¿ ¿¿¿¿ length ¿¿¿ ¿¿¿¿. ¿¿¿¿ ¿¿ ¿¿ ¿¿ ¿¿¿ ¿¿¿¿ ¿¿¿ 'item' ¿¿¿ ¿¿¿ ¿¿¿. item ¿¿¿ database¿ ¿¿¿ ¿¿ ¿¿¿ ¿¿¿¿¿¿ ¿¿¿ ¿¿¿¿.
+SQLResultSetList ï¿½ SQL select ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ select ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ length ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ 'item' ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½. item ï¿½ï¿½ï¿½ databaseï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 
 contains the data returned from a SQL select statement.  The object contains a length property letting you know how many rows the select statement has been returned.  To get a row of data you would call the `item` method specifing an index.  The item method returns a JavaScript Object who's properties are the columns of the database the select statement was executed against.
 
-¿¿¿¿ ¿¿¿
+ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 -------------------
 
 - Android
 - BlackBerry WebWorks (OS 6.0 and higher)
 - iPhone
 
-Execute SQL ¿¿ ¿¿
+Execute SQL ï¿½ï¿½ ï¿½ï¿½
 ------------------
 
 	function queryDB(tx) {
@@ -36,9 +36,9 @@ Execute SQL ¿¿ ¿¿
 
 	function querySuccess(tx, results) {
 		var len = results.rows.length;
-	   	console.log("DEMO table: " + len + " rows found.");
-	   	for (var i=0; i<len; i++){
-	    	console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
+	ï¿½ï¿½ï¿½	console.log("DEMO table: " + len + " rows found.");
+	ï¿½ï¿½ï¿½	for (var i=0; i<len; i++){
+	ï¿½ï¿½ï¿½ï¿½	console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
 		}
 	}
 	
@@ -49,7 +49,7 @@ Execute SQL ¿¿ ¿¿
 	var db = window.openDatabase("Database", "1.0", "PhoneGap Demo", 200000);
 	db.transaction(queryDB, errorCB);
 
-¿¿ ¿¿
+ï¿½ï¿½ ï¿½ï¿½
 ------------
 
     <!DOCTYPE html>
@@ -60,11 +60,11 @@ Execute SQL ¿¿ ¿¿
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
 
-        // PhoneGap¿ ¿¿¿¿¿ ¿¿¿¿.
+        // PhoneGapï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-		// database¿ ¿¿¿. 
+		// databaseï¿½ ï¿½ï¿½ï¿½. 
 		//
 		function populateDB(tx) {
 			tx.executeSql('DROP TABLE IF EXISTS DEMO');
@@ -73,7 +73,7 @@ Execute SQL ¿¿ ¿¿
 			tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
 		}
 
-		// database¿ ¿¿¿¿.
+		// databaseï¿½ ï¿½ï¿½ï¿½ï¿½.
 		//
 		function queryDB(tx) {
 			tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
@@ -89,20 +89,20 @@ Execute SQL ¿¿ ¿¿
 			}
 		}
 
-		// error callback ¿¿
+		// error callback ï¿½ï¿½
 		//
 		function errorCB(err) {
 			console.log("Error processing SQL: "+err.code);
 		}
 
-		// success callback ¿¿
+		// success callback ï¿½ï¿½
 		//
 		function successCB() {
 			var db = window.openDatabase("Database", "1.0", "PhoneGap Demo", 200000);
 			db.transaction(queryDB, errorCB);
 		}
 
-		// PhoneGap¿ ¿¿¿¿.
+		// PhoneGapï¿½ ï¿½ï¿½ï¿½ï¿½.
 		//
 		function onDeviceReady() {
 			var db = window.openDatabase("Database", "1.0", "PhoneGap Demo", 200000);
