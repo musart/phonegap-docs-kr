@@ -69,7 +69,7 @@ Change Version 빠른 예제
 			db.transaction(populateDB, errorCB, successCB);
         }
 		
-		// database를 채운 다
+		// database를 채운다
 		//
 		function populateDB(tx) {
 			 tx.executeSql('DROP TABLE IF EXISTS DEMO');
