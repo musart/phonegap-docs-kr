@@ -14,7 +14,7 @@ Parameters
 설명
 -----------
 
-Function `media.seekTo` is an asynchronous function that updates the current position of the underlying audio file of a Media object. Also updates the ___position__ parameter within the Media object. 
+`media.seekTo` 함수는 Media 객체의 원 오디오 파일의 현재 위치를 갱신하는 동기 함수이다.
 
 지원하는 플랫폼
 -------------------

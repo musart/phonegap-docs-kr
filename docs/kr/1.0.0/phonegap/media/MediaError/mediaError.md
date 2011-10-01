@@ -1,13 +1,13 @@
 MediaError
 ==========
 
-A `MediaError` object is returned to the `mediaError` callback function when an error occurs.
+`MediaError` 객체는 에러가 발생했을 때 'mediaError' 콜백 함수를 반환한다.
 
 Properties
 ----------
 
-- __code:__ One of the predefined error codes listed below.
-- __message:__ Error message describing the details of the error.
+- __code:__ 아래 나열된 미리 정의된 에러 코드 중 하나.
+- __message:__ 에러의 상세 설명을 묘사한 에러 메세지.
 
 Constants
 ---------
@@ -21,5 +21,5 @@ Constants
 설명
 -----------
 
-The `MediaError` object is returned to the user through the `mediaError` callback function when an error occurs.
+`MediaError` 객체는 에러가 발생했을 때 사용자에게 'mediaError' 콜백 함수를 통해 반환한다.
 

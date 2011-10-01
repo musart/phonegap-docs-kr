@@ -1,7 +1,7 @@
 media.stopRecord
 ================
 
-Stops recording an audio file.
+오디오 파일을 녹음하는 것을 멈춘다.
 
     media.stopRecord();
 
@@ -9,7 +9,7 @@ Stops recording an audio file.
 설명
 -----------
 
-Function `media.stopRecord` is a synchronous function that stops recording an audio file.
+`media.stopRecord` 함수는 오디오 파일을 녹음하는 것을 멈추는 동기함수이다.
 
 지원하는 플랫폼
 -------------------
@@ -20,25 +20,25 @@ Function `media.stopRecord` is a synchronous function that stops recording an au
 빠른 예제
 -------------
 
-    // Record audio
+    // 오디오를 녹음한다.
     // 
     function recordAudio() {
         var src = "myrecording.mp3";
         var mediaRec = new Media(src,
-            // success callback
+            // 성공 콜백
             function() {
                 console.log("recordAudio():Audio Success");
             },
             
-            // error callback
+            // 에러 콜백
             function(err) {
                 console.log("recordAudio():Audio Error: "+ err.code);
             });
 
-        // Record audio
+        // 오디오를 녹음한다.
         mediaRec.startRecord();
 
-        // Stop recording after 10 seconds
+        // 10초 뒤에 녹음을 멈춘다.
         setTimeout(function() {
             mediaRec.stopRecord();
         }, 10000);
@@ -60,16 +60,16 @@ Function `media.stopRecord` is a synchronous function that stops recording an au
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Record audio
+        // 오디오를 녹음한다.
         // 
         function recordAudio() {
             var src = "myrecording.mp3";
             var mediaRec = new Media(src, onSuccess, onError);
 
-            // Record audio
+            // 오디오를 녹음한다.
             mediaRec.startRecord();
 
-            // Stop recording after 10 sec
+            // 10초 뒤에 녹음을 멈춘다.
             var recTime = 0;
             var recInterval = setInterval(function() {
                 recTime = recTime + 1;
@@ -87,20 +87,20 @@ Function `media.stopRecord` is a synchronous function that stops recording an au
             recordAudio();
         }
     
-        // onSuccess Callback
+        // onSuccess 콜백
         //
         function onSuccess() {
             console.log("recordAudio():Audio Success");
         }
     
-        // onError Callback 
+        // onError 콜백
         //
         function onError(error) {
             alert('code: '    + error.code    + '\n' + 
                   'message: ' + error.message + '\n');
         }
 
-        // Set audio position
+        // 오디오 위치를 설정한다.
         // 
         function setAudioPosition(position) {
             document.getElementById('audio_position').innerHTML = position;

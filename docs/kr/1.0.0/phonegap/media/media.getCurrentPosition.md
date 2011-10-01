@@ -1,20 +1,20 @@
 media.getCurrentPosition
 ========================
 
-Returns the current position within an audio file.
+오디오 파일의 현재 위치를 얻는다.
 
     media.getCurrentPosition(mediaSuccess, [mediaError]);
 
 Parameters
 ----------
 
-- __mediaSuccess__: The callback that is called with the current position in seconds.
-- __mediaError__: (Optional) The callback that is called if there was an error.
+- __mediaSuccess__: 초 단위의 현재 위치가 호출되는 콜백.
+- __mediaError__: (선택적인 인자) 에러가 있으면 호출되는 콜백.
 
 설명
 -----------
 
-Function `media.getCurrentPosition` is an asynchronous function that returns the current position of the underlying audio file of a Media object. Also updates the ___position__ parameter within the Media object. 
+`media.getCurrentPosition` 함수는 Media 객체의 실제 오디오 파일의 현재 위치를 반환하는 비동기 함수이다. 또한 Media 객체의 __position__ 인자를 갱신한다.
 
 지원하는 플랫폼
 -------------------
@@ -29,17 +29,17 @@ Function `media.getCurrentPosition` is an asynchronous function that returns the
         //
         var my_media = new Media(src, onSuccess, onError);
 
-        // Update media position every second
+        // 매 초마다 media 위치를 갱신한다.
         var mediaTimer = setInterval(function() {
-            // get media position
+            // media 위치를 얻는다.
             my_media.getCurrentPosition(
-                // success callback
+                // 성공 콜백
                 function(position) {
                     if (position > -1) {
                         console.log((position) + " sec");
                     }
                 },
-                // error callback
+                // 실패 콜백
                 function(e) {
                     console.log("Error getting pos=" + e);
                 }
@@ -74,27 +74,27 @@ Function `media.getCurrentPosition` is an asynchronous function that returns the
             var my_media = null;
             var mediaTimer = null;
         
-            // Play audio
+            // 오디오를 재생한다.
             //
             function playAudio(src) {
-                // Create Media object from src
+                // src로부터 Media 객체를 생성한다.
                 my_media = new Media(src, onSuccess, onError);
         
-                // Play audio
+                // 오디오를 재생한다.
                 my_media.play();
         
-                // Update my_media position every second
+                // 매 초마다 my_media 위치를 갱신한다.
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
-                        // get my_media position
+                        // my_media 위치를 얻는다.
                         my_media.getCurrentPosition(
-                            // success callback
+                            // 성공 콜백
                             function(position) {
                                 if (position > -1) {
                                     setAudioPosition((position) + " sec");
                                 }
                             },
-                            // error callback
+                            // 에러 콜백
                             function(e) {
                                 console.log("Error getting pos=" + e);
                                 setAudioPosition("Error: " + e);
@@ -104,7 +104,7 @@ Function `media.getCurrentPosition` is an asynchronous function that returns the
                 }
             }
         
-            // Pause audio
+            // 오디오를 일시정지한다.
             // 
             function pauseAudio() {
                 if (my_media) {
@@ -112,7 +112,7 @@ Function `media.getCurrentPosition` is an asynchronous function that returns the
                 }
             }
         
-            // Stop audio
+            // 오디오를 멈춘다.
             // 
             function stopAudio() {
                 if (my_media) {
@@ -122,20 +122,20 @@ Function `media.getCurrentPosition` is an asynchronous function that returns the
                 mediaTimer = null;
             }
         
-            // onSuccess Callback
+            // onSuccess 콜백
             //
             function onSuccess() {
                 console.log("playAudio():Audio Success");
             }
         
-            // onError Callback 
+            // onError 콜백
             //
             function onError(error) {
                 alert('code: '    + error.code    + '\n' + 
                       'message: ' + error.message + '\n');
             }
         
-            // Set audio position
+            // 오디오 위치를 설정한다.
             // 
             function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;

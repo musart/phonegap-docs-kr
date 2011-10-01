@@ -1,7 +1,7 @@
 media.getDuration
 =================
 
-Returns the duration of an audio file.
+오디오 파일의 지속 시간을 반환한다.
 
     media.getDuration();
 
@@ -9,7 +9,7 @@ Returns the duration of an audio file.
 설명
 -----------
 
-Function `media.getDuration` is a synchronous function that returns the duration of the audio file in seconds, if known.  If the duration is unknown, a value of -1 is returned.
+`media.getDuration` 함수는 오디오 파일의 초단위 지속 시간을 반환하는 동기 함수이다. 만약 지속 시간을 모르면, -1이 반환된다.
 
 지원하는 플랫폼
 -------------------
@@ -24,7 +24,7 @@ Function `media.getDuration` is a synchronous function that returns the duration
         //
         var my_media = new Media(src, onSuccess, onError);
 
-        // Get duration
+        // 지속 시간을 얻는다.
         var counter = 0;
         var timerDur = setInterval(function() {
             counter = counter + 100;
@@ -66,27 +66,27 @@ Function `media.getDuration` is a synchronous function that returns the duration
             var my_media = null;
             var mediaTimer = null;
         
-            // Play audio
+            // 오디오를 재생한다.
             //
             function playAudio(src) {
-                // Create Media object from src
+                // src로부터 Media 객체를 생성한다.
                 my_media = new Media(src, onSuccess, onError);
         
-                // Play audio
+                // 오디오를 재생한다.
                 my_media.play();
         
-                // Update my_media position every second
+                // 매 초마다 my_media 위치를 갱신한다.
                 if (mediaTimer == null) {
                     mediaTimer = setInterval(function() {
-                        // get my_media position
+                        // my_media 위치를 얻는다.
                         my_media.getCurrentPosition(
-                            // success callback
+                            // 성공 콜백
                             function(position) {
                                 if (position > -1) {
                                     setAudioPosition((position) + " sec");
                                 }
                             },
-                            // error callback
+                            // 에러 콜백
                             function(e) {
                                 console.log("Error getting pos=" + e);
                                 setAudioPosition("Error: " + e);
@@ -96,7 +96,7 @@ Function `media.getDuration` is a synchronous function that returns the duration
                 }
             }
         
-            // Pause audio
+            // 오디오를 일시정지한다.
             // 
             function pauseAudio() {
                 if (my_media) {
@@ -104,7 +104,7 @@ Function `media.getDuration` is a synchronous function that returns the duration
                 }
             }
         
-            // Stop audio
+            // 오디오를 멈춘다.
             // 
             function stopAudio() {
                 if (my_media) {
@@ -114,20 +114,20 @@ Function `media.getDuration` is a synchronous function that returns the duration
                 mediaTimer = null;
             }
         
-            // onSuccess Callback
+            // onSuccess 콜백
             //
             function onSuccess() {
                 console.log("playAudio():Audio Success");
             }
         
-            // onError Callback 
+            // onError 콜백
             //
             function onError(error) {
                 alert('code: '    + error.code    + '\n' + 
                       'message: ' + error.message + '\n');
             }
         
-            // Set audio position
+            // 오디오 위치를 설정한다.
             // 
             function setAudioPosition(position) {
                 document.getElementById('audio_position').innerHTML = position;

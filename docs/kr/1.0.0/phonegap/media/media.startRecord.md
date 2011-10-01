@@ -1,7 +1,7 @@
 media.startRecord
 =================
 
-Starts recording an audio file.
+오디오 파일을 녹음하는 것을 시작한다.
 
     media.startRecord();
 
@@ -9,7 +9,7 @@ Starts recording an audio file.
 설명
 -----------
 
-Function `media.startRecord` is a synchronous function that starts recording an audio file.
+`media.startRecord` 함수는 오디오 파일을 녹음하는 것을 시작하는 동기 함수이다. 
 
 지원하는 플랫폼
 -------------------
@@ -20,22 +20,22 @@ Function `media.startRecord` is a synchronous function that starts recording an 
 빠른 예제
 -------------
 
-    // Record audio
+    // 오디오를 녹음한다.
     // 
     function recordAudio() {
         var src = "myrecording.mp3";
         var mediaRec = new Media(src,
-            // success callback
+            // 성공 콜백
             function() {
                 console.log("recordAudio():Audio Success");
             },
             
-            // error callback
+            // 에러 콜백
             function(err) {
                 console.log("recordAudio():Audio Error: "+ err.code);
             });
 
-        // Record audio
+        // 오디오를 녹음한다.
         mediaRec.startRecord();
     }
 
@@ -55,16 +55,16 @@ Function `media.startRecord` is a synchronous function that starts recording an 
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // Record audio
+        // 오디오를 녹음한다.
         // 
         function recordAudio() {
             var src = "myrecording.mp3";
             var mediaRec = new Media(src, onSuccess, onError);
 
-            // Record audio
+            // 오디오를 녹음한다.
             mediaRec.startRecord();
 
-            // Stop recording after 10 sec
+            // 10초뒤 녹음을 멈춘다.
             var recTime = 0;
             var recInterval = setInterval(function() {
                 recTime = recTime + 1;
@@ -95,7 +95,7 @@ Function `media.startRecord` is a synchronous function that starts recording an 
                   'message: ' + error.message + '\n');
         }
 
-        // Set audio position
+        // 오디오 위치를 설정한다.
         // 
         function setAudioPosition(position) {
             document.getElementById('audio_position').innerHTML = position;
@@ -113,4 +113,4 @@ Function `media.startRecord` is a synchronous function that starts recording an 
 iOS Quirks
 ----------
 
-- The file to record to must already exist and should be of type .wav. The File API's can be used to create the file.
+- 녹음을 위한 파일은 존재해야 하고, wav 타입이어야 한다. File API를 사용하여 파일을 생성할 수 있다.
