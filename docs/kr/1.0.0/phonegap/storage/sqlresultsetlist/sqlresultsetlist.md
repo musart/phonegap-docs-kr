@@ -1,7 +1,7 @@
 SQLResultSetList
 =======
 
-SQL ¿¿¿¿¿ ¿¿¿ ¿¿¿ ¿¿¿¿ SQLResultSet¿ ¿¿ ¿ ¿¿.
+SQL ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿ ¿¿¿ ¿¿¿ ¿¿¿¿ SQLResultSet¿ ¿¿ ¿ ¿¿.
 
 Properties
 -------
