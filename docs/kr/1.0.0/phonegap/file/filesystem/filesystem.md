@@ -1,18 +1,18 @@
 FileSystem
 ==========
 
-This object represents a file system.
+이 객체는 파일 시스템을 나타낸다.
 
 Properties
 ----------
 
-- __name:__ The name of the file system. _(DOMString)_
-- __root:__ The root directory of the file system. _(DirectoryEntry)_
+- __name:__ 파일 시스템의 이름. _(DOMString)_
+- __root:__ 파일 시스템의 root 디렉토리. _(DirectoryEntry)_
 
 Details
 -------
 
-The `FileSystem` object represents information about the file system. The name of the file system will be unique across the list of exposed file systems.  The root property contains a `DirectoryEntry` object which represents the root directory of the file system.
+`FileSystem` 객체는 파일시스템 관련 정보를 나타낸다. 파일 시스템의 이름은 모든 노출된 파일시스템의 리스트에 유일하다. root 속성은 파일 시스템의 root 디렉토리를 나타내는 'DirectoryEntry' 객체를 포함한다.
 
 지원하는 플랫폼
 -------------------
@@ -29,7 +29,7 @@ File System 빠른 예제
 		console.log(fileSystem.root.name);
 	}
 	
-	// request the persistent file system
+	// 지속되는 파일시스템을 요청한다.
 	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, null);
 
 전체 예제

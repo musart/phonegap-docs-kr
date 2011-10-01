@@ -1,37 +1,37 @@
 FileWriter
 ==========
 
-FileWriter is an object that allows one to write a file.
+FileWriter 는 파일을 쓰도록 가능하게 하는 객체이다.
 
 Properties
 ----------
 
-- __readyState:__ One of the three states the reader can be in INIT, WRITING or DONE.
-- __fileName:__ The name of the file to be written. _(DOMString)_
-- __length:__ The length of the file to be written. _(long)_
-- __position:__ The current position of the file pointer. _(long)_
-- __error:__ An object containing errors. _(FileError)_
-- __onwritestart:__ Called when the write starts. . _(Function)_
-- __onprogress:__ Called while writing the file, reports progress (progess.loaded/progress.total). _(Function)_ -NOT SUPPORTED
-- __onwrite:__ Called when the request has completed successfully.  _(Function)_
-- __onabort:__ Called when the write has been aborted. For instance, by invoking the abort() method. _(Function)_
-- __onerror:__ Called when the write has failed. _(Function)_
-- __onwriteend:__ Called when the request has completed (either in success or failure).  _(Function)_
+- __readyState:__ INIT, WRITING, DONE 가운데 writer가 될 수 있는 3가지 상태 중에 하나.
+- __fileName:__ 쓰여진 파일 이름. _(DOMString)_
+- __length:__ 쓰여진 파일 길이. _(long)_
+- __position:__ 파일 포인터의 현재 위치. _(long)_
+- __error:__ 에러를 가진 객체. _(FileError)_
+- __onwritestart:__ 쓰기 시작하면 호출됨. _(Function)_
+- __onprogress:__ 파일을 쓰는 동안에 호출되고 진행상태를 보고함 (progess.loaded/progress.total). _(Function)_ -NOT SUPPORTED
+- __onwrite:__ 요청이 성공적으로 완료되었을 경우 호출됨. _(Function)_
+- __onabort:__ 쓰기가 중단되었을 경우 호출됨. 예를 들면, abort() 함수가 호출될 경우. _(Function)_
+- __onerror:__ 쓰기가 실패했을 경우 호출됨. _(Function)_
+- __onwriteend:__ 요청이 완료되었을 경우 (또는 성공이나 실패시) 호출됨 _(Function)_
 
 Methods
 -------
 
-- __abort__: Aborts writing file. 
-- __seek__: Moves the file pointer to the byte specified.
-- __truncate__: Shortens the file to the length specified.
-- __write__: Writes data to the file.
+- __abort__: 파일을 쓰는 것을 중단시킨다.
+- __seek__: 파일 포인터를 지정된 바이트로 이동한다.
+- __truncate__: 파일을 지정된 길이로 짧게한다.
+- __write__: 파일에 데이터를 쓴다.
 
 Details
 -------
 
-The `FileWriter` object is a way to write files from the devices file system.  Users register their own event listeners to receive the writestart, progress, write, writeend, error and abort events.
+`FileWriter` 객체는 기기의 파일시스템으로부터 파일을 쓰는 방법이다. 사용자는 writestart, progress, write, writeend, error 그리고 abort 이벤트를 받기 위해 자신의 이벤트 리스터를 등록한다.
 
-A FileWriter is created for a single file. You can use it to write to a file multiple times. The FileWriter maintains the file's position and length attributes, so you can seek and write anywhere in the file. By default, the FileWriter writes to the beginning of the file (will overwrite existing data). Set the optional append boolean to true in the FileWriter's constructor to begin writing to the end of the file.
+FileWriter 는 단일 파일을 위해 생성된다. 당신은 여러번 파일에 쓸수 있다. FileWriter는 파일의 position과 length 속성을 관리하기 때문에 파일안에서 자유롭게 검색하고 쓸 수 있다. 기본적으로 FileWriter 는 파일의 시작점에 (기존에 존자하는 데이터에 덮어)쓴다. FileWriter의 생성자에 optional append boolean을 true로 하면 파일의 끝에서부터 쓴다.
 
 지원하는 플랫폼
 -------------------
@@ -44,7 +44,7 @@ Seek 빠른 예제
 ------------------------------
 
 	function win(writer) {
-		// fast forwards file pointer to end of file
+		// 파일포인터를 파일의 끝으로 이동한다.
 		writer.seek(writer.length);	
 	};
 
@@ -150,13 +150,13 @@ Abort 빠른 예제
                 console.log("write success");
             };
             writer.write("some sample text");
-			// contents of file now 'some sample text'
+			// 파일의 내용은 이제 'some sample text' 이다.
 			writer.truncate(11);
-			// contents of file now 'some sample'
+			// 파일의 내용은 이제 'some sample' 이다.
 			writer.seek(4);
-			// contents of file still 'some sample' but file pointer is after the 'e' in 'some'
+			// 파일의 내용은 여전히 'some sample' 이지만 파일 포인터는 'some'의 'e' 다음이다.
 			writer.write(" different text");
-			// contents of file now 'some different text'
+			// 파일의 내용은 이제 'some different text' 이다.
 		}
         
         function fail(error) {

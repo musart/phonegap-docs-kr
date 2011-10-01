@@ -1,7 +1,7 @@
-rirectoryEntry
+DirectoryEntry
 ==============
 
-이 객체는 파일 시스템의 디렉토리를 대표한다. [W3C Directories and Systems](http://www.w3.org/TR/file-system-api/) 스펙에 정의되어 있다.
+이 객체는 파일 시스템의 디렉토리를 나타낸다. [W3C Directories and Systems](http://www.w3.org/TR/file-system-api/) 표준에 정의되어 있다.
 
 Properties
 ----------
@@ -13,8 +13,7 @@ Properties
 
 NOTE: 다음의 속성들은 W3C 표준에 정의되어 있지만 PhoneGap은 지원하지 __not supported__ 않는다:
 
-- __filesystem:__ DirectoryEntry에 있는 파일 시스템
-The file system on which the DirectoryEntry resides. _(FileSystem)_ 
+- __filesystem:__ DirectoryEntry가 위치하는 파일 시스템. _(FileSystem)_ 
 
 Methods
 -------
@@ -70,22 +69,17 @@ moveTo
 
 디렉토리를 파일 시스템의 다른 위치에 이동한다. 다음을 수행하면 에러이다:
 
-- 디렉토리를 자신 안으로 또는 자식으로 이동한다.
- move a directory inside itself or to any child at any depth;
-- 디렉토리를 자신의 부모로 이동한다.
-move a directory into its parent if a name different from its current one is not provided;
-- 파일 경로로 디렉토리를 이동한다. 
-move a directory to a path occupied by a file;
-- 비어있지 않은 디렉토리 경로로 디렉토리를 이동한다.
-move a directory to a path occupied by a directory which is not empty.
+- 어떤 디렉토리를 자신 안으로 또는 아래 위치의 자식으로 이동한다:
+- 현재와 다른 이름으로 규정되지 않는 디렉토리를 자신의 부모로 이동한다.
+- 다른 파일에 의해 사용되는 경로로 디렉토리를 이동한다;
+- 비어있지 않은 디렉토리에 의해 사용되는 경로로 디렉토리를 이동한다.
 
-추가적으로, 디렉토리를 기존의 빈 디렉토리의 최상위로 이동하기 위한 시도는 반드시 그 디렉토리를 지우고 교체한다.
-In addition, an attempt to move a directory on top of an existing empty directory must attempt to delete and replace that directory.
+추가적으로, 디렉토리를 기존의 빈 디렉토리로 이동하기 위한 시도는 반드시 그 디렉토리를 지우고 교체한다.
 
 __Parameters:__
 
 - __parent__ - 디렉토리를 이동하기 위한 부모 디렉토리. _(DirectoryEntry)_
-- __newName__ - 디렉토리의 새 이름. 만약 명시되어 있지 않으면 현재이름이 기본값이다. _(DOMString)_
+- __newName__ - 디렉토리의 새 이름. 명시되어 있지 않으면 현재이름이 기본값이다. _(DOMString)_
 - __successCallback__ - 새 디렉토리의 DirectoryEntry 객체와 함께 호출되는 콜백. _(Function)_
 - __errorCallback__ - 디렉토리를 이동하다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 발생한다. _(Function)_
 
@@ -115,15 +109,14 @@ copyTo
 디렉토리를 파일시스템의 다른 위치에 복사한다. 다음을 수행하면 에러이다:
 
 - 자기 자신안의 위치에 디렉토리를 복사한다:
-- 만약 이름이 ?? 디렉토리를 자신의 부모로 복사한다.
-copy a directory into its parent if a name different from its current one is not provided. 
+- 현재와 다른 이름으로 규정되지 않는 디렉토리를 자신의 부모로 복사한다.
 
 디렉토리 복사는 항상 재귀적이다 - 즉, 디렉토리의 모든 컨텐츠를 복사한다.
 
 __Parameters:__
 
 - __parent__ - 디렉토리를 복사하기 위한 부모 디렉토리. _(DirectoryEntry)_
-- __newName__ - 디렉토리의 새 이름. 만약 명시되어 있지 않으면 현재 이름을 기본값으로 사용한다. _(DOMString)_
+- __newName__ - 디렉토리의 새 이름. 명시되어 있지 않으면 현재 이름을 기본값으로 사용한다. _(DOMString)_
 - __successCallback__ - 새 디렉토리의 DirectoryEntry 객체와 함께 호출되는 콜백. _(Function)_
 - __errorCallback__ - 밑에 있는 디렉토리를 복사하다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 발생한다. _(Function)_
 
@@ -170,7 +163,7 @@ remove
 
 __Parameters:__
 
-- __successCallback__ - 디렉토리가 지위지고난 뒤 호출되는 콜백. 아무 인자 없이 호출된다. _(Function)_
+- __successCallback__ - 디렉토리가 지위지고 난 뒤 호출되는 콜백. 아무 인자 없이 호출된다. _(Function)_
 - __errorCallback__ - 디렉토리를 제거하다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 발생한다. _(Function)_
 
 __빠른 예제__
@@ -190,7 +183,7 @@ __빠른 예제__
 getParent
 ---------
 
-디렉토리가 들어있는 부모 DirectoryEntry를 검색한다.
+디렉토리를 담고있는 부모 DirectoryEntry를 검색한다.
 
 __Parameters:__
 
@@ -227,13 +220,13 @@ getDirectory
 
 기존의 디렉토리를 생성하거나 검색한다. 다음을 수행하면 에러이다:
 
-- create a directory whose immediate parent does not yet exist.
+- 직속 부모가 아직 존재하지 않는 디렉토리를 생성한다. 
 
 __Parameters:__
 
-- __path__ - The path to the directory to be looked up or created.  Either an absolute path, or a relative path from this DirectoryEntry. _(DOMString)_
-- __options__ - Options to specify whether the directory is created if it doesn't exist.  _(Flags)_
-- __successCallback__ - A callback that is invoked with a DirectoryEntry object. _(Function)_
+- __path__ - 생성되거나 검색된 디렉토리의 경로. 절대 경로이거나 이 DirectoryEntry부터의 상대 경로. _(DOMString)_
+- __options__ - 디렉토리가 존재하지 않을 경우 생성되었는지를 명시하는 옵션. _(Flags)_
+- __successCallback__ - DirecotyrEntry 객체와 함께 호출되는 콜백. _(Function)_
 - __errorCallback__ - 디렉토리를 생성하거나 찾다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 발생한다. _(Function)_
 
 __빠른 예제__
@@ -259,7 +252,7 @@ getFile
 
 __Parameters:__
 
-- __path__ - The path to the file to be looked up or created.  Either an absolute path, or a relative path from this DirectoryEntry. _(DOMString)_
+- __path__ - 생성되거나 검색되는 파일의 경로. 절대 경로이거나 이 DirectoryEntry로부터의 상대 경로. _(DOMString)_
 - __options__ - Options to specify whether the file is created if it doesn't exist.  _(Flags)_
 - __successCallback__ - FileEntry 객체와 함께 발생되는 콜백. _(Function)_
 - __errorCallback__ - 파일을 생성하거나 찾다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 발생한다. _(Function)_

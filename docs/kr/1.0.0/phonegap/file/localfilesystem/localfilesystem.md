@@ -1,24 +1,24 @@
 LocalFileSystem
 ===============
 
-This object provides a way to obtain root file systems.
+이 객체는 root 파일 시스템을 얻는 방법을 제공한다.
 
 Methods
 ----------
 
-- __requestFileSystem:__ Requests a filesystem. _(Function)_
-- __resolveLocalFileSystemURI:__ Retrieve a DirectoryEntry or FileEntry using local URI. _(Function)_
+- __requestFileSystem:__ 파일시스템을 요청한다. _(Function)_
+- __resolveLocalFileSystemURI:__ local URI를 사용하여 DirectoryEntry나 FileEntry 를 검색한다. _(Function)_
 
 Constants
 ---------
 
-- `LocalFileSystem.PERSISTENT`: Used for storage that should not be removed by the user agent without application or user permission.
-- `LocalFileSystem.TEMPORARY`: Used for storage with no guarantee of persistence.
+- `LocalFileSystem.PERSISTENT`: 어플리케이션이나 사용자 권한 없이 삭제되지 않아야 하는 저장소를 위해 사용됨.
+- `LocalFileSystem.TEMPORARY`: 지속성을 보장할 필요가 없는 저장소를 위해 사용됨.
 
 Details
 -------
 
-The `LocalFileSystem` object methods are defined on the __window__ object.
+`LocalFileSystem` 객체 함수는 __window__ 객체에 정의되어 있다.
 
 지원하는 플랫폼
 -------------------
@@ -34,7 +34,7 @@ Request File System 빠른 예제
 		console.log(fileSystem.name);
 	}
 	
-	// request the persistent file system
+	// 지속되는 파일 시스템을 요청한다.
 	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, onSuccess, onError);
 
 Resolve Local File System URI 빠른 예제

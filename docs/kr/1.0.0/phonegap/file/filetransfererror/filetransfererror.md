@@ -1,12 +1,12 @@
 FileTransferError
 ========
 
-A `FileTransferError` object is returned via the error callback when an error occurs.
+`FileTransferError` 객체는 에러가 발생했을 때 에러 콜백을 통해 반환된다.
 
 Properties
 ----------
 
-- __code:__ One of the predefined error codes listed below. (int)
+- __code:__ 아래 리스트된 미리 정의된 에러 코드 중 하나. (int)
 
 Constants
 ---------
@@ -18,4 +18,4 @@ Constants
 설명
 -----------
 
-The `FileTransferError` object is returned via the error callback  when an error occurs when uploading a file.
+`FileTransferError` 객체는 파일을 업로드하다가 에러가 발생핬을 때 에러 콜백을 통해 반환된다.

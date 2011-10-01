@@ -1,32 +1,32 @@
 FileEntry
 ==========
 
-This object represents a file on a file system.  It is defined in the [W3C Directories and Systems](http://www.w3.org/TR/file-system-api/) specification.
+이 객체는 파일 시스템의 파일을 나타낸다. [W3C Directories and Systems](http://www.w3.org/TR/file-system-api/) 표준에 정의되어 있다.
 
 Properties
 ----------
 
-- __isFile:__ Always true. _(boolean)_
-- __isDirectory:__ Always false. _(boolean)_
-- __name:__ The name of the FileEntry, excluding the path leading to it. _(DOMString)_
-- __fullPath:__ The full absolute path from the root to the FileEntry. _(DOMString)_
+- __isFile:__ 항상 true이다. _(boolean)_
+- __isDirectory:__ 항상 false이다. _(boolean)_
+- __name:__ FileEntry의 이름, excluding the path leading to it. _(DOMString)_
+- __fullPath:__ root부터 FileEntry까지 전체 절대 경로. _(DOMString)_
 
-NOTE: The following attributes are defined by the W3C specification, but are __not supported__ by PhoneGap:
+NOTE: 다음의 속성은 W3C 표준에 정의되어 있지만, PhoneGap은 지원되지 __not supported__ 않는다:
 
-- __filesystem:__ The file system on which the FileEntry resides. _(FileSystem)_
+- __filesystem:__ FileEntry가 위치하는 파일 시스템. _(FileSystem)_
 
 
 Methods
 -------
 
-- __getMetadata__: Look up metadata about a file. 
-- __moveTo__: Move a file to a different location on the file system.
-- __copyTo__: Copy a file to a different location on the file system.
-- __toURI__: Return a URI that can be used to locate a file.
-- __remove__: Delete a file.  
-- __getParent__: Look up the parent directory.
-- __createWriter__: Creates a FileWriter object that can be used to write to a file.
-- __file__: Creates a File object containing file properties.
+- __getMetadata__: 파일의 metadata를 찾아본다. 
+- __moveTo__: 파일을 파일 시스템 상의 다른 위치로 이동한다.
+- __copyTo__: 파일을 파일 시스템 상의 다른 위치로 복사한다.
+- __toURI__: 파일의 위치를 찾아내기 위해 사용되는 URI를 반환한다.
+- __remove__: 파일을 삭제한다.
+- __getParent__: 부모 디렉토리를 찾아본다.
+- __createWriter__: 파일을 쓰기위해 사용되는 FileWriter 객체를 생성한다.
+- __file__: 파일 속성들을 담고 있는 File 객체를 생성한다.
 
 
 지원하는 플랫폼
@@ -40,12 +40,12 @@ Methods
 getMetadata
 ----------------
 
-Look up metadata about a file.
+파일의 메타데이터를 찾아본다.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with a Metadata object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs retrieving the Metadata. Invoked with a FileError object. _(Function)_
+- __successCallback__ - 메타데이터 객체와 함께 호출되는 콜백.. _(Function)_
+- __errorCallback__ - 메타데이터를 검색하다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 호출된다. _(Function)_
 
 
 __빠른 예제__
@@ -58,26 +58,26 @@ __빠른 예제__
         alert(error.code);
     }
 
-    // Request the metadata object for this entry
+    // 이 엔트리의 메타데이터 객체를 요청한다.
     entry.getMetadata(success, fail);	
 
 
 moveTo
 ------
 
-Move a file to a different location on the file system. It is an error to attempt to:
+파일을 파일 시스템의 다른 위치에 이동한다. 다음을 수행하면 에러이다:
 
-- move a file into its parent if a name different from its current one isn't provided;
-- move a file to a path occupied by a directory;
+- 현재와 다른 이름으로 규정되지 않은 파일을 자신의 부모로 이동한다;
+- 다른 디렉토리에 의해 사용되는 경로로 파일을 이동한다;
 
-In addition, an attempt to move a file on top of an existing file must attempt to delete and replace that file. 
+추가적으로, 파일을 기존의 파일로 이동하기 위한 시도는 반드시 그 파일을 지우고 교체한다.
 
 __Parameters:__
 
-- __parent__ - The parent directory to which to move the file. _(DirectoryEntry)_
-- __newName__ - The new name of the file. Defaults to the current name if unspecified. _(DOMString)_
-- __successCallback__ - A callback that is called with the FileEntry object of the new file. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to move the file.  Invoked with a FileError object. _(Function)_
+- __parent__ - 파일을 이동하기 위한 부모 디렉토리. _(DirectoryEntry)_
+- __newName__ - 파일의 새 이름. 명시되어 있지 않으면 현재 이름이 기본값이다. _(DOMString)_
+- __successCallback__ - 새 파일의 FileEntry 객체와 함께 호출되는 콜백. _(Function)_
+- __errorCallback__ - 파일을 이동하다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함깨 발생한다. _(Function)_
 
 
 __빠른 예제__
@@ -94,7 +94,7 @@ __빠른 예제__
         var parent = document.getElementById('parent').value,
             parentEntry = new DirectoryEntry({fullPath: parent});
 
-        // move the file to a new directory and rename it
+        // 파일을 새 디렉토리로 이동하고 이름을 변경한다.
         entry.moveTo(parentEntry, "newFile.txt", success, fail);
     }
 	
@@ -102,16 +102,16 @@ __빠른 예제__
 copyTo
 ------
 
-Copy a file to a new location on the file system.  It is an error to attempt to:
+파일을 파일 시스템상의 새 위치로 복사한다. 다음을 수행하면 에러이다:
 
-- copy a file into its parent if a name different from its current one is not provided. 
+- 현재와 다른 이름으로 규정되지 않은 파일을 자신의 부모로 복사한다.
 
 __Parameters:__
 
-- __parent__ - The parent directory to which to copy the file. _(DirectoryEntry)_
-- __newName__ - The new name of the file. Defaults to the current name if unspecified. _(DOMString)_
-- __successCallback__ - A callback that is called with the FileEntry object of the new file. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to copy the file.  Invoked with a FileError object. _(Function)_
+- __parent__ - 파일을 복사하기 위한 부모 디렉토리. _(DirectoryEntry)_
+- __newName__ - 파일의 새 이름. 명시되어 있지 않으면 현재 이름을 기본값으로 사용한다. _(DOMString)_
+- __successCallback__ - 새 파일의 FileEntry 객체와 함께 호출되는 콜백. _(Function)_
+- __errorCallback__ - 파일을 복사하다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 발생한다. _(Function)_
 
 
 __빠른 예제__
@@ -128,7 +128,7 @@ __빠른 예제__
         var parent = document.getElementById('parent').value,
             parentEntry = new DirectoryEntry({fullPath: parent});
 
-        // copy the file to a new directory and rename it
+        // 파일을 새 디렉토리로 복사하고 이름을 바꾼다.
         entry.copyTo(parentEntry, "file.copy", success, fail);
     }
 
@@ -136,11 +136,11 @@ __빠른 예제__
 toURI
 -----
 
-Returns a URI that can be used to locate the file. 
+파일의 정확한 위치를 찾기 위해 사용되는 URI를 반환한다.
 
 __빠른 예제__
 	
-    // Request the metadata object for this entry
+    // 이 entry의 URI를 얻는다.
     var uri = entry.toURI();
     console.log(uri);
 
@@ -148,12 +148,12 @@ __빠른 예제__
 remove
 ------
 
-Deletes a file. 
+파일을 제거한다. 
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called after the file has been deleted.  Invoked with no parameters. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to delete the file.  Invoked with a FileError object. _(Function)_
+- __successCallback__ - 파일이 지워지고 난 뒤 호출되는 콜백. 아무 인자 없이 호출된다. _(Function)_
+- __errorCallback__ - 파일을 제거하다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 발생한다. _(Function)_
 
 __빠른 예제__
 	
@@ -172,12 +172,12 @@ __빠른 예제__
 getParent
 ---------
 
-Look up the parent DirectoryEntry containing the file. 
+파일을 담고있는 부모 DirectoryEntry를 검색한다.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with the file's parent DirectoryEntry. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when attempting to retrieve the parent DirectoryEntry.  Invoked with a FileError object. _(Function)_
+- __successCallback__ - 파일의 부모 DirectoryEntry와 함께 호출되는 콜백. _(Function)_
+- __errorCallback__ - 부모 DirectoryEntry를 검색하다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 발생한다. _(Function)_
 
 __빠른 예제__
 	
@@ -189,19 +189,19 @@ __빠른 예제__
         alert(error.code);
     }
 
-    // Get the parent DirectoryEntry
+    // 부모 DirectoryEntry를 얻는다.
     entry.getParent(success, fail);	
 
 
 createWriter
 ------------
 
-Create a FileWriter object associated with the file that the FileEntry represents.
+FileEntry를 나타내는 파일과 관련된 FileWriter 객체를 생성한다.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with a FileWriter object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs while attempting to create the FileWriter.  Invoked with a FileError object. _(Function)_
+- __successCallback__ - FileWriter 객체와 함께 호출되는 콜백. _(Function)_
+- __errorCallback__ - FileWriter를 생성하기를 시도하는 중에 에러가 발생했을 경우 불리우는 콜백. FileError 객체를 발생한다. _(Function)_
 
 __빠른 예제__
 	
@@ -213,19 +213,19 @@ __빠른 예제__
         alert(error.code);
     }
 
-    // create a FileWriter to write to the file
+    // 파일을 쓰기 위해 FileWriter를 생성한다.
     entry.createWriter(success, fail);	
 
 
 file
 ----
 
-Return a File object that represents the current state of the file that this FileEntry represents.
+해당 FileEntry가 가리키는 파일의 현재 상태를 나타내는 File 객체를 반환한다.
 
 __Parameters:__
 
-- __successCallback__ - A callback that is called with a File object. _(Function)_
-- __errorCallback__ - A callback that is called if an error occurs when creating the File object (e.g. the underlying file no longer exists).  Invoked with a FileError object. _(Function)_
+- __successCallback__ - File 객체와 함께 호출되는 콜백이다. _(Function)_
+- __errorCallback__ - File 객체를 생성할 경우 에러가 발생하면 호출되는 콜백(예를 들면 실제 파일이 존재하지 않을 경우). FileError 객체를 발생한다. _(Function)_
 
 __빠른 예제__
 	
@@ -237,5 +237,5 @@ __빠른 예제__
         alert("Unable to retrieve file properties: " + error.code);
     }
  
-    // obtain properties of a file
+    // 파일의 속성들을 얻는다.
     entry.file(success, fail);	

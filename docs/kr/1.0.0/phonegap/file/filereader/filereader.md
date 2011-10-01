@@ -1,32 +1,32 @@
 FileReader
 ==========
 
-FileReader is an object that allows one to read a file.
+FileReader 는 파일을 읽도록 가능하게 하는 객체이다.
 
 Properties
 ----------
 
-- __readyState:__ One of the three states the reader can be in EMPTY, LOADING or DONE.
-- __result:__ The contents of the file that has been read. _(DOMString)_
-- __error:__ An object containing errors. _(FileError)_
-- __onloadstart:__ Called when the read starts. . _(Function)_
-- __onprogress:__ Called while reading the file, reports progress (progess.loaded/progress.total). _(Function)_ -NOT SUPPORTED
-- __onload:__ Called when the read has successfully completed. _(Function)_
-- __onabort:__ Called when the read has been aborted. For instance, by invoking the abort() method. _(Function)_
-- __onerror:__ Called when the read has failed. _(Function)_
-- __onloadend:__ Called when the request has completed (either in success or failure).  _(Function)_
+- __readyState:__ EMPTY, LOADING, DONE 가운데 reader가 될 수 있는 3가지 상태 중에 하나.
+- __result:__ 파일의 읽혀진 내용. _(DOMString)_
+- __error:__ 에러를 담은 객체. _(FileError)_
+- __onloadstart:__ 읽기 시작하면 호출됨. _(Function)_
+- __onprogress:__ 파일을 읽는 동안에 호출되고 진행상태를 보고함 (progess.loaded/progress.total). _(Function)_ -NOT SUPPORTED
+- __onload:__ 읽기가 성공적으로 완료되었을 경우 호출됨. _(Function)_
+- __onabort:__ 읽기가 중단되었을 경우 호출됨. 예를 들면, abort() 함수 호출될 경우. _(Function)_
+- __onerror:__ 읽기가 실패했을 경우 호출됨. _(Function)_
+- __onloadend:__ 요청이 완료되었을 경우 (또는 성공이나 실패시) 호출됨. _(Function)_
 
 Methods
 -------
 
-- __abort__: Aborts reading file. 
-- __readAsDataURL__: Read file and return data as a base64 encoded data url.
-- __readAsText__: Reads text file.
+- __abort__: 파일을 읽는 것을 중단시킨다.
+- __readAsDataURL__: 파일을 읽고 base64로 함호화된 데이터 url을 반환한다.
+- __readAsText__: text 파일을 읽는다.
 
 Details
 -------
 
-The `FileReader` object is a way to read files from the devices file system.  Files can be read as text or as a base64 data encoded string.  Users register their own event listners to receive the loadstart, progress, load, loadend, error and abort events.
+`FileReader` 객체는 기기의 파일시스템으로부터 파일들을 읽는 방법이다. 파일들은 text로 읽히거나 base64로 암호화된 문자열로 읽힌다. 사용자들은 loadstart, progress, load, loadend, error 그리고 abort 에벤트를 받기 위해 자신의 이벤트 리스너를 등록한다.
 
 지원하는 플랫폼
 -------------------
@@ -39,7 +39,7 @@ Read As Data URL
 ----------------
 
 __Parameters:__
-- file - the file object to read
+- file - 읽기 위한 file 객체
 
 
 빠른 예제
@@ -65,8 +65,8 @@ Read As Text
 
 __Parameters:__
 
-- file - the file object to read
-- encoding - the encoding to use to encode the file's content. Default is UTF8.
+- file - 읽기 위한 file 객체
+- encoding - file의 컨텐츠를 암호화 하기 위해 사용되는 암호 코드. 기본값은 UTF8이다.
 
 빠른 예제
 -------------
@@ -173,4 +173,4 @@ Abort 빠른 예제
 
 iOS Quirks
 ----------
-- __encoding__ parameter is not supported, UTF8 encoding is always used.
+- __encoding__ 인자는 지원되지 않는다. UTF8 인코딩이 항상 사용된다.

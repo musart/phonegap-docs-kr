@@ -1,18 +1,18 @@
 FileUploadOptions
 ========
 
-A `FileUploadOptions` object can be passed to the FileTransfer objects upload method in order to specify additional parameters to the upload script.
+`FileUploadOptions` 객체는 추가적인 인자들을 upload script에 명시하기 위해 FileTransfer 객체의 upload 함수에 건내준다.
 
 Properties
 ----------
 
-- __fileKey:__ The name of the form element.  If not set defaults to "file". (DOMString)
-- __fileName:__ The file name you want the file to be saved as on the server.  If not set defaults to "image.jpg". (DOMString)
-- __mimeType:__ The mime type of the data you are uploading.  If not set defaults to "image/jpeg". (DOMString)
-- __params:__ A set of optional key/value pairs to be passed along in the HTTP request. (Object)
+- __fileKey:__ form 엘리먼트 이름. 설정되어 있지 않으면 디폴트 값으로 "file"을 설정한다. (DOMString)
+- __fileName:__ 당신이 서버에 저장되길 원하는 파일 이름. 설정되어 있지 않으면 디폴트 값으로 "image.jpg"를 설정한다. (DOMString)
+- __mimeType:__ 당신이 업로드하는 데이터의 mime 타입. 설정되어 있지 않으면 디폴트 값으로 "image/jpeg"를 설정한다. (DOMString)
+- __params:__ HTTP 요청시 전달하기 위한 선택적인 key/value 쌍의 집합. (Object)
 
 
 설명
 -----------
 
-A `FileUploadOptions` object can be passed to the FileTransfer objects upload method in order to specify additional parameters to the upload script.
+`FileUploadOptions` 객체는 추가적인 인자들을 upload script에 명시하기 위해 FileTransfer 객체의 upload 함수에 건내준다.
