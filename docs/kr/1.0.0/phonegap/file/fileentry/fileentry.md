@@ -44,7 +44,7 @@ getMetadata
 
 __Parameters:__
 
-- __successCallback__ - 메타데이터 객체와 함께 호출되는 콜백.. _(Function)_
+- __successCallback__ - 메타데이터 객체와 함께 호출되는 콜백. _(Function)_
 - __errorCallback__ - 메타데이터를 검색하다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 호출된다. _(Function)_
 
 
