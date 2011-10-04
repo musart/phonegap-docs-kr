@@ -1,7 +1,7 @@
 ContactError
 ========
 
-`ContactError` 객체는 에러가 발생할 때 'contactError' 콜백에 반환된다.
+`ContactError` 객체는 에러가 발생할 때 `contactError` 콜백에 반환된다.
 
 Properties
 ----------
@@ -22,5 +22,5 @@ Constants
 설명
 -----------
 
-`ContactError` 객체는 에러가 발생했을 때 사용자의 'contactError' 콜백함수에 반환된다.
+`ContactError` 객체는 에러가 발생했을 때 사용자의 `contactError` 콜백함수에 반환된다.
 

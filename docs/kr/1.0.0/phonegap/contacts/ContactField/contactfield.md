@@ -1,21 +1,21 @@
 ContactField
 ============
 
-'Contact' 객체의 포괄적인 필드를 지원한다. 일부 속성은 email 주소들, 전화번호, URL등을 포함하는 'ContactField' 객체로 저장된다.
+`Contact` 객체의 포괄적인 필드를 지원한다. 일부 속성은 email 주소들, 전화번호, URL등을 포함하는 `ContactField` 객체로 저장된다.
 
 Properties
 ----------
 
 - __type:__ 어떤 타입의 필드인지 알려주는 문자열 (예제: 'home'). _(DOMString)_
 - __value:__ 필드 값 (전화번호나 이메일 주소와 같은). _(DOMString)_
-- __pref:__ 만약 'ContactField' 가 사용자의 선호하는 값이 포함되어 있을 경우 `true`를 설정한다. _(boolean)_
+- __pref:__ 만약 `ContactField` 가 사용자의 선호하는 값이 포함되어 있을 경우 `true`를 설정한다. _(boolean)_
 
 Details
 -------
 
-`ContactField` 객채는 일반적으로 연락처 필드를 지원하기위해 사용되는 재사용 가능한 컴포넌트이다. 각각의 'ContactField' 객체는 value, type 그리고 pref 속성을 포함한다. 'Contact' 객체는 전화번호나 이메일 주소와 같은 여러 개의 속성을 'ContactField[]' 배열에 저장한다.
+`ContactField` 객채는 일반적으로 연락처 필드를 지원하기위해 사용되는 재사용 가능한 컴포넌트이다. 각각의 `ContactField` 객체는 value, type 그리고 pref 속성을 포함한다. `Contact` 객체는 전화번호나 이메일 주소와 같은 여러 개의 속성을 `ContactField[]` 배열에 저장한다.
 
-대개의 경우에는, 'ContactField' 객체의 __type__ 속성을 위해 미리 결정된 value가 없다. 예를 들면, 전화번호는 'home', 'work', 'mobile', 'iPhone' 또는 특정 기기 플랫폼의 연락처 database에서 지원되는 이름의 __type__ 값을 가질 수 있다. 하지만 'Contact'의 __photos__ 필드의 경우에, PhoneGap은 반환되는 이미지의 포멧을 나타내기 위해 __type__ 필드를 사용한다. PhoneGap은 __value__ 속성이 사진 이미지를 위한 URL을 포함할때 __type: 'url'__을 반환하고, 또는 반환된 __value__ 속성이 Base64로 인코딩된 이미지 문자열일 경우 __type: 'base64'__를 반환한다. 
+대개의 경우에는, `ContactField` 객체의 __type__ 속성을 위해 미리 결정된 value가 없다. 예를 들면, 전화번호는 'home', 'work', 'mobile', 'iPhone' 또는 특정 기기 플랫폼의 연락처 database에서 지원되는 이름의 __type__ 값을 가질 수 있다. 하지만 `Contact`의 __photos__ 필드의 경우에, PhoneGap은 반환되는 이미지의 포멧을 나타내기 위해 __type__ 필드를 사용한다. PhoneGap은 __value__ 속성이 사진 이미지를 위한 URL을 포함할때 __type: 'url'__을 반환하고, 또는 반환된 __value__ 속성이 Base64로 인코딩된 이미지 문자열일 경우 __type: 'base64'__를 반환한다. 
 
 지원하는 플랫폼
 -------------------
@@ -108,15 +108,15 @@ Details
 Android Quirks
 --------------
 
-- __pref:__ 이 속성은 Android 기기에서 지원되지 않고, 항상 'false'를 반환한다.
+- __pref:__ 이 속성은 Android 기기에서 지원되지 않고, 항상 `false`를 반환한다.
 
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
 
 - __type:__ 부분적으로 지원된다. 전화번호로 사용된다.
 - __value:__ 지원된다.
-- __pref:__ 이 속성은 지원되지 않고, 항상 'false'를 반환한다.
+- __pref:__ 이 속성은 지원되지 않고, 항상 `false`를 반환한다.
 
 iOS Quirks
 -----------
-- __pref:__ 이 속성은 iOS 기기에서 지원되지 않고, 항상 'false'를 반환한다.
+- __pref:__ 이 속성은 iOS 기기에서 지원되지 않고, 항상 `false`를 반환한다.

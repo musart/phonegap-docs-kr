@@ -1,7 +1,7 @@
 contactFindOptions
 ==================
 
-'contacts.find' 함수의 선택적인 변수. 이 변수를 연락처 저장소로부터 반환되는 contacts를 거르기 위해 사용한다.
+`contacts.find` 함수의 선택적인 변수. 이 변수를 연락처 저장소로부터 반환되는 contacts를 거르기 위해 사용한다.
 
     { 
 		filter: "",

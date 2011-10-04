@@ -1,11 +1,11 @@
 ContactAddress
 ==============
 
-'Contact' 객체의 주소 속성을 담는다.
+`Contact` 객체의 주소 속성을 담는다.
 
 Properties
 ----------
-- __pref:__ 만약 'ContactAddress'가 사용자의 선호 값이 포함되어 있다면 'true'로 설정된다. _(boolean)_
+- __pref:__ 만약 `ContactAddress`가 사용자의 선호 값이 포함되어 있다면 `true`로 설정된다. _(boolean)_
 - __type:__ 이것이 어떤 타입의 필드인지 알려주는 문자열 (예제: 'home'). _(DOMString)
 - __formatted:__ 표시하기 위한 구성된 전체 주소. _(DOMString)_
 - __streetAddress:__ 전체 street 주소. _(DOMString)_
@@ -17,7 +17,7 @@ Properties
 Details
 -------
 
-`ContactAddress` 객체는 연락처의 단일 주소 속성들을 저장한다. 'Conatact' 객체는 'ContactAddress[]' 배열안에 하나 이상의 주소를 가질 수 있다.
+`ContactAddress` 객체는 연락처의 단일 주소 속성들을 저장한다. `Conatact` 객체는 `ContactAddress[]` 배열안에 하나 이상의 주소를 가질 수 있다.
 
 지원하는 플랫폼
 -------------------
@@ -115,22 +115,22 @@ Details
 Android 2.X Quirks
 ------------------
 
-- __pref:__ 이 속성은 Android 2.X 기기에서 지원되지 않고 항상 'false'를 반환한다.
+- __pref:__ 이 속성은 Android 2.X 기기에서 지원되지 않고 항상 `false`를 반환한다.
 
 Android 1.X Quirks
 ------------------
 
-- __pref:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 'false'를 반환한다.
-- __type:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 'null'를 반환한다.
-- __streetAddress:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 'null'를 반환한다.
-- __locality:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 'null'를 반환한다.
-- __region:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 'null'를 반환한다.
-- __postalCode:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 'null'를 반환한다.
-- __country:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 'null'를 반환한다.
+- __pref:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 `false`를 반환한다.
+- __type:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 `null`를 반환한다.
+- __streetAddress:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 `null`를 반환한다.
+- __locality:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 `null`를 반환한다.
+- __region:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 `null`를 반환한다.
+- __postalCode:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 `null`를 반환한다.
+- __country:__ 이 속성은 Android 1.X 기기에서 지원되지 않고 항상 `null`를 반환한다.
 
 BlackBerry WebWorks (OS 5.0 and higher) Quirks
 --------------------------------------------
-- __pref:__ 이 속성은 Blackberry 기기에서 지원되지 않고 항상 'false'를 반환한다.
+- __pref:__ 이 속성은 Blackberry 기기에서 지원되지 않고 항상 `false`를 반환한다.
 - __type:__ 부분적으로 지원된다. 연락처당 각각 "Work"와 "Home" 타입의 주소만 저장된다. 
 - __formatted:__ 부분적으로 지원된다. 모든 BlackBerry 주소 필드의 연속을 반환한다.
 - __streetAddress:__ 지원된다. BlackBerry의 __address1__ 과 __address2__ 주소 필드의 연속을 반환한다.
@@ -141,5 +141,5 @@ BlackBerry WebWorks (OS 5.0 and higher) Quirks
 
 iOS Quirks
 ----------
-- __pref:__ 이 속성은 iOS 기기에서 지원되지 않고 항상 'false'를 반환한다.
+- __pref:__ 이 속성은 iOS 기기에서 지원되지 않고 항상 `false`를 반환한다.
 - __formatted:__ 현재 지원되지 않는다.

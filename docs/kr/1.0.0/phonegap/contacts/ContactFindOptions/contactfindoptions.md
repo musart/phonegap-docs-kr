@@ -1,7 +1,7 @@
 ContactFindOptions
 ==================
 
-'contacts.find' 동작의 결과를 거르기위해 사용되는 속성을 포함한다.
+`contacts.find` 동작의 결과를 거르기위해 사용되는 속성을 포함한다.
 
 Properties
 ----------

@@ -1,7 +1,7 @@
 contactSuccess
 ==============
 
-'contacts.find' 동작의 결과인 'Contact' 배열을 제공하는 성공 콜백 함수.
+`contacts.find` 동작의 결과인 `Contact` 배열을 제공하는 성공 콜백 함수.
 
     function(contacts) {
         // 무언가 한다.

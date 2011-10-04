@@ -1,7 +1,7 @@
 ContactName
 ===========
 
-'Contact' 객체의 이름 속성을 담는다.
+`Contact` 객체의 이름 속성을 담는다.
 
 Properties
 ----------
@@ -109,9 +109,9 @@ BlackBerry WebWorks (OS 5.0 and higher) Quirks
 - __formatted:__ 부분적으로 지원된다. BlackBerry의 __firstName__ 과 __lastName__ 필드의 연속을 반환한다.
 - __familyName:__ 지원된다. BlackBerry에 저장된 __lastName__ 필드.
 - __givenName:__ 지원된다. BlackBerry에 저장된 __firstName__ 필드.
-- __middleName:__ 이 속성은 지원되지 않고, 항상 'null'을 반환한다.
-- __honorificPrefix:__ 이 속성은 지원되지 않고, 항상 'null'을 반환한다.
-- __honorificSuffix:__ 이 속성은 지원되지 않고, 항상 'null'을 반환한다.
+- __middleName:__ 이 속성은 지원되지 않고, 항상 `null`을 반환한다.
+- __honorificPrefix:__ 이 속성은 지원되지 않고, 항상 `null`을 반환한다.
+- __honorificSuffix:__ 이 속성은 지원되지 않고, 항상 `null`을 반환한다.
 
 iOS Quirks
 ------------
