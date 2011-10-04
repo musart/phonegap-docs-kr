@@ -12,9 +12,9 @@ accelerometer.watchAcceleration
 
 가속도계는 현재 위치와 관련된 움직임속에서 변화를 감지하는 모션센서이다. 가속도계는 x, y, z 축의 3D 움직임을 감지할 수 있다.
 
-`accelerometer.watchAcceleration`는 기기의 현재 가속도를 규칙적인 시간간격으로 얻는다. 각 시간마다 'Acceletion'이 검색될 때, 'accelerometerSuccess' 콜백 함수는 실행된다. 'acceleratorOptions' 객체 안에 'frequency' 변수를 통해 1000분의 1초 단위의 간격을 명시한다.
+`accelerometer.watchAcceleration`는 기기의 현재 가속도를 규칙적인 시간간격으로 얻는다. 각 시간마다 `Acceleration`이 검색될 때, `accelerometerSuccess` 콜백 함수는 실행된다. `acceleratorOptions` 객체 안에 `frequency` 변수를 통해 1000분의 1초 단위의 간격을 명시한다.
 
-반환된 watch ID는 accelerometer watch interval을 참고한다. watch ID는 가속도를 지켜보는 것을 멈추기 위해 'accelerometer.clearWatch'와 함께 사용된다.
+반환된 watch ID는 accelerometer watch interval을 참고한다. watch ID는 가속도를 지켜보는 것을 멈추기 위해 `accelerometer.clearWatch`와 함께 사용된다.
 
 지원하는 플랫폼
 -------------------

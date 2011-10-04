@@ -6,4 +6,5 @@ accelerometerOptions
 Options
 -------
 
-- __frequency:__ 얼마나 자주 1000분의 1초 단위의 가속도를 검색하는 변수 _(Number)_ (기본값: 10000)
+
+- __frequency:__ 얼마나 자주 1000분의 1초 단위의 `Acceleration`을 검색하는 변수 _(Number)_ (기본값: 10000)

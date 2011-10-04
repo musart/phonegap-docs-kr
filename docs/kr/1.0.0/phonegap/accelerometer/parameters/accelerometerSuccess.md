@@ -1,7 +1,7 @@
 accelerometerSuccess
 ====================
 
-가속도 정보를 제공하는 onSuccess 콜백 함수.
+Acceleration 정보를 제공하는 onSuccess 콜백 함수.
 
     function(acceleration) {
         // Do something

@@ -1,7 +1,7 @@
 Acceleration
 ============
 
-특정 시간에 얻어진 'Accelerometer' 값을 담고 있다.
+특정 시간에 얻어진 `Accelerometer` 값을 담고 있다.
 
 Properties
 ----------
@@ -14,7 +14,7 @@ Properties
 설명
 -----------
 
-이 객체는 PhoneGap에 의해 생성되고 'Accelerometer' 메소드에 의해 반환된다.
+이 객체는 PhoneGap에 의해 생성되고 `Accelerometer` 메소드에 의해 반환된다.
 
 지원하는 플랫폼
 -------------------

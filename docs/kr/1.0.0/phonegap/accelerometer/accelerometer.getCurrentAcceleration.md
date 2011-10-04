@@ -1,7 +1,7 @@
 accelerometer.getCurrentAcceleration
 ====================================
 
-x, y 그리고 x축에 대한 현재 가속도를 얻는다.
+x, y 그리고 z축에 대한 현재 가속도를 얻는다.
 
     navigator.accelerometer.getCurrentAcceleration(accelerometerSuccess, accelerometerError);
 
@@ -10,7 +10,7 @@ x, y 그리고 x축에 대한 현재 가속도를 얻는다.
 
 가속도계는 현재 가기의 방향에 관계있는 움직임의 변화(거리)를 감지하는 모션센서이다. 가속도계는 x, y, z축을 통해 3차원 움직임을 감지할 수 있다.
 
-가속도는 accelerometerSuccess콜백 함수를 사용하여 리턴된다.
+가속도는 `accelerometerSuccess`콜백 함수를 사용하여 리턴된다.
 
 지원하는 플랫폼
 -------------------
@@ -65,7 +65,7 @@ x, y 그리고 x축에 대한 현재 가속도를 얻는다.
                   'Timestamp: '      + acceleration.timestamp + '\n');
         }
     
-        // onError: Failed to get the acceleration
+        // onError: 가속도 얻기를 실패했을 경우
         //
         function onError() {
             alert('onError!');
@@ -83,5 +83,5 @@ iPhone Quirks
 -------------
 
 - iPhone은 특정 위치의 현재 가속도를 얻어오는 컨셉을 갖고있지 않다.
-- 반드시 가속도를 지켜보고 주어진 시간 간격으로 데이터를 가저와야 한다.
-- 따라서, 'getCurrentAcceleration' 함수는 PhoneGap의 'watchAccelerometer' 호출로부터 제공된 가장 최근 값을 너에게 줄 것이다.
+- 반드시 가속도를 지켜보고 주어진 시간 간격으로 데이터를 가져와야 한다.
+- 따라서, `getCurrentAcceleration` 함수는 PhoneGap의 `watchAccelerometer` 호출로부터 제공된 가장 최근 값을 제공한다.

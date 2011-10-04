@@ -1,11 +1,11 @@
 accelerometer.clearWatch
 ========================
 
-watch ID 변수에 의해 참조되는 acceleration 모니터링을 멈춘다.
+watch ID 변수에 의해 참조되는 `Acceleration` 모니터링을 멈춘다.
 
     navigator.accelerometer.clearWatch(watchID);
 
-- __watchID__: accelerometer.watchAcceleration에 의해 반환되는 ID.
+- __watchID__: `accelerometer.watchAcceleration`에 의해 반환되는 ID.
 
 지원하는 플랫폼
 -------------------
