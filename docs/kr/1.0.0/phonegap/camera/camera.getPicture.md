@@ -8,11 +8,11 @@ camera.getPicture
 설명
 -----------
 
-'camera.getPicture' 함수는 기기의 기본 카메라 어플리케이션을 열고, 사용자는 사진을 찍을 수 있다(만약 'Camera.sourceType = Camera.PictureSourceType.CAMERA'일 경우, 디폴트값). 사진이 찍히면, 카메라 어플리케이션은 종료되고 당신의 어플리케이션이 복원된다.
+`camera.getPicture` 함수는 기기의 기본 카메라 어플리케이션을 열고, 사용자는 사진을 찍을 수 있다(만약 `Camera.sourceType = Camera.PictureSourceType.CAMERA`일 경우, 디폴트값). 사진이 찍히면, 카메라 어플리케이션은 종료되고 당신의 어플리케이션이 복원된다.
 
 만약 `Camera.sourceType = Camera.PictureSourceType.PHOTOLIBRARY`이나 `Camera.PictureSourceType.SAVEDPHOTOALBUM`이면, 사진 선택 다이얼로그가 나타나고, 앨범내에 사진을 선택할 수 있다.
 
-당신이 정한 'cameraOptions'에 따라, 결과값은 다음 중 하나가 `cameraSuccess` 함수로 보내질 것이다. 
+당신이 정한 `cameraOptions`에 따라, 결과값은 다음 중 하나가 `cameraSuccess` 함수로 보내질 것이다. 
 
 - Base64로 암호화된 사진 이미지를 담은 'String'(기본값).
 - LocalStorage에 이미지 파일을 나타내는 'String'.
