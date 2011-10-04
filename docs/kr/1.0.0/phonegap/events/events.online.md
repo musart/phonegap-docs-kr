@@ -10,7 +10,7 @@ Details
 
 어플리케이션의 네트워크 연결이 온라인으로 변경될 때, online 이벤트는 발생된다.
 
-일반적으로, 당신은 PhoneGap의 'deviceready' 이벤트를 받았을 때 'document.addEventListener'에 이벤트 리스너를 추가하기를 원할 것이다.
+일반적으로, 당신은 PhoneGap의 `deviceready` 이벤트를 받았을 때 `document.addEventListener`에 이벤트 리스너를 추가하기를 원할 것이다.
 
 지원하는 플랫폼
 -------------------

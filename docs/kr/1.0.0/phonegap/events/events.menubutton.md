@@ -8,9 +8,9 @@ menubutton
 Details
 -------
 
-만약 당신이 안드로이드에서 기본 메뉴 버튼의 동작보다 우선하는 동작을 싶다면 'menubutton'이벤트를 위한 이벤트 리스너를 등록할 수 있다.
+만약 당신이 안드로이드에서 기본 메뉴 버튼의 동작보다 우선하는 동작을 싶다면 `menubutton`이벤트를 위한 이벤트 리스너를 등록할 수 있다.
 
-일반적으로, 당신이 PhoneGap의 'deviceready' 이벤트를 받았을 때 'document.addEventListener'에 이벤트 리스너를 추가하기를 원할 것이다.
+일반적으로, 당신이 PhoneGap의 `deviceready`이벤트를 받았을 때 `document.addEventListener`에 이벤트 리스너를 추가하기를 원할 것이다.
 
 지원하는 플랫폼
 -------------------

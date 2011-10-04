@@ -10,7 +10,7 @@ Details
 
 PhoneGap은 두 개의 코드 기반으로 이루어진다. 네이티브와 자바스크립트이다. 네이티브 코드는 어플리케이션을 백그라운드에서 꺼내는 동안에 resume 에벤트가 발생된다.
 
-일반적으로, 당신은 PhoneGap의 'deviceready' 이벤트를 받았을 때 'document.addEventListener'에 이벤트 리스너를 추가하기를 원할 것이다.
+일반적으로, 당신은 PhoneGap의 `deviceready` 이벤트를 받았을 때 `document.addEventListener`에 이벤트 리스너를 추가하기를 원할 것이다.
 
 지원하는 플랫폼
 -------------------
