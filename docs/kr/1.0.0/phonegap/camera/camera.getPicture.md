@@ -14,16 +14,16 @@ camera.getPicture
 
 당신이 정한 `cameraOptions`에 따라, 결과값은 다음 중 하나가 `cameraSuccess` 함수로 보내질 것이다. 
 
-- Base64로 암호화된 사진 이미지를 담은 'String'(기본값).
-- LocalStorage에 이미지 파일을 나타내는 'String'.
+- Base64로 암호화된 사진 이미지를 담은 `String`(기본값).
+- LocalStorage에 이미지 파일을 나타내는 `String`.
 
 당신이 원하는 암호화된 이미지나 URI로 어떤 것도 할 수 있다, 예를 들면:
 
-- '<img>' 태그 안에서 이미지를 그린다. _(아래 예제 참조)_
+- `<img>` 태그 안에서 이미지를 그린다. _(아래 예제 참조)_
 - 데이터를 저장한다. ('LocalStorage', [Lawnchair](http://brianleroux.github.com/lawnchair/), 등)
 - 데이터를 원격 서버에 게시한다.
 
-Note: 최신 기기의 카메라를 사용하여 찍힌 사진의 이미지 품질은 아주 좋다. _이러한 이미지들을 Base64를 사용하여 임호화하면 일부 기기(iPhone 4, BlackBerry Torch 9800)에서 메모리 이슈를 야기한다. 따라서, 'Camera.destinationType'으로 FILE_URI 사용을 강력하게 권한다.
+Note: 최신 기기의 카메라를 사용하여 찍힌 사진의 이미지 품질은 아주 좋다. _이러한 이미지들을 Base64를 사용하여 임호화하면 일부 기기(iPhone 4, BlackBerry Torch 9800)에서 메모리 이슈를 야기한다._ 따라서, `Camera.destinationType`으로 FILE_URI 사용을 강력하게 권한다.
 
 지원하는 플랫폼
 -------------------
