@@ -14,7 +14,7 @@ capture.captureAudio
 
 사용자가 오디오 녹음 어플리케이션을 나가거나 CaptureAudioOptions의 __limit__ 인자에 의해 정의된 녹음의 최대 갯수에 도달하면 기록 동작이 끝난다. 만약 __limit__ 인자에 아무런 값도 제공되지 않는다면, 1이 기본값으로 사용되고, capture 동작은 사용자가 하나의 오디오 클립이 녹음된 후 종료될 것이다.
 
-capture 동작이 끝났을 때, 각각의 기록된 오디오 클립 파일들을 설명하는 MediaFile 객체 배열을 담은 CaptureCB 콜백을 호출한다. 만약 동작이 오디오 클립이 기록되기 전에 사용자에 의해 종료되면, CaptureErrorCB 콜백은 CaptureError 객체를 담아 호출된다. 'CAPTURE_NO_MEDIA_FILES' 에러 코드이다.
+capture 동작이 끝났을 때, 각각의 기록된 오디오 클립 파일들을 설명하는 MediaFile 객체 배열을 담은 CaptureCB 콜백을 호출한다. 만약 동작이 오디오 클립이 기록되기 전에 사용자에 의해 종료되면, CaptureErrorCB 콜백은 CaptureError 객체를 담아 호출된다. `CAPTURE_NO_MEDIA_FILES` 에러 코드이다.
 
 지원하는 플랫폼
 -------------------
@@ -107,7 +107,7 @@ capture 동작이 끝났을 때, 각각의 기록된 오디오 클립 파일들�
 BlackBerry WebWorks Quirks
 --------------------------
 
-- PhoneGap for BlackBerry WebWorks는 오디오 녹음을 위해 RIM에서 제공한 __Voice Notes Recorder__ 어플리케이션을 실행하기를 시도한다. 어플리케이션이 디바이스에 설치되어 있지 않으면 개발자는 'CAPTURE_NOT_SUPPORTED' 에러코드의 CaptureError를 받는다.
+- PhoneGap for BlackBerry WebWorks는 오디오 녹음을 위해 RIM에서 제공한 __Voice Notes Recorder__ 어플리케이션을 실행하기를 시도한다. 어플리케이션이 디바이스에 설치되어 있지 않으면 개발자는 `CAPTURE_NOT_SUPPORTED` 에러코드의 CaptureError를 받는다.
 
 iOS Quirks
 ----------

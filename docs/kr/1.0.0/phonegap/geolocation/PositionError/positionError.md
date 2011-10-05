@@ -19,5 +19,5 @@ Constants
 설명
 -----------
 
-`PositionError` 객체는 geolocation에서 에러가 발생햇을 때 사용자에게 'geolocationError' 콜백함수를 통해 반환된다.
+`PositionError` 객체는 geolocation에서 에러가 발생햇을 때 사용자에게 `geolocationError` 콜백함수를 통해 반환된다.
 

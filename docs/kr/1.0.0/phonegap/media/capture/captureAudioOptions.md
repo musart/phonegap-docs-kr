@@ -8,7 +8,7 @@ Properties
 
 - __limit:__ 기기 사용자가 한번의 capture 동작에 녹음할 수 있는 오디오 클립의 최대 갯수. 이 값은 1 이상이어야 한다.(기본값은 1이다.)
 - __duration:__ 초 단위의 오디오 사운드 클립의 최대 시간.
-- __mode:__ 선택된 오디오 모드. 이 값은 'capture.supportedAudioModes'안에 요소 중 하나와 일치해야 한다.
+- __mode:__ 선택된 오디오 모드. 이 값은 `capture.supportedAudioModes`안에 요소 중 하나와 일치해야 한다.
 
 빠른 예제
 -------------

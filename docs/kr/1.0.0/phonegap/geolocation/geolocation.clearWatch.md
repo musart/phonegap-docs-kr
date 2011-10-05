@@ -1,20 +1,19 @@
 geolocation.clearWatch
 ======================
 
-'watchID' 변수에 의해 참조되는 기기의 위치 변화를 감지하는 것을 멈춘다.
-Stop watching for changes to the device's location referenced by the `watchID` parameter.
+`watchID` 변수에 의해 참조되는 기기의 위치 변화를 감지하는 것을 멈춘다.
 
     navigator.geolocation.clearWatch(watchID);
 
 Parameters
 ----------
 
-- __watchID:__ 'watchPosition' 시간 간격을 지우기 위한 id. (String)
+- __watchID:__ `watchPosition` 시간 간격을 지우기 위한 id. (String)
 
 설명
 -----------
 
-'geolocation.clearWatch' 함수는 'watchID'에 의해 참조되는 'geolocation.watchPosition'을 지움으로써 기기의 위치 변화를 감지하는 것을 멈춘다.
+`geolocation.clearWatch` 함수는 `watchID`에 의해 참조되는 `geolocation.watchPosition`을 지움으로써 기기의 위치 변화를 감지하는 것을 멈춘다.
 
 지원하는 플랫폼
 -------------------

@@ -61,7 +61,7 @@ device.platform
 iPhone Quirks
 -------------
 
-모든 기기는 플랫폼으로써 'iPhone'을 반환한다. 이 부정확함은 애플이 iPhone 운영체제를 'iOS'로 새로 바꿔서이다.
+모든 기기는 플랫폼으로써 `iPhone`을 반환한다. 이 부정확함은 애플이 iPhone 운영체제를 `iOS`로 새로 바꿔서이다.
 
 BlackBerry Quirks
 -----------------

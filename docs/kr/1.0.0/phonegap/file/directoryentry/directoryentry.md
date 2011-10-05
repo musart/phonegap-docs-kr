@@ -11,7 +11,7 @@ Properties
 - __name:__ DirectoryEntry의 이름, excluding the path leading to it. _(DOMString)_
 - __fullPath:__ root로부터 DirectoryEntry까지 전체 절대 경로. _(DOMString)_
 
-NOTE: 다음의 속성들은 W3C 표준에 정의되어 있지만 PhoneGap은 지원하지 __not supported__ 않는다:
+NOTE: 다음의 속성들은 W3C 표준에 정의되어 있지만 PhoneGap은 __지원되지 않는다__:
 
 - __filesystem:__ DirectoryEntry가 위치하는 파일 시스템. _(FileSystem)_ 
 
@@ -46,8 +46,8 @@ getMetadata
 
 __Parameters:__
 
-- __successCallback__ - 메타데이터 객체와 함께 호출되는 콜백. _(Function)_
-- __errorCallback__ - 메타데이터를 검색하다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 호출된다. _(Function)_
+- __successCallback__ - Metadata 객체와 함께 호출되는 콜백. _(Function)_
+- __errorCallback__ - Metadata를 검색하다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 호출된다. _(Function)_
 
 
 __빠른 예제__
@@ -274,7 +274,7 @@ __빠른 예제__
 removeRecursively
 -----------------
 
-디렉토리와 그 안의 모든 컨텐츠를 제거한다. 에러 이벤트 가운데 (e.g. 지워질 수 없는 파일을 포함한 디렉토리를 지위기 위해 시도하는), 일부 디렉토리의 컨텐츠들은 아마 지워질 것이다. 다음을 수행하면 에러이다:
+디렉토리와 그 안의 모든 컨텐츠를 제거한다. 에러 이벤트 가운데 (예를 들면, 지워질 수 없는 파일을 포함한 디렉토리를 지위기 위해 시도하는), 일부 디렉토리의 컨텐츠들은 아마 지워질 것이다. 다음을 수행하면 에러이다:
 
 - 파일 시스템의 root 디레토리를 제거한다.
 

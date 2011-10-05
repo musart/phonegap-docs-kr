@@ -1,13 +1,13 @@
 Position
 ========
 
-geolocation API에 의해 생성된 'Position' 좌표를 포함한다.
+geolocation API에 의해 생성된 `Position` 좌표를 포함한다.
 
 Properties
 ----------
 
 - __coords:__ 지리적인 좌표 세트. _(Coordinates)_
-- __timestamp:__ 1000분의 1초 단위의 'coords'위한 생성된 timestamp. _(DOMTimeStamp)_
+- __timestamp:__ 1000분의 1초 단위의 `coords`위한 생성된 timestamp. _(DOMTimeStamp)_
 
 설명
 -----------

@@ -1,7 +1,7 @@
 Flags
 =====
 
-이 객체는, 각각 파일이나 디렉토리들을 검색하거나 생성할 경우, 'DirectoryEntry'의 __getFile__과 __getDirectory__ 함수의 아규먼트를 지원하기 위해 사용된다. 
+이 객체는, 각각 파일이나 디렉토리들을 검색하거나 생성할 경우, `DirectoryEntry`의 __getFile__과 __getDirectory__ 함수의 아규먼트를 지원하기 위해 사용된다. 
 
 Properties
 ----------

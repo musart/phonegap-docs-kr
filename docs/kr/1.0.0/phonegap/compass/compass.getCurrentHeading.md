@@ -10,7 +10,7 @@ compass.getCurrentHeading
 
 나침반은 이동 방향이나 기기가 가리키는 방향을 얻어오는 센서이다. 이것은 0도부터 359.99도까지 가리키는 방향을 측정한다.
 
-나침반 heading은 'compassSuccess' 콜백 함수에 의해 반환된다. 
+나침반 heading은 `compassSuccess` 콜백 함수에 의해 반환된다. 
 
 지원하는 플랫폼
 -------------------

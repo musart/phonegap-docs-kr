@@ -1,7 +1,7 @@
 geolocation.getCurrentPosition
 ==============================
 
-'Position' 객체로 기기의 현재 위치를 반환한다.
+`Position` 객체로 기기의 현재 위치를 반환한다.
 
     navigator.geolocation.getCurrentPosition(geolocationSuccess, 
                                              [geolocationError], 
@@ -17,7 +17,7 @@ Parameters
 설명
 -----------
 
-`geolocation.getCurrentPositon` 함수는 비동기 함수이다. 이 함수는 기기의 현재 위치를 'Position' 객체를 변수로 하는 'geolocationSuccess' 콜백으로 반환한다. 만약 에러가 있다면 'geolocationError' 콜백은 'PositionError' 객체와 함께 호출된다.
+`geolocation.getCurrentPositon` 함수는 비동기 함수이다. 이 함수는 기기의 현재 위치를 `Position` 객체를 변수로 하는 `geolocationSuccess` 콜백으로 반환한다. 만약 에러가 있다면 `geolocationError` 콜백은 `PositionError` 객체와 함께 호출된다.
 
 지원하는 플랫폼
 -------------------

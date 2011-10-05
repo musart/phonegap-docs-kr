@@ -39,6 +39,7 @@ Read As Data URL
 ----------------
 
 __Parameters:__
+
 - file - 읽기 위한 file 객체
 
 

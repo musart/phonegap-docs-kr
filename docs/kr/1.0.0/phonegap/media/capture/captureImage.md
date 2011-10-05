@@ -1,7 +1,7 @@
 capture.captureImage
 ====================
 
-> 카메라 어플리케이션을 시작하고 기록된 이미지 파일에 대한 정보를 반환한다.
+> 카메라 어플리케이션을 시작하고 기록된 이미지 파일(들)에 대한 정보를 반환한다.
 
     navigator.device.capture.captureImage( 
 	    CaptureCB captureSuccess, CaptureErrorCB captureError, [CaptureImageOptions options]
@@ -14,7 +14,7 @@ capture.captureImage
 
 캡쳐 동작은 사용자가 카메라 어플리케이션을 나가거나, CaptureImageOptions의 __limit__ 인자에 정의된 이미지의 최대 갯수에 도달했을 때 끝난다. 만약 __limit__ 인자에 아무값도 없을 경우, 기본값인 1이 사용되고, 캡쳐 동작은 사용자가 하나의 이미지를 켑쳐한 뒤 종료될 것이다.
 
-캡쳐 동작이 끝났을 때, 각각의 캡쳐된 이미지 파일을 설명하는 MediaFile 객체의 배열을 담은 CaptureCB를 호출한다. 만약 이 동작이 이미지가 캡쳐되기 전에 사용자에 의해 종료될 경우, CaptureErrorCB 콜백은 CaptureError 객체를 담아 호출된다. 'CAPTURE_NO_MEDIA_FILES' 에러코드이다.
+캡쳐 동작이 끝났을 때, 각각의 캡쳐된 이미지 파일을 설명하는 MediaFile 객체의 배열을 담은 CaptureCB를 호출한다. 만약 이 동작이 이미지가 캡쳐되기 전에 사용자에 의해 종료될 경우, CaptureErrorCB 콜백은 CaptureError 객체를 담아 호출된다. `CAPTURE_NO_MEDIA_FILES` 에러코드이다.
 
 지원하는 플랫폼
 -------------------

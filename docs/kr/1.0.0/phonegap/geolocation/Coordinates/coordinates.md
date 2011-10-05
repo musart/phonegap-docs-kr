@@ -17,7 +17,7 @@ Properties
 설명
 -----------
 
-`Coordinates` 객체는 PhoneGap에 의해 생성되고 채워진다. 또 'Position' 객체가 추가된다. 'Position' 객체는 콜백 함수를 통해 사용자에게 반환된다.
+`Coordinates` 객체는 PhoneGap에 의해 생성되고 채워진다. 또 `Position` 객체가 추가된다. `Position` 객체는 콜백 함수를 통해 사용자에게 반환된다.
 
 지원하는 플랫폼
 -------------------

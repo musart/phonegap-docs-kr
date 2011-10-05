@@ -1,7 +1,7 @@
 MediaError
 ==========
 
-`MediaError` 객체는 에러가 발생했을 때 'mediaError' 콜백 함수를 반환한다.
+`MediaError` 객체는 에러가 발생했을 때 `mediaError` 콜백 함수를 반환한다.
 
 Properties
 ----------
@@ -21,5 +21,5 @@ Constants
 설명
 -----------
 
-`MediaError` 객체는 에러가 발생했을 때 사용자에게 'mediaError' 콜백 함수를 통해 반환한다.
+`MediaError` 객체는 에러가 발생했을 때 사용자에게 `mediaError` 콜백 함수를 통해 반환한다.
 

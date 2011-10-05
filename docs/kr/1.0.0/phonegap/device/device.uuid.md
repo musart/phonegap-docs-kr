@@ -8,8 +8,7 @@ device.uuid
 설명
 -----------
 
-어떻게 UUID가 기기 제조사에 의해 생성되고 결정되는지를 그리고 기기의 플랫폼이나 모델에 특유해지는 세부사항
-The details of how a UUID is generated are determined by the device manufacturer and specific to the device's platform or model.
+어떻게 UUID가 기기 제조사에 의해 생성되고 결정되는지, 그리고 기기의 플랫폼이나 모델을 정의되는지에 대한 세부사항
 
 지원하는 플랫폼
 -------------------

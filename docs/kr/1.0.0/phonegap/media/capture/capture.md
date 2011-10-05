@@ -27,7 +27,7 @@ Methods
 Scope
 -----
 
-__capture__ 객체는 __navigator.device__ 객체에 의해 할당되고, 따라서 전역 범뷔이다.
+__capture__ 객체는 __navigator.device__ 객체에 의해 할당되고, 따라서 전역 범위이다.
 
     // 전역 capture 객체
     var capture = navigator.device.capture;

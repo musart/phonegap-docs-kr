@@ -10,7 +10,7 @@ cameraSuccess
 Parameters
 ----------
 
-- __imageData:__ 'cameraOptions'에 따른 이미지 데이터의 Base64 인코딩 값이나 이미지 파일의 URL. ('String')
+- __imageData:__ `cameraOptions`에 따른 이미지 데이터의 Base64 인코딩 값이나 이미지 파일의 URL. (`String`)
 
 Example
 -------

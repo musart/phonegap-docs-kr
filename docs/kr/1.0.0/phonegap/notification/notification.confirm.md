@@ -13,7 +13,7 @@ notification.confirm
 설명
 -----------
 
-`notification.confirm` 함수는 브라우저의 'confirm' 함수대신 더 사용자 설정가능한 네이티브 다이얼로그 박스를 표시한다.
+`notification.confirm` 함수는 브라우저의 `confirm` 함수대신 더 사용자 설정가능한 네이티브 다이얼로그 박스를 표시한다.
 
 지원하는 플랫폼
 -------------------

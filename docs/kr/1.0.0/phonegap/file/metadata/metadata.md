@@ -11,7 +11,7 @@ Properties
 Details
 -------
 
-`Metadata` 객체는 파일이나 디렉토리의 상태에 대한 정보를 나타낸다. 당신은 'DirectoryEntry'나 'FileEntry' 객체의 __getMetadata__ 함수를 호출함으로써 Metadata 객체의 인스턴스를 얻는다. 
+`Metadata` 객체는 파일이나 디렉토리의 상태에 대한 정보를 나타낸다. 당신은 `DirectoryEntry`나 `FileEntry` 객체의 __getMetadata__ 함수를 호출함으로써 Metadata 객체의 인스턴스를 얻는다. 
 
 지원하는 플랫폼
 -------------------

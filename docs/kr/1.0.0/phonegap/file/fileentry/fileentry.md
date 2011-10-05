@@ -11,7 +11,7 @@ Properties
 - __name:__ FileEntry의 이름, excluding the path leading to it. _(DOMString)_
 - __fullPath:__ root부터 FileEntry까지 전체 절대 경로. _(DOMString)_
 
-NOTE: 다음의 속성은 W3C 표준에 정의되어 있지만, PhoneGap은 지원되지 __not supported__ 않는다:
+NOTE: 다음의 속성은 W3C 표준에 정의되어 있지만, PhoneGap은 __지원되지 않는다__:
 
 - __filesystem:__ FileEntry가 위치하는 파일 시스템. _(FileSystem)_
 
@@ -40,12 +40,12 @@ Methods
 getMetadata
 ----------------
 
-파일의 메타데이터를 찾아본다.
+파일의 Metadata를 찾아본다.
 
 __Parameters:__
 
-- __successCallback__ - 메타데이터 객체와 함께 호출되는 콜백. _(Function)_
-- __errorCallback__ - 메타데이터를 검색하다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 호출된다. _(Function)_
+- __successCallback__ - Metadata 객체와 함께 호출되는 콜백. _(Function)_
+- __errorCallback__ - Metadata를 검색하다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 호출된다. _(Function)_
 
 
 __빠른 예제__
