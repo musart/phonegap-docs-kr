@@ -14,16 +14,16 @@ cameraOptions
 Options
 -------
 
-- __quality:__ 저장된 이미지의 품질.  범위는 [0, 100]. (`Number`)
+- __quality:__ 저장된 이미지의 품질. 범위는 [0, 100]. (`Number`)
 
-- __destinationType:__ 리턴값의 포멧을 선택한다.  navigator.camera.DestinationType에 정의되어 있다. (`Number`)
+- __destinationType:__ 리턴값의 포멧을 선택한다. navigator.camera.DestinationType에 정의되어 있다. (`Number`)
         
             Camera.DestinationType = {
                 DATA_URL : 0,                // base64로 인코딩된 문자열기반의 이미지가 반환된다.
                 FILE_URI : 1                 // 파일의 URI가 반환된다.
             };
 
-- __sourceType:__ 사진의 근원을 설정한다.  nagivator.camera.PictureSourceType에 정의되어 있다. (`Number`)
+- __sourceType:__ 사진의 근원을 설정한다. nagivator.camera.PictureSourceType에 정의되어 있다. (`Number`)
      
         Camera.PictureSourceType = {
             PHOTOLIBRARY : 0,
@@ -33,22 +33,22 @@ Options
 
 - __allowEdit:__ 선택하기 전에 이미지의 간단한 수정을 가능하게 한다. (`Boolean`)
   
-- __EncodingType:__ 반환되는 이미지 파일의 인코딩 타입을 선택한다.  navigator.camera.EncodingType에 정의되어 있다. (`Number`)
+- __EncodingType:__ 반환되는 이미지 파일의 인코딩 타입을 선택한다. navigator.camera.EncodingType에 정의되어 있다. (`Number`)
         
             Camera.EncodingType = {
                 JPEG : 0,               // JPEG로 인코딩된 이미지가 반환
                 PNG : 1                 // PNG로 인코딩된 이미지가 반환
             };
 
-- __targetWidth:__ 이미지 크기를 변경하기 위한 픽셀단위의 넓이.  targetHeight와 꼭 함께 사용되어야 한다.  가로세로비는 유지된다. (`Number`)
-- __targetHeight:__ 이미지 크기를 변경하기 위한 픽셀단위의 높이.  targetWidth와 꼭 함께 사용되어야 한다. 가로세로비는 유지된다. (`Number`)
+- __targetWidth:__ 이미지 크기를 변경하기 위한 픽셀단위의 넓이. targetHeight와 꼭 함께 사용되어야 한다.  가로세로비는 유지된다. (`Number`)
+- __targetHeight:__ 이미지 크기를 변경하기 위한 픽셀단위의 높이. targetWidth와 꼭 함께 사용되어야 한다. 가로세로비는 유지된다. (`Number`)
   
 Android Quirks
 --------------
 
-- `allowEdit` 변수는 무시한다.
-- Camera.PictureSourceType.PHOTOLIBRARY 와 Camera.PictureSourceType.SAVEDPHOTOALBUM 둘 다 같은 포토앨범을 보여준다.
-- Camera.EncodingType 은 지원하지 않는다.
+- `allowEdit`변수는 무시한다.
+- Camera.PictureSourceType.PHOTOLIBRARY와 Camera.PictureSourceType.SAVEDPHOTOALBUM은 둘 다 같은 포토앨범을 보여준다.
+- Camera.EncodingType은 지원하지 않는다.
 
 BlackBerry Quirks
 -----------------
