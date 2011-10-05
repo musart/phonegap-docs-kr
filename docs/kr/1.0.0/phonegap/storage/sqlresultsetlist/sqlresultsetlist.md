@@ -16,7 +16,7 @@ Methods
 Details
 -------
 
-SQLResultSetList 는 SQL select 구문으로부터 반환된 데이터를 포함한다. 이 객체는 얼마나 많은 rows가 select 구문에 의해 반환되었는지를 알려주는 length 속성을 담고있다. 데이터의 row를 얻기 위해서는 인텍스를 명기하여 'item' 함수를 호출한다. item 함수는 select 구문이 실행된 이후 database의 columns 속성인 자바스크립트 객체를 반환한다. 
+SQLResultSetList 는 SQL select 구문으로부터 반환된 데이터를 포함한다. 이 객체는 얼마나 많은 rows가 select 구문에 의해 반환되었는지를 알려주는 length 속성을 담고있다. 데이터의 row를 얻기 위해서는 인텍스를 명기하여 `item` 함수를 호출한다. item 함수는 select 구문이 실행된 이후 database의 columns 속성인 자바스크립트 객체를 반환한다. 
 
 지원하는 플랫폼
 -------------------

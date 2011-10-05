@@ -11,7 +11,7 @@ Methods
 Details
 -------
 
-당신이 database 객체에 트랜젝션 함수를 호출할 때 콜백 함수는 SQLTransaction 객체ㅏ 함께 호출된다. 사용자는 database executeSql 함수를 여러번 호출하면서 트렌젝션을 개발할 수 있다.
+당신이 database 객체에 트랜젝션 함수를 호출할 때 콜백 함수는 SQLTransaction 객체와 함께 호출된다. 사용자는 database executeSql 함수를 여러번 호출하면서 트렌젝션을 개발할 수 있다.
 
 지원하는 플랫폼
 -------------------

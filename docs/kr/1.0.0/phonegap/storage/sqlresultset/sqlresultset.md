@@ -13,7 +13,7 @@ Properties
 Details
 -------
 
-당신이 SQLTransaction executeSql 함수를 호출할 때, 해당 콜백 함수는 SQLResultSet 객체와 함께 호출될 것이다. 결과 객체는 3개의 속성을 가진다. 첫번째는 성공적인 SQL insert 구문의 열 번호를 반환하는 'insertId'이다. 만약 SQL 구문이 삽입되지 않았다면 'insertId'는 설정되지 않는다. 'rowAffected'는 SQL select 구문을 위해 항상 0이다. insert나 update 구문을 위헤 그것은 수정된 열의 개수를 반환한다. 마지막 속성은 SQLResultSetList 타입이고, 그것은 SQL select 구문으로부터 반환된 데이터를 포함한다.
+당신이 SQLTransaction executeSql 함수를 호출할 때, 해당 콜백 함수는 SQLResultSet 객체와 함께 호출될 것이다. 결과 객체는 3개의 속성을 가진다. 첫번째는 성공적인 SQL insert 구문의 열 번호를 반환하는 `insertId`이다. 만약 SQL 구문이 삽입되지 않았다면 `insertId`는 설정되지 않는다. `rowAffected`는 SQL select 구문을 위해 항상 0이다. insert나 update 구문을 위헤 그것은 수정된 열의 개수를 반환한다. 마지막 속성은 SQLResultSetList 타입이고, 그것은 SQL select 구문으로부터 반환된 데이터를 포함한다.
 
 지원하는 플랫폼
 -------------------

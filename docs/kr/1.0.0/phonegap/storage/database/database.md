@@ -12,7 +12,7 @@ Methods
 Details
 -------
 
-'window.openDatabase()' 호출로부터 반환되는 Database 객체
+`window.openDatabase()` 호출로부터 반환되는 Database 객체
 
 지원하는 플랫폼
 -------------------
