@@ -1,7 +1,7 @@
 FileError
 ========
 
-File API 함수들 중에 에러가 발생했을 경우 `FileError` 객체는 설정된다. 
+File API 함수들 중에 에러가 발생했을 경우 `FileError`객체는 설정된다. 
 
 Properties
 ----------
@@ -27,4 +27,4 @@ Constants
 설명
 -----------
 
-`FileError` 객체는 File API의 에러 콜백들의 유일한 인자이다. 개발자는 에러의 종류를 결정하기 위해 반드시 코드 속성을 읽어야 한다.
+`FileError`객체는 File API의 에러 콜백들의 유일한 인자이다. 개발자는 에러의 종류를 결정하기 위해 반드시 코드 속성을 읽어야 한다.

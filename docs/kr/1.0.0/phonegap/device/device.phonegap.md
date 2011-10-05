@@ -8,7 +8,7 @@ device.phonegap
 설명
 -----------
 
-`device.phonegap` 는 기기에 동작되는 phonegap의 버전을 반환한다.
+`device.phonegap`는 기기에 동작되는 phonegap의 버전을 반환한다.
 
 지원하는 플랫폼
 -------------------

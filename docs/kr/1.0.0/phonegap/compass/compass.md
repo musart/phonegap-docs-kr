@@ -1,7 +1,7 @@
 Compass
 =======
 
-> Obtains the direction that the device is pointing.
+> 기기가 가리키는 방향을 얻는다.
 
 Methods
 -------

@@ -11,7 +11,8 @@ contacts.find
 contacts.find 는 기기의 연락처 저장소를 쿼리하고 `Contact` 객체의 배열을 반환하는 비동기 함수이다. 결과 객체는 __contactSuccess__ 변수에 의해 명시된 `contactSuccess` 콜백 함수로 전달된다.
 
 사용자는 __contactFields__ 변수안의 검색 식별자로 쓰이는 연락처 필드를 반드시 명시한다. __contactFields__ 인자에 명시된 필드만 __contactSuccess__ 콜백 함수로 전달되는 `Contact` 객체의 속성으로 반환된다. 길이가 없는 __contactFields__ 인자는 `id` 속성만 채워진 `Contact` 객체로 반환한다. ["*"]의 __contactFields__ 값은 모든 연락처 필드들을 반환한다.
-__contactFindOptions.filter__ 문자열은 연락처 저장소를 쿼리 할 때 검색 필터로 사용될 수 있다. 만약 이 문자열이 제공되어 지면, case-insensitive하고 부분적인 값 메치가 __contactFields__ 인자에 명기된 각 필드에 적용된다. 만약 매치가 명기된 필드와 비교하여 발견되면 연락처는 반환된다.
+
+__contactFindOptions.filter__ 문자열은 연락처 저장소를 쿼리 할 때 검색 필터로 사용될 수 있다. 만약 이 문자열이 제공되어 지면, 대소문자 구분 없이 부분적인 값 메치가 __contactFields__ 인자에 명기된 각 필드에 적용된다. 만약 매치가 명기된 필드와 비교하여 발견되면 연락처는 반환된다.
 
 Parameters
 ----------

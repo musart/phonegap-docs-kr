@@ -35,7 +35,7 @@ Note: 최신 기기의 카메라를 사용하여 찍힌 사진의 이미지 품�
 빠른 예제
 -------------
 
-Take photo and retrieve Base64-encoded image:
+사진을 찍고 Base64로 암호화된 이미지를 얻는다:
 
     navigator.camera.getPicture(onSuccess, onFail, { quality: 50 }); 
 
@@ -48,7 +48,7 @@ Take photo and retrieve Base64-encoded image:
         alert('Failed because: ' + message);
     }
 
-Take photo and retrieve image file location: 
+사진을 찍고 이미지 파일 위치를 얻는다:
 
     navigator.camera.getPicture(onSuccess, onFail, { quality: 50, 
         destinationType: Camera.DestinationType.FILE_URI }); 

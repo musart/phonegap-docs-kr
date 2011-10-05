@@ -12,7 +12,7 @@ Parameters
 
 - __acceleration:__ 특정한 순간의 가속도. (Acceleration)
 
-Example
+예제
 -------
 
     function onSuccess(acceleration) {

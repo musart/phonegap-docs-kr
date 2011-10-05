@@ -1,9 +1,9 @@
 Connection
 ==========
 
-> 'connection' 객체는 기기의 무선 전화나 와이파이 연경 정보의 접근을 허가한다.
+> `connection`객체는 기기의 무선 전화나 와이파이 연결 정보의 접근을 허가한다.
 
-이 객체는 navigator.network 인터페이스에 점근된다.
+이 객체는 navigator.network 인터페이스에 접근된다.
 
 Properties
 ----------

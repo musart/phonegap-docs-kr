@@ -10,7 +10,7 @@ compass.watchHeading
 
 나침반은 이동 방향이나 기기가 가리키는 방향을 감지하는 센서이다. 이것은 가리키는 방향을 0도에서 359.99도까지 측정한다.
 
-`compass.watchHeading`은  기기의 현재 가리키는 방향을 규칙적인 시간간격으로 얻는다. 각 시간간격마다 가리키는 방향을 얻을 때, `headingSuccess` 콜백 함수는 실행된다. `compassOptions` 객체 안에 `frequency` 변수를 통해 1000분의 1초 단위의 간격을 명시한다.
+`compass.watchHeading`은 기기의 현재 가리키는 방향을 규칙적인 시간간격으로 얻는다. 각 시간간격마다 가리키는 방향을 얻을 때, `headingSuccess`콜백 함수는 실행된다. `compassOptions`객체 안에 `frequency`변수를 통해 1000분의 1초 단위의 간격을 명시한다.
 
 반환된 watch ID는 compass watch 시간 간격을 참고한다. watch ID는 나참반을 지켜보는 것을 멈추기 위해 `compass.clearWatch`와 함께 사용된다.
 

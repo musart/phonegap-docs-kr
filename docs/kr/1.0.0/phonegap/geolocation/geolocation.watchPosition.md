@@ -17,12 +17,12 @@ Parameters
 Returns
 -------
 
-- __String__: 위치 감시 시간 간격을 참조하는 watch id를 반환한다. watch id는 위치 변화를 감지하는 것을 멈추기 위한 `geolocation.clearWatch` 와 함께 사용될 수 있다.
+- __String__: 위치 감시 시간 간격을 참조하는 watch id를 반환한다. watch id는 위치 변화를 감지하는 것을 멈추기 위한 `geolocation.clearWatch`와 함께 사용될 수 있다.
 
 설명
 -----------
 
-`geolocation.watchPosition` 은 비동기 함수이다. 위치의 변화가 감지되었을 때 기기의 현재 위치를 반환한다. 기기가 새로운 위치를 검색할 때, `geolocationSuccess` 콜백은 `Position` 겍체를 파라미터로 하여 호출된다. 만약 에러가 있다면, `geolocationError` 콜백이 `PositionError` 객체와 함께 호출된다.
+`geolocation.watchPosition`은 비동기 함수이다. 위치의 변화가 감지되었을 때 기기의 현재 위치를 반환한다. 기기가 새로운 위치를 검색할 때, `geolocationSuccess`콜백은 `Position`겍체를 파라미터로 하여 호출된다. 만약 에러가 있다면, `geolocationError`콜백이 `PositionError`객체와 함께 호출된다.
 
 지원하는 플랫폼
 -------------------
