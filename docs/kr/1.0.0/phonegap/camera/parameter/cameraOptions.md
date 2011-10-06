@@ -1,7 +1,7 @@
 cameraOptions
 =============
 
-카메라 설정값을 사용자 설정 가능한 선택적인 파라미터
+카메라 설정값을 사용자가 설정 가능한 선택적인 파라미터
 
     { quality : 75, 
       destinationType : Camera.DestinationType.DATA_URL, 
@@ -23,7 +23,7 @@ Options
                 FILE_URI : 1                 // 파일의 URI가 반환된다.
             };
 
-- __sourceType:__ 사진의 근원을 설정한다. nagivator.camera.PictureSourceType에 정의되어 있다. (`Number`)
+- __sourceType:__ 사진의 출처를 설정한다. nagivator.camera.PictureSourceType에 정의되어 있다. (`Number`)
      
         Camera.PictureSourceType = {
             PHOTOLIBRARY : 0,

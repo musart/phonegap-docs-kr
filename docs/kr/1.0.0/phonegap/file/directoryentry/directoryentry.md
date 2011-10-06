@@ -23,8 +23,7 @@ Methods
 - __getMetadata__: 디렉토리에 대해 메타데이터를 찾아본다.
 - __moveTo__: 디렉토리를 파일 시스템 상의 다른 위치로 이동한다.
 - __copyTo__: 디렉토리를 파일 시스템 상의 다른 위치로 복사한다.
-- __toURI__: 디렉토리를 위치하기위해 사용되는 URI를 반환한다.
-Return a URI that can be used to locate a directory.
+- __toURI__: 디렉토리의 위치를 찾아내기 위해 사용되는 URI를 반환한다.
 - __remove__: 디렉토리를 지운다. 디렉토리는 비어있어야 한다.
 - __getParent__: 부모 디렉토리를 찾아본다.
 - __createReader__: 디렉토리로부터 엔트리들을 읽을 수 있는 새로운 DirectoryReader를 생성한다.
@@ -253,7 +252,7 @@ getFile
 __Parameters:__
 
 - __path__ - 생성되거나 검색되는 파일의 경로. 절대 경로이거나 이 DirectoryEntry로부터의 상대 경로. _(DOMString)_
-- __options__ - Options to specify whether the file is created if it doesn't exist.  _(Flags)_
+- __options__ - 파일이 없을 경우 생성 여부를 결정하는 옵션.  _(Flags)_
 - __successCallback__ - FileEntry 객체와 함께 발생되는 콜백. _(Function)_
 - __errorCallback__ - 파일을 생성하거나 찾다가 에러가 발생하면 호출되는 콜백. FileError 객체와 함께 발생한다. _(Function)_
 
@@ -274,7 +273,7 @@ __빠른 예제__
 removeRecursively
 -----------------
 
-디렉토리와 그 안의 모든 컨텐츠를 제거한다. 에러 이벤트 가운데 (예를 들면, 지워질 수 없는 파일을 포함한 디렉토리를 지위기 위해 시도하는), 일부 디렉토리의 컨텐츠들은 아마 지워질 것이다. 다음을 수행하면 에러이다:
+디렉토리와 그 안의 모든 컨텐츠를 제거한다. 에러 이벤트 가운데 (예를 들면, 지워질 수 없는 파일을 포함한 디렉토리를 지우기 위해 시도하는), 일부 디렉토리의 컨텐츠들은 아마 지워질 것이다. 다음을 수행하면 에러이다:
 
 - 파일 시스템의 root 디레토리를 제거한다.
 

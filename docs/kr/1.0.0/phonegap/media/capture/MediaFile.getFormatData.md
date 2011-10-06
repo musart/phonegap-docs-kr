@@ -11,7 +11,7 @@ MediaFile.getFormatData
 설명
 -----------
 
-이 함수는 비동기적으로 미디어 파일의 포멧 정보를 검색하기를 시도한다. 만약 성공일 경우 MediaFileData 객체와 함께 MeidaFileDataSuccessCB 콜백을 발생한다. 만약 시도가 실패하면, 이 함수는 MediaFileDataErrorCB 콜백을 발생한다.
+이 함수는 비동기로 미디어 파일의 포멧 정보를 검색하기를 시도한다. 만약 성공일 경우 MediaFileData 객체와 함께 MeidaFileDataSuccessCB 콜백을 발생한다. 만약 시도가 실패하면, 이 함수는 MediaFileDataErrorCB 콜백을 발생한다.
 
 
 지원하는 플랫폼

@@ -1,7 +1,7 @@
 FileUploadOptions
 ========
 
-`FileUploadOptions` 객체는 추가적인 인자들을 upload script에 명시하기 위해 FileTransfer 객체의 upload 함수에 건내준다.
+`FileUploadOptions` 객체는 추가적인 인자들을 upload script에 명시하기 위해 FileTransfer 객체의 upload 함수에 건네준다.
 
 Properties
 ----------

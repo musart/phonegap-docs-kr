@@ -26,7 +26,7 @@ Parameters
 빠른 예제
 -------------
 
-    // Options: 매 3초간 위치를 검색한다.
+    // Options: 매 3초 마다 위치를 검색한다.
     //
     var watchID = navigator.geolocation.watchPosition(onSuccess, onError, { frequency: 3000 });
 

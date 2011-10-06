@@ -80,4 +80,4 @@ iPhone Quirks
 - __time:__ time을 무시하고 미리 정의된 시간 동안 진동한다.
 
         navigator.notification.vibrate();
-        navigator.notification.vibrate(2500);   // 2500 is ignored
+        navigator.notification.vibrate(2500);   // 2500은 무시된다.

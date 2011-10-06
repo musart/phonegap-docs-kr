@@ -6,7 +6,7 @@ ContactOrganization
 Properties
 ----------
 - __pref:__ 만약 `ContactOrganization` 이 사용자의 선호하는 변수를 포함할 경우 `true`로 설정한다. _(boolean)_
-- __type:__ 이것이 어떤 타입의 필드인지 알려주는 문자열 (example: 'home'). _(DOMString)
+- __type:__ 이것이 어떤 타입의 필드인지 알려주는 문자열 (example: 'home'). _(DOMString)_
 - __name:__ 조직의 이름 _(DOMString)_
 - __department:__ 연락처가 일하는 부서. _(DOMString)_
 - __title:__ 조직에서 연락처의 직함. _(DOMString)_
@@ -58,11 +58,11 @@ Details
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
 
 
-        // PhoneGap이 로드되기를 기다린다
+        // PhoneGap이 로드되기를 기다린다.
         //
         document.addEventListener("deviceready", onDeviceReady, false);
 
-        // PhoneGap이 준비되면 호출된다
+        // PhoneGap이 준비되면 호출된다.
         //
         function onDeviceReady() {
 			var options = new ContactFindOptions();

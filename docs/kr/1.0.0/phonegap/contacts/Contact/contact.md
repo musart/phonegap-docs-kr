@@ -6,7 +6,7 @@ Contact
 Properties
 ----------
 
-- __id:__ 전역적인 unique 식별자. _(DOMString)_
+- __id:__ 전역적인 유일한 식별자. _(DOMString)_
 - __displayName:__ 최종사용자에게 표시되기 적합한 이 연락처의 이름. _(DOMString)_
 - __name:__ 사람 이름의 모든 컴포넌트를 포함하는 객체. _(ContactName)_
 - __nickname:__ 연착처의 일상적인 이름. _(DOMString)_
@@ -25,7 +25,7 @@ Methods
 -------
 
 - __clone__: 호출하는 객체의 완전한 복사본으로 id 속성은 `null`로 설정되는 새로운 Contact 객체를 반환한다.
-- __remove__: 연락처를 기기의 연락처 database에서 제거한다. 제거가 성공적이지 않으면 에러 콜백이 `ContactError` 객체를 담아 호출된다
+- __remove__: 연락처를 기기의 연락처 database에서 제거한다. 성공적으로 제거되지 않으면 에러 콜백이 `ContactError` 객체를 담아 호출된다
 - __save__: 새로운 연락처를 기기의 연락처 database에 저장하거나 __id__ 가 있는 기존의 연락처에 갱신한다.
 
 

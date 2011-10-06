@@ -31,7 +31,7 @@ Details
 
 `FileWriter` 객체는 기기의 파일시스템으로부터 파일을 쓰는 방법이다. 사용자는 writestart, progress, write, writeend, error 그리고 abort 이벤트를 받기 위해 자신의 이벤트 리스터를 등록한다.
 
-FileWriter 는 단일 파일을 위해 생성된다. 당신은 여러번 파일에 쓸수 있다. FileWriter는 파일의 position과 length 속성을 관리하기 때문에 파일안에서 자유롭게 검색하고 쓸 수 있다. 기본적으로 FileWriter 는 파일의 시작점에 (기존에 존자하는 데이터에 덮어)쓴다. FileWriter의 생성자에 optional append boolean을 true로 하면 파일의 끝에서부터 쓴다.
+FileWriter는 단일 파일을 위해 생성된다. 당신은 여러번 파일에 쓸 수 있다. FileWriter는 파일의 position과 length 속성을 관리하기 때문에 파일안에서 자유롭게 검색하고 쓸 수 있다. 기본적으로 FileWriter 는 파일의 시작점에 (기존에 존재하는 데이터에 덮어)쓴다. FileWriter의 생성자에 optional append boolean을 true로 하면 파일의 끝에서부터 쓴다.
 
 지원하는 플랫폼
 -------------------

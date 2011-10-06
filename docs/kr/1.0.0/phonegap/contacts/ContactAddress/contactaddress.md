@@ -6,7 +6,7 @@ ContactAddress
 Properties
 ----------
 - __pref:__ 만약 `ContactAddress`가 사용자의 선호 값이 포함되어 있다면 `true`로 설정된다. _(boolean)_
-- __type:__ 이것이 어떤 타입의 필드인지 알려주는 문자열 (예제: 'home'). _(DOMString)
+- __type:__ 이것이 어떤 타입의 필드인지 알려주는 문자열 (예제: 'home'). _(DOMString)_
 - __formatted:__ 표시하기 위한 구성된 전체 주소. _(DOMString)_
 - __streetAddress:__ 전체 street 주소. _(DOMString)_
 - __locality:__ 도시나 주택지구. _(DOMString)_

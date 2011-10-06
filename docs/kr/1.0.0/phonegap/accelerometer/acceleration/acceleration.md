@@ -8,7 +8,7 @@ Properties
 
 - __x:__ x축의 모션 값. 범위 [0, 1] (`Number`)
 - __y:__ y축의 모션 값. 범위 [0, 1] (`Number`)
-- __z:__ z축의 모션 값. 범위 (`Number`)
+- __z:__ z축의 모션 값. 범위 [0, 1] (`Number`)
 - __timestamp:__ 1000분의 1초 단위로 생성된 timestamp (`DOMTimeStamp`)
 
 설명

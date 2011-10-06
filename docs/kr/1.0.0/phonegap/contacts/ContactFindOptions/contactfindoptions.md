@@ -34,9 +34,9 @@ Properties
 
 	// 명시된 연락처 기준
     var options = new ContactFindOptions();
-	options.filter="";			// empty search string returns all contacts
-	options.multiple=true;		// return multiple results
-	filter = ["displayName"];	// return contact.displayName field
+	options.filter="";			// 빈 문자열은 모든 연락처를 반환한다.
+	options.multiple=true;		// 다중 결과값을 반환한다.
+	filter = ["displayName"];	// contact.displayName 필드를 반환한다.
 	
 	// 연락처를 찾는다.
     navigator.contacts.find(filter, onSuccess, onError, options);
@@ -61,9 +61,9 @@ Properties
         function onDeviceReady() {
 			// 명시된 연락처 기준
 		    var options = new ContactFindOptions();
-			options.filter="";			// empty search string returns all contacts
-			options.multiple=true;		// return multiple results
-			filter = ["displayName"];	// return contact.displayName field
+			options.filter="";			// 빈 문자열은 모든 연락처를 반환한다.
+			options.multiple=true;		// 다중 결과값을 반환한다.
+			filter = ["displayName"];	// contact.displayName 필드를 반환한다.
 
 			// 연락처를 찾는다.
 		    navigator.contacts.find(filter, onSuccess, onError, options);

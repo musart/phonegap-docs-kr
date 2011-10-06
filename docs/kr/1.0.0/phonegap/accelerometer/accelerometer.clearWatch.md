@@ -51,7 +51,7 @@ watch ID 변수에 의해 참조되는 `Acceleration` 모니터링을 멈춘다.
         //
         function startWatch() {
             
-            // Update acceleration every 3 seconds
+            // 매 3초마다 가속도를 갱신한다.
             var options = { frequency: 3000 };
             
             watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);

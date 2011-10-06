@@ -1,8 +1,7 @@
 compass.clearWatch
 ========================
 
-watch ID 변수에 의해 참조되는 나침반을 관찰하기를 멈춘다.
-Stop watching the compass referenced by the watch ID parameter.
+watch ID 변수에 의해 참조되는 나침반 관찰하기를 멈춘다.
 
     navigator.compass.clearWatch(watchID);
 

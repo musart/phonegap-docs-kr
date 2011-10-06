@@ -71,7 +71,7 @@ Details
 			// 연락처를 저장한다.
 			contact.save();
 
-			// search contacts, returning display name and phone numbers
+			// display 이름과 전화번호를 반환하는 연락처를 검색한다.
 			var options = new ContactFindOptions();
 			options.filter="";
 			filter = ["displayName","phoneNumbers"];

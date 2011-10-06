@@ -8,9 +8,9 @@ contacts.create
 설명
 -----------
 
-contacts.create 는 새로운 `Contact` 객체를 반환하는 동기화 함수이다.
+contacts.create 는 새로운 `Contact` 객체를 반환하는 동기 함수이다.
 
-이 함수는 Contact 객체를 기기의 연락처 저장소에 지속하지 않는다. Contact 객체를 기기에 지속하기 위해서는 `Contact.save` 함수를 호출한다.
+이 함수는 Contact 객체를 기기의 연락처 저장소에 유지하지 않는다. Contact 객체를 기기에 유지하기 위해서는 `Contact.save` 함수를 호출한다.
 
 지원하는 플랫폼
 -------------------

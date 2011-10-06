@@ -1,7 +1,7 @@
 media.startRecord
 =================
 
-오디오 파일을 녹음하는 것을 시작한다.
+오디오 파일을 녹음하기 시작한다.
 
     media.startRecord();
 
@@ -9,7 +9,7 @@ media.startRecord
 설명
 -----------
 
-`media.startRecord` 함수는 오디오 파일을 녹음하는 것을 시작하는 동기 함수이다. 
+`media.startRecord` 함수는 오디오 파일을 녹음하기 시작하는 동기 함수이다. 
 
 지원하는 플랫폼
 -------------------

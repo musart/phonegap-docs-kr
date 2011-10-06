@@ -36,7 +36,7 @@ Returns
 -------------
 
     // onSuccess Callback
-    //   이 함수는 현재 GPS의 좌표를 담고있는 'Position' 객채를 받는다.
+    //   이 함수는 현재 GPS의 좌표를 담고있는 `Position` 객채를 받는다.
     //
     function onSuccess(position) {
         var element = document.getElementById('geolocation');

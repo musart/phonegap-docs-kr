@@ -58,7 +58,7 @@ compass.getCurrentHeading
             alert('Heading: ' + heading);
         }
     
-        // onError: 가리키는 방향을 얻기 실패했을 시
+        // onError: 가리키는 방향을 얻기 실패했을 경우
         //
         function onError() {
             alert('onError!');

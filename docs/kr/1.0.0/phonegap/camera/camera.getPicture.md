@@ -23,7 +23,7 @@ camera.getPicture
 - 데이터를 저장한다. ('LocalStorage', [Lawnchair](http://brianleroux.github.com/lawnchair/), 등)
 - 데이터를 원격 서버에 게시한다.
 
-Note: 최신 기기의 카메라를 사용하여 찍힌 사진의 이미지 품질은 아주 좋다. _이러한 이미지들을 Base64를 사용하여 임호화하면 일부 기기(iPhone 4, BlackBerry Torch 9800)에서 메모리 이슈를 야기한다._ 따라서, `Camera.destinationType`으로 FILE_URI 사용을 강력하게 권한다.
+Note: 최신 기기의 카메라를 사용하여 찍힌 사진의 이미지 품질은 아주 좋다. _이러한 이미지들을 Base64를 사용하여 암호화하면 일부 기기(iPhone 4, BlackBerry Torch 9800)에서 메모리 이슈를 야기한다._ 따라서, `Camera.destinationType`으로 FILE_URI 사용을 강력하게 권한다.
 
 지원하는 플랫폼
 -------------------
@@ -75,7 +75,7 @@ Note: 최신 기기의 카메라를 사용하여 찍힌 사진의 이미지 품�
         <script type="text/javascript" charset="utf-8">
 
         var pictureSource;   // picture source
-        var destinationType; // sets the format of returned value 
+        var destinationType; // 반환된 값의 포멧을 설정한다.
         
         // 기기와 연결하기 위해 PhoneGap을 기다린다.
         //
@@ -98,7 +98,7 @@ Note: 최신 기기의 카메라를 사용하여 찍힌 사진의 이미지 품�
           //
           var smallImage = document.getElementById('smallImage');
       
-          // Unhide image elements 
+          // image 엘리먼트를 보이게 한다. 
           //
           smallImage.style.display = 'block';
       
@@ -118,7 +118,7 @@ Note: 최신 기기의 카메라를 사용하여 찍힌 사진의 이미지 품�
           //
           var largeImage = document.getElementById('largeImage');
       
-          // Unhide image elements
+          // image 엘리먼트를 보이게 한다.
           //
           largeImage.style.display = 'block';
       
